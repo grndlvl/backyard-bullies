@@ -104,6 +104,9 @@
     Skip to main content
   </a>
 
+  <!-- Facebook SDK root (required for the live Page feed) -->
+  <div id="fb-root"></div>
+
   <!-- ============ HEADER / NAV ============ -->
   <header class="fixed top-0 inset-x-0 z-50 bg-ink/90 backdrop-blur border-b border-ink-line">
     <nav class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between" aria-label="Primary">
@@ -116,10 +119,11 @@
 
       <ul class="hidden lg:flex items-center gap-6 text-sm font-head uppercase tracking-wide">
         <li><a href="#about" class="hover:text-brand transition-colors">About</a></li>
+        <li><a href="#coaches" class="hover:text-brand transition-colors">Coaches</a></li>
         <li><a href="#programs" class="hover:text-brand transition-colors">Programs</a></li>
         <li><a href="#schedule" class="hover:text-brand transition-colors">Schedule</a></li>
         <li><a href="#pricing" class="hover:text-brand transition-colors">Membership</a></li>
-        <li><a href="#results" class="hover:text-brand transition-colors">Results</a></li>
+        <li><a href="#feed" class="hover:text-brand transition-colors">Latest</a></li>
         <li><a href="#contact" class="hover:text-brand transition-colors">Contact</a></li>
       </ul>
 
@@ -138,11 +142,11 @@
     <div id="mobileMenu" class="lg:hidden hidden border-t border-ink-line bg-ink/98">
       <ul class="px-4 py-3 space-y-1 font-head uppercase tracking-wide text-sm">
         <li><a href="#about" class="block py-2.5 hover:text-brand">About</a></li>
+        <li><a href="#coaches" class="block py-2.5 hover:text-brand">Coaches</a></li>
         <li><a href="#programs" class="block py-2.5 hover:text-brand">Programs</a></li>
         <li><a href="#schedule" class="block py-2.5 hover:text-brand">Schedule</a></li>
         <li><a href="#pricing" class="block py-2.5 hover:text-brand">Membership &amp; Payments</a></li>
-        <li><a href="#results" class="block py-2.5 hover:text-brand">Results</a></li>
-        <li><a href="#gallery" class="block py-2.5 hover:text-brand">Gallery</a></li>
+        <li><a href="#feed" class="block py-2.5 hover:text-brand">Latest</a></li>
         <li><a href="#contact" class="block py-2.5 hover:text-brand">Contact</a></li>
         <li class="pt-2"><a href="tel:+17062500186" class="block text-center bg-brand text-ink font-700 px-4 py-2.5 rounded-md">Call / Text 706-250-0186</a></li>
       </ul>
@@ -241,14 +245,59 @@
           </p>
         </div>
         <div class="relative">
-          <img src="images/action1.jpg" alt="A Backyard Bullies wrestler competing at a tournament" class="rounded-xl w-full object-cover shadow-2xl shadow-black/50 border border-ink-line" loading="lazy" />
+          <img src="images/about-new.jpg" alt="Backyard Bullies coaches and young wrestlers gathered together in the club's training room" class="rounded-xl w-full aspect-[4/3] object-cover shadow-2xl shadow-black/50 border border-ink-line" loading="lazy" />
           <div class="absolute -bottom-4 -left-4 bg-brand text-ink font-display uppercase text-xl px-5 py-3 rounded-lg shadow-lg">Est. 2023</div>
         </div>
       </div>
     </section>
 
+    <!-- ============ COACHES ============ -->
+    <!-- TODO: Replace placeholder names, roles, bios, and photos below with real coach info.
+         Add a headshot to images/ (e.g. images/coach-1.jpg) and update each img src.
+         Add or remove <article> cards to match the number of coaches. -->
+    <section id="coaches" class="bg-ink-soft py-20 sm:py-24 border-b border-ink-line">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="max-w-2xl mb-12">
+          <div class="section-rule mb-5"></div>
+          <h2 class="font-display uppercase text-4xl sm:text-5xl mb-4">Meet the Coaches</h2>
+          <p class="text-slate-300">Experienced coaches dedicated to developing better wrestlers — and better people — on and off the mat.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <!-- Coach 1 — Justin -->
+          <article class="bg-ink-card border border-brand/40 rounded-xl p-6 text-center">
+            <img src="images/logo.jpg" alt="" width="112" height="112" class="logo-badge w-28 h-28 mx-auto mb-4 ring-2 ring-brand/40 object-cover" />
+            <h3 class="font-head font-700 uppercase text-xl">Justin</h3>
+            <p class="text-brand text-sm uppercase tracking-wide mb-3">Head Coach</p>
+            <p class="text-slate-300 text-sm">Short bio goes here — background, wrestling experience, coaching philosophy, and what he brings to the Backyard Bullies family.</p>
+          </article>
+          <!-- Coach 2 -->
+          <article class="bg-ink-card border border-ink-line rounded-xl p-6 text-center">
+            <img src="images/logo.jpg" alt="" width="112" height="112" class="logo-badge w-28 h-28 mx-auto mb-4 ring-2 ring-brand/40 object-cover" />
+            <h3 class="font-head font-700 uppercase text-xl">Coach Name</h3>
+            <p class="text-brand text-sm uppercase tracking-wide mb-3">Coach</p>
+            <p class="text-slate-300 text-sm">Short bio goes here — background, wrestling experience, coaching philosophy, and what they bring to the Backyard Bullies family.</p>
+          </article>
+          <!-- Coach 3 -->
+          <article class="bg-ink-card border border-ink-line rounded-xl p-6 text-center">
+            <img src="images/logo.jpg" alt="" width="112" height="112" class="logo-badge w-28 h-28 mx-auto mb-4 ring-2 ring-brand/40 object-cover" />
+            <h3 class="font-head font-700 uppercase text-xl">Coach Name</h3>
+            <p class="text-brand text-sm uppercase tracking-wide mb-3">Coach</p>
+            <p class="text-slate-300 text-sm">Short bio goes here — background, wrestling experience, coaching philosophy, and what they bring to the Backyard Bullies family.</p>
+          </article>
+          <!-- Coach 4 -->
+          <article class="bg-ink-card border border-ink-line rounded-xl p-6 text-center">
+            <img src="images/logo.jpg" alt="" width="112" height="112" class="logo-badge w-28 h-28 mx-auto mb-4 ring-2 ring-brand/40 object-cover" />
+            <h3 class="font-head font-700 uppercase text-xl">Coach Name</h3>
+            <p class="text-brand text-sm uppercase tracking-wide mb-3">Coach</p>
+            <p class="text-slate-300 text-sm">Short bio goes here — background, wrestling experience, coaching philosophy, and what they bring to the Backyard Bullies family.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ PROGRAMS ============ -->
-    <section id="programs" class="bg-ink-soft py-20 sm:py-24 border-b border-ink-line">
+    <section id="programs" class="py-20 sm:py-24 border-b border-ink-line">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="max-w-2xl mb-12">
           <div class="section-rule mb-5"></div>
@@ -306,7 +355,7 @@
     </section>
 
     <!-- ============ SCHEDULE ============ -->
-    <section id="schedule" class="py-20 sm:py-24 border-b border-ink-line">
+    <section id="schedule" class="bg-ink-soft py-20 sm:py-24 border-b border-ink-line">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="max-w-2xl mb-12">
           <div class="section-rule mb-5"></div>
@@ -373,7 +422,7 @@
     </section>
 
     <!-- ============ MEMBERSHIP & PAYMENTS ============ -->
-    <section id="pricing" class="bg-ink-soft py-20 sm:py-24 border-b border-ink-line">
+    <section id="pricing" class="py-20 sm:py-24 border-b border-ink-line">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="max-w-2xl mb-12">
           <div class="section-rule mb-5"></div>
@@ -431,47 +480,37 @@
       </div>
     </section>
 
-    <!-- ============ RESULTS ============ -->
-    <section id="results" class="py-20 sm:py-24 border-b border-ink-line">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="max-w-2xl mb-10">
-          <div class="section-rule mb-5"></div>
-          <h2 class="font-display uppercase text-4xl sm:text-5xl mb-4">On the Podium</h2>
-          <p class="text-slate-300">Backyard Bullies returned from the <strong class="text-white">2026 Team GA State Championship</strong> with strong performances across the brackets. 🏆</p>
-        </div>
-
-        <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-          <li class="bg-ink-card border border-brand/40 rounded-lg px-4 py-3 flex items-center justify-between gap-3"><span class="font-semibold">Katalina H</span><span class="text-brand font-head uppercase text-sm">1st • K–2 Girls</span></li>
-          <li class="bg-ink-card border border-ink-line rounded-lg px-4 py-3 flex items-center justify-between gap-3"><span class="font-semibold">James B</span><span class="text-slate-300 font-head uppercase text-sm">2nd • 12U</span></li>
-          <li class="bg-ink-card border border-ink-line rounded-lg px-4 py-3 flex items-center justify-between gap-3"><span class="font-semibold">Knox K</span><span class="text-slate-300 font-head uppercase text-sm">2nd • 8U</span></li>
-          <li class="bg-ink-card border border-ink-line rounded-lg px-4 py-3 flex items-center justify-between gap-3"><span class="font-semibold">Amelia S</span><span class="text-slate-300 font-head uppercase text-sm">2nd • K–2</span></li>
-          <li class="bg-ink-card border border-ink-line rounded-lg px-4 py-3 flex items-center justify-between gap-3"><span class="font-semibold">Ethan B</span><span class="text-slate-300 font-head uppercase text-sm">3rd • 14U</span></li>
-          <li class="bg-ink-card border border-ink-line rounded-lg px-4 py-3 flex items-center justify-between gap-3"><span class="font-semibold">Christine B</span><span class="text-slate-300 font-head uppercase text-sm">4th • HS</span></li>
-          <li class="bg-ink-card border border-ink-line rounded-lg px-4 py-3 flex items-center justify-between gap-3"><span class="font-semibold">Maddox M</span><span class="text-slate-300 font-head uppercase text-sm">4th • 8U</span></li>
-          <li class="bg-ink-card border border-ink-line rounded-lg px-4 py-3 flex items-center justify-between gap-3"><span class="font-semibold">Carina B</span><span class="text-slate-300 font-head uppercase text-sm">4th • K–2 Girls</span></li>
-          <li class="bg-ink-card border border-brand/40 rounded-lg px-4 py-3 flex items-center justify-between gap-3"><span class="font-semibold">Karter F</span><span class="text-brand font-head uppercase text-sm">🔨 Hammer Award • 8U</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ============ GALLERY ============ -->
-    <section id="gallery" class="bg-ink-soft py-20 sm:py-24 border-b border-ink-line">
+    <!-- ============ LATEST / SOCIAL FEED ============ -->
+    <section id="feed" class="bg-ink-soft py-20 sm:py-24 border-b border-ink-line">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="max-w-2xl mb-10">
           <div class="section-rule mb-5"></div>
           <h2 class="font-display uppercase text-4xl sm:text-5xl mb-4">From the Mat</h2>
-          <p class="text-slate-300">Follow <a href="https://www.facebook.com/BackyardBulliesWC/" class="text-brand hover:underline">@BackyardBulliesWC</a> for the latest from practices, camps &amp; tournaments.</p>
+          <p class="text-slate-300">The latest straight from our Facebook page — practices, camps &amp; tournaments. Follow
+            <a href="https://www.facebook.com/BackyardBulliesWC/" class="text-brand hover:underline">@BackyardBulliesWC</a>,
+            <a href="https://www.instagram.com/backyardbullieswc" class="text-brand hover:underline">Instagram</a> &amp;
+            <a href="https://www.tiktok.com/@backyardbullieswc" class="text-brand hover:underline">TikTok</a>.</p>
         </div>
-        <ul class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-          <li><img src="images/g1.jpg" alt="Backyard Bullies wrestling moment" class="aspect-square w-full object-cover rounded-lg border border-ink-line" loading="lazy" /></li>
-          <li><img src="images/g2.jpg" alt="Backyard Bullies wrestling moment" class="aspect-square w-full object-cover rounded-lg border border-ink-line" loading="lazy" /></li>
-          <li><img src="images/g3.jpg" alt="Backyard Bullies wrestling moment" class="aspect-square w-full object-cover rounded-lg border border-ink-line" loading="lazy" /></li>
-          <li><img src="images/g4.jpg" alt="Backyard Bullies wrestling moment" class="aspect-square w-full object-cover rounded-lg border border-ink-line" loading="lazy" /></li>
-          <li><img src="images/g5.jpg" alt="Backyard Bullies wrestling moment" class="aspect-square w-full object-cover rounded-lg border border-ink-line" loading="lazy" /></li>
-          <li><img src="images/g6.jpg" alt="Backyard Bullies wrestling moment" class="aspect-square w-full object-cover rounded-lg border border-ink-line" loading="lazy" /></li>
-          <li><img src="images/g7.jpg" alt="Backyard Bullies wrestling moment" class="aspect-square w-full object-cover rounded-lg border border-ink-line" loading="lazy" /></li>
-          <li><img src="images/g8.jpg" alt="Backyard Bullies wrestling moment" class="aspect-square w-full object-cover rounded-lg border border-ink-line" loading="lazy" /></li>
-        </ul>
+
+        <!-- Live Facebook feed -->
+        <div class="flex justify-center">
+          <div class="bg-white rounded-xl p-2 sm:p-3 shadow-2xl shadow-black/40 w-full max-w-[500px] overflow-hidden">
+            <div class="fb-page"
+                 data-href="https://www.facebook.com/BackyardBulliesWC/"
+                 data-tabs="timeline"
+                 data-width="500"
+                 data-height="640"
+                 data-small-header="false"
+                 data-adapt-container-width="true"
+                 data-hide-cover="false"
+                 data-show-facepile="true">
+              <blockquote cite="https://www.facebook.com/BackyardBulliesWC/" class="fb-xfbml-parse-ignore">
+                <a href="https://www.facebook.com/BackyardBulliesWC/">Backyard Bullies Wrestling Club on Facebook</a>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -556,6 +595,10 @@
       </div>
     </div>
   </footer>
+
+  <!-- Facebook SDK (loads the live Page feed; no app ID required for social plugins) -->
+  <script async defer crossorigin="anonymous" nonce="byb"
+          src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0"></script>
 
   <script>
     // Mobile nav toggle

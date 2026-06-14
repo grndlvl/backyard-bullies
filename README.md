@@ -39,11 +39,22 @@ The **Membership & Payments** section has buttons that currently point to a plac
 > If you have a full **Square Online store**, you can instead point the "Open Square Store"
 > button to your `*.square.site` URL.
 
+## "From the Mat" — live Facebook feed
+
+The **From the Mat** section embeds your Facebook Page's live feed using the official
+[Facebook Page Plugin](https://developers.facebook.com/docs/plugins/page-plugin/) — no API
+key, no token, no maintenance. New posts appear automatically.
+
+- It renders only on a **real web domain** (e.g. your GitHub Pages URL), *not* over `localhost`
+  or `file://`, and the visitor must allow Facebook's script. A harmless `404` from
+  `/platform/plugin/page/logging/` may appear in the console on unregistered domains — ignore it.
+- To point it at a different page, edit the `data-href` on the `fb-page` div in `index.html`.
+
 ## Photos
 
-Photos in `images/` were pulled from the club's Facebook page. The gallery thumbnails
-(`g1`–`g8.jpg`) are low-resolution (160×160). For a sharper gallery, drop in higher-res
-photos with the same filenames, or replace `cover.jpg` (hero) and `action1.jpg` (about section).
+`cover.jpg` (hero) and `action1.jpg` (About section) were pulled from the club's Facebook page —
+replace them with higher-res images using the same filenames anytime. The unused
+`g1`–`g8.jpg` thumbnails remain in `images/` in case you want to re-add a static photo grid later.
 
 ## Deploy to GitHub Pages
 
