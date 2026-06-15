@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---- Custom site styles (moved out of the inline <style> in index.html) ---- */
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+body { font-family: 'Inter', system-ui, sans-serif; }
+
+.font-display { font-family: 'Anton', sans-serif; letter-spacing: .01em; }
+.font-head { font-family: 'Oswald', sans-serif; }
+
+/* Logo badge: clip the white-cornered JPEG into a clean circle */
+.logo-badge { border-radius: 9999px; object-fit: cover; background: #fff; }
+
+/* Hero darkening overlay */
+.hero-overlay {
+  background: linear-gradient(180deg, rgba(14,17,22,.62) 0%, rgba(14,17,22,.78) 55%, rgba(14,17,22,.97) 100%);
+}
+
+.section-rule { height: 4px; width: 64px; background: #3FC8F4; border-radius: 4px; }
+
+a:focus-visible, button:focus-visible {
+  outline: 3px solid #3FC8F4; outline-offset: 2px; border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation: none !important; transition: none !important; }
+}

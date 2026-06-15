@@ -14,8 +14,12 @@ desktop.ini
 *.log
 npm-debug.log*
 
-# Dependencies (in case tooling is added later)
+# Dependencies
 node_modules/
+
+# Build output (compiled Tailwind CSS + Pages publish dir are produced by the build)
+assets/tailwind.css
+_site/
 
 # Local preview / browser-automation artifacts
 .playwright-mcp/
