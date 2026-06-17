@@ -39,6 +39,7 @@ jobs:
           mkdir -p _site/assets
           cp index.html _site/
           cp -r images _site/
+          cp robots.txt sitemap.xml llms.txt _site/
           touch _site/.nojekyll
           npx tailwindcss -i ./src/input.css -o ./_site/assets/tailwind.css --minify
 
