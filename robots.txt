@@ -36,4 +36,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://backyardbullieswc.com/sitemap.xml
+Sitemap: https://www.backyardbullies-wc.com/sitemap.xml
