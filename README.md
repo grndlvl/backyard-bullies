@@ -4,7 +4,7 @@ Single-page website for **Backyard Bullies Wrestling Club** (Augusta, GA / CSRA)
 Plain HTML + [Tailwind CSS](https://tailwindcss.com) (compiled to a static stylesheet) + a
 little vanilla JS. Hosted on **GitHub Pages**, built and deployed automatically by GitHub Actions.
 
-🔗 **Live:** https://grndlvl.github.io/backyard-bullies/
+🔗 **Live:** https://www.backyardbullies-wc.com/
 
 ## Files
 
@@ -101,7 +101,7 @@ Watch runs under the repo's **Actions** tab. The live URL is printed on the depl
 
 ### Custom domain (optional)
 
-1. Add a `CNAME` file containing only your domain (e.g. `backyardbullieswc.com`), and include it
+1. Add a `CNAME` file containing only your domain (e.g. `www.backyardbullies-wc.com`), and include it
    in the deploy (copy it into `_site/` in the workflow).
 2. At your registrar, point DNS to GitHub Pages
    ([guide](https://docs.github.com/pages/configuring-a-custom-domain-for-your-github-pages-site)).
