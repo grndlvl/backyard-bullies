@@ -52,18 +52,17 @@ Common edits:
 | Brand colors / fonts | `tailwind.config.js` (`theme.extend`) — rebuild after changing |
 | Social links | Search for `facebook.com`, `instagram.com`, `tiktok.com` |
 
-## 💳 Square payments — IMPORTANT (action needed)
+## 💳 Membership & payments
 
-The **Membership & Payments** section has buttons that currently point to a placeholder
-(`https://square.link/u/REPLACE_ME`). To make them work:
+There is no online checkout. Billing is handled by **emailed invoice** or **payment in
+person**, and the buttons in the **Membership & Payments** section are simple call/text
+links (`tel:+17062500186`).
 
-1. Log in to your **Square Dashboard** → **Online** → **Payment Links** (or **Checkout Links**).
-2. Create a payment link for each item (e.g. *Monthly Membership*, *Drop-In Class*). Square gives you a URL like `https://square.link/u/abc123`.
-3. In `index.html`, find each `data-square-link` button and replace `https://square.link/u/REPLACE_ME` with your real link.
-4. Update the prices: find `data-price="monthly"` / `data-price="dropin"` and replace the `—` with the dollar amount.
-
-> If you have a full **Square Online store**, you can instead point the "Open Square Store"
-> button to your `*.square.site` URL.
+- Prices are written directly in the markup — monthly tiers ($90 / $115 / $130 / $150 for
+  2–5 practices per week) and the $15 open-mat / drop-in. Edit those values in `index.html`
+  if rates change.
+- Discounts (U.S. Military Appreciation, Sibling) are noted in the same section; members ask
+  the club admin for details.
 
 ## Team store
 
