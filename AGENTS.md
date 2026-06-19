@@ -22,15 +22,28 @@ A single-page **static marketing site** for a youth-to-adult wrestling club in A
 npm ci                 # install
 npm run build:css      # compile assets/tailwind.css (REQUIRED before previewing)
 npm run watch:css      # rebuild on change while editing
-npm run lint           # html-validate index.html (markup + a11y/structure checks)
+npm run lint           # all checks: html + css + content (see below)
+npm run format         # prettier --write (auto-format)
 python3 -m http.server 8000   # then open http://127.0.0.1:8000
 ```
 
-`npm run lint` runs **html-validate** (config in `.htmlvalidate.json`) over
-`index.html` — it catches malformed markup, duplicate IDs, broken ARIA, missing
-`alt`, heading-order problems, and inconsistent void elements. It also runs in CI
-(`deploy.yml`) **before** the build, so a lint error blocks the deploy. Run it
-locally before committing markup changes.
+### Linting & formatting
+
+`npm run lint` is an umbrella over three checks; CI (`deploy.yml`) runs it **plus
+`npm run format:check` before the build**, so any failure blocks the deploy. Run
+`npm run lint` (and `npm run format` to fix style) before committing.
+
+- `lint:html` — **html-validate** (`.htmlvalidate.json`): malformed markup,
+  duplicate IDs, broken ARIA, missing `alt`, heading order, void-element style.
+- `lint:css` — **stylelint** (`stylelint-config-standard`, `.stylelintrc.json`)
+  over `src/**/*.css`; the Tailwind at-rules (`@tailwind`/`@apply`/`@layer`) are
+  whitelisted. Use `npx stylelint "src/**/*.css" --fix` to auto-fix.
+- `lint:content` — `scripts/check-content.mjs`: every JSON-LD block parses, the
+  FAQPage markup count equals the visible FAQ-card count, and every `href="#id"`
+  resolves to a real element id.
+- **Prettier** (`.prettierrc.json`) formats everything except the files in
+  `.prettierignore` — note **`index.html` is intentionally excluded** (its
+  hand-tuned markup must not be reflowed) along with build output and assets.
 
 Serve over HTTP — don't open via `file://` (relative assets and the map/calendar iframes need a real origin).
 

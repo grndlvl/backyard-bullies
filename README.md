@@ -42,15 +42,15 @@ Then open `index.html` (or serve the folder, e.g. `python3 -m http.server`).
 Page content lives in `index.html`; styling tokens (colors/fonts) live in `tailwind.config.js`.
 Common edits:
 
-| What | Where to look |
-|------|---------------|
-| Phone number | Search for `7062500186` (and the display text `706-250-0186`) |
-| Address | Search for `Bobby Jones Expressway` |
-| Schedule times | The **Weekly Training Schedule** section |
-| Programs | The **Programs** section cards |
-| Coaches | The **Meet the Coaches** section (replace placeholder names/bios/photos) |
-| Brand colors / fonts | `tailwind.config.js` (`theme.extend`) — rebuild after changing |
-| Social links | Search for `facebook.com`, `instagram.com`, `tiktok.com` |
+| What                 | Where to look                                                            |
+| -------------------- | ------------------------------------------------------------------------ |
+| Phone number         | Search for `7062500186` (and the display text `706-250-0186`)            |
+| Address              | Search for `Bobby Jones Expressway`                                      |
+| Schedule times       | The **Weekly Training Schedule** section                                 |
+| Programs             | The **Programs** section cards                                           |
+| Coaches              | The **Meet the Coaches** section (replace placeholder names/bios/photos) |
+| Brand colors / fonts | `tailwind.config.js` (`theme.extend`) — rebuild after changing           |
+| Social links         | Search for `facebook.com`, `instagram.com`, `tiktok.com`                 |
 
 ## 💳 Membership & payments
 
@@ -76,7 +76,7 @@ The **From the Mat** section embeds your Facebook Page's live feed using the off
 [Facebook Page Plugin](https://developers.facebook.com/docs/plugins/page-plugin/) — no API
 key, no token, no maintenance. New posts appear automatically.
 
-- It renders only on a **real web domain** (e.g. the GitHub Pages URL), *not* over `localhost`
+- It renders only on a **real web domain** (e.g. the GitHub Pages URL), _not_ over `localhost`
   or `file://`, and the visitor must allow Facebook's script. A harmless `404` from
   `/platform/plugin/page/logging/` may appear in the console on unregistered domains — ignore it.
 - To point it at a different page, edit the `data-href` on the `fb-page` div in `index.html`.

@@ -1,0 +1,17 @@
+# Dependencies & build output
+node_modules/
+_site/
+assets/tailwind.css
+package-lock.json
+
+# Hand-formatted markup — Prettier's HTML reflow can alter inline whitespace/rendering
+index.html
+
+# Binary / generated assets
+images/
+lighthouse*.json
+
+# Assistant / tooling working state
+.omx/
+.omc/
+.claude/
