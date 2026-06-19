@@ -34,6 +34,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Lint HTML
+        run: npm run lint
+
       - name: Assemble site and compile Tailwind CSS
         run: |
           mkdir -p _site/assets

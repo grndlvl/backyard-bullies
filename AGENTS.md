@@ -22,8 +22,15 @@ A single-page **static marketing site** for a youth-to-adult wrestling club in A
 npm ci                 # install
 npm run build:css      # compile assets/tailwind.css (REQUIRED before previewing)
 npm run watch:css      # rebuild on change while editing
+npm run lint           # html-validate index.html (markup + a11y/structure checks)
 python3 -m http.server 8000   # then open http://127.0.0.1:8000
 ```
+
+`npm run lint` runs **html-validate** (config in `.htmlvalidate.json`) over
+`index.html` — it catches malformed markup, duplicate IDs, broken ARIA, missing
+`alt`, heading-order problems, and inconsistent void elements. It also runs in CI
+(`deploy.yml`) **before** the build, so a lint error blocks the deploy. Run it
+locally before committing markup changes.
 
 Serve over HTTP — don't open via `file://` (relative assets and the map/calendar iframes need a real origin).
 
