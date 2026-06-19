@@ -2,7 +2,7 @@ version: 1
 layout: tests-a11y-harness
 project_type: static-html
 site_mode: single-site
-node: 20
+node: 22
 notes: >
   Static single-page site (index.html + compiled Tailwind, no framework).
   jsx-a11y / PHPCS / Twig / multisite layers do not apply. Layer 1 a11y linting
