@@ -46,8 +46,9 @@
   {
     "@context": "https://schema.org",
     "@type": "SportsActivityLocation",
+    "@id": "https://www.backyardbullies-wc.com/#business",
     "name": "Backyard Bullies Wrestling Club",
-    "description": "Wrestling club serving Augusta, GA and the CSRA since 2023. Youth, middle school, high school, girls, and adult wrestling programs.",
+    "description": "Backyard Bullies Wrestling Club is a wrestling club in Augusta, Georgia serving boys, girls, youth, middle school, high school, adult, beginner, girls, and advanced competition wrestlers throughout the CSRA.",
     "url": "https://www.backyardbullies-wc.com/",
     "image": "https://www.backyardbullies-wc.com/images/og-image.jpg",
     "telephone": "+1-706-250-0186",
@@ -66,11 +67,17 @@
     },
     "areaServed": [
       { "@type": "City", "name": "Augusta, GA" },
+      { "@type": "City", "name": "Evans, GA" },
+      { "@type": "City", "name": "Martinez, GA" },
+      { "@type": "City", "name": "Grovetown, GA" },
+      { "@type": "City", "name": "North Augusta, SC" },
+      { "@type": "City", "name": "Aiken, SC" },
+      { "@type": "Place", "name": "Fort Eisenhower" },
       { "@type": "AdministrativeArea", "name": "Central Savannah River Area (CSRA)" }
     ],
     "audience": {
       "@type": "Audience",
-      "audienceType": "Youth, middle school, high school, girls, and adult wrestlers"
+      "audienceType": "Boys, girls, youth wrestlers, middle school wrestlers, high school wrestlers, adult wrestlers, first-time wrestlers, and advanced competition wrestlers"
     },
     "founder": {
       "@type": "Person",
@@ -96,6 +103,20 @@
       "name": "First class free",
       "price": "0",
       "priceCurrency": "USD"
+    },
+    "priceRange": "$90-$150 per month",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Wrestling Programs",
+      "itemListElement": [
+        { "@type": "Offer", "name": "Youth Wrestling in Augusta, GA" },
+        { "@type": "Offer", "name": "Girls Wrestling Program" },
+        { "@type": "Offer", "name": "Beginners Wrestling Program" },
+        { "@type": "Offer", "name": "Intermediate Wrestling Program" },
+        { "@type": "Offer", "name": "Advanced Competition Team" },
+        { "@type": "Offer", "name": "Private Wrestling Lessons" },
+        { "@type": "Offer", "name": "Free Sunday CSRA Folkstyle Practice" }
+      ]
     },
     "sameAs": [
       "https://www.facebook.com/BackyardBulliesWC/",
@@ -128,14 +149,26 @@
       </a>
 
       <ul class="hidden lg:flex items-center gap-6 text-sm font-head uppercase tracking-wide">
-        <li><a href="#about" class="hover:text-brand transition-colors">About</a></li>
-        <li><a href="#coaches" class="hover:text-brand transition-colors">Coaches</a></li>
         <li><a href="#programs" class="hover:text-brand transition-colors">Programs</a></li>
         <li><a href="#schedule" class="hover:text-brand transition-colors">Schedule</a></li>
         <li><a href="#pricing" class="hover:text-brand transition-colors">Membership</a></li>
-        <li><a href="#store" class="hover:text-brand transition-colors">Shop</a></li>
-        <li><a href="#sponsors" class="hover:text-brand transition-colors">Sponsors</a></li>
-        <li><a href="#feed" class="hover:text-brand transition-colors">Latest</a></li>
+        <li><a href="#reviews" class="hover:text-brand transition-colors">Reviews</a></li>
+        <li><a href="#faq" class="hover:text-brand transition-colors">FAQ</a></li>
+        <li class="relative">
+          <details id="desktopMoreMenu" class="group">
+            <summary class="list-none cursor-pointer hover:text-brand transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand">
+              More
+              <span class="inline-block text-brand group-open:rotate-45 transition-transform" aria-hidden="true">+</span>
+            </summary>
+            <ul class="absolute right-0 top-full mt-3 w-44 rounded-lg border border-ink-line bg-ink-card p-2 shadow-2xl shadow-black/40">
+              <li><a href="#coaches" class="block rounded-md px-3 py-2 hover:bg-ink-soft hover:text-brand transition-colors">Coaches</a></li>
+              <li><a href="#about" class="block rounded-md px-3 py-2 hover:bg-ink-soft hover:text-brand transition-colors">About</a></li>
+              <li><a href="#sponsors" class="block rounded-md px-3 py-2 hover:bg-ink-soft hover:text-brand transition-colors">Sponsors</a></li>
+              <li><a href="#store" class="block rounded-md px-3 py-2 hover:bg-ink-soft hover:text-brand transition-colors">Shop</a></li>
+              <li><a href="#feed" class="block rounded-md px-3 py-2 hover:bg-ink-soft hover:text-brand transition-colors">Latest</a></li>
+            </ul>
+          </details>
+        </li>
         <li><a href="#contact" class="hover:text-brand transition-colors">Contact</a></li>
       </ul>
 
@@ -153,15 +186,17 @@
     <!-- Mobile menu -->
     <div id="mobileMenu" class="lg:hidden hidden border-t border-ink-line bg-ink/98">
       <ul class="px-4 py-3 space-y-1 font-head uppercase tracking-wide text-sm">
-        <li><a href="#about" class="block py-2.5 hover:text-brand">About</a></li>
-        <li><a href="#coaches" class="block py-2.5 hover:text-brand">Coaches</a></li>
         <li><a href="#programs" class="block py-2.5 hover:text-brand">Programs</a></li>
         <li><a href="#schedule" class="block py-2.5 hover:text-brand">Schedule</a></li>
         <li><a href="#pricing" class="block py-2.5 hover:text-brand">Membership &amp; Payments</a></li>
-        <li><a href="#store" class="block py-2.5 hover:text-brand">Shop Team Store</a></li>
-        <li><a href="#sponsors" class="block py-2.5 hover:text-brand">Sponsors</a></li>
-        <li><a href="#feed" class="block py-2.5 hover:text-brand">Latest</a></li>
+        <li><a href="#reviews" class="block py-2.5 hover:text-brand">Reviews</a></li>
+        <li><a href="#coaches" class="block py-2.5 hover:text-brand">Coaches</a></li>
+        <li><a href="#faq" class="block py-2.5 hover:text-brand">FAQ</a></li>
         <li><a href="#contact" class="block py-2.5 hover:text-brand">Contact</a></li>
+        <li><a href="#about" class="block py-2.5 hover:text-brand">About</a></li>
+        <li><a href="#sponsors" class="block py-2.5 hover:text-brand">Sponsors</a></li>
+        <li><a href="#store" class="block py-2.5 hover:text-brand">Shop Team Store</a></li>
+        <li><a href="#feed" class="block py-2.5 hover:text-brand">Latest</a></li>
         <li class="pt-2"><a href="tel:+17062500186" class="block text-center bg-brand text-ink font-700 px-4 py-2.5 rounded-md">Call / Text 706-250-0186</a></li>
       </ul>
     </div>
@@ -206,72 +241,300 @@
       </div>
     </section>
 
-    <!-- ============ MISSION ============ -->
-    <section id="mission" class="bg-ink-soft py-20 sm:py-24 border-b border-ink-line">
+    <!-- ============ PROGRAMS ============ -->
+    <section id="programs" class="py-20 sm:py-24 border-b border-ink-line">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="max-w-3xl">
+        <div class="max-w-2xl mb-12">
           <div class="section-rule mb-5"></div>
-          <h2 class="font-display uppercase text-4xl sm:text-5xl mb-6">Our Mission</h2>
-          <p class="text-lg text-slate-300 mb-5">
-            Since opening in 2023, Backyard Bullies Wrestling Club has focused on creating a positive,
-            competitive environment where wrestlers develop their skills, build confidence, and become
-            leaders both on and off the mat.
-          </p>
-          <p class="text-slate-300 mb-8">We believe wrestling changes lives through:</p>
+          <h2 class="font-display uppercase text-4xl sm:text-5xl mb-4">Programs</h2>
+          <p class="text-slate-300">Year-round wrestling in Augusta, GA for boys and girls, youth wrestlers, middle school wrestlers, high school wrestlers, adult wrestlers, first-time wrestlers, and advanced competitors across Evans, Martinez, Grovetown, North Augusta, Aiken, Fort Eisenhower, and the CSRA. Your first class is always free.</p>
         </div>
 
-        <ul class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-12">
-          <li class="bg-ink-card border border-ink-line rounded-lg px-4 py-3 text-center font-head uppercase tracking-wide text-sm">Discipline</li>
-          <li class="bg-ink-card border border-ink-line rounded-lg px-4 py-3 text-center font-head uppercase tracking-wide text-sm">Accountability</li>
-          <li class="bg-ink-card border border-ink-line rounded-lg px-4 py-3 text-center font-head uppercase tracking-wide text-sm">Hard Work</li>
-          <li class="bg-ink-card border border-ink-line rounded-lg px-4 py-3 text-center font-head uppercase tracking-wide text-sm">Respect</li>
-          <li class="bg-ink-card border border-ink-line rounded-lg px-4 py-3 text-center font-head uppercase tracking-wide text-sm">Perseverance</li>
-          <li class="bg-ink-card border border-ink-line rounded-lg px-4 py-3 text-center font-head uppercase tracking-wide text-sm">Leadership</li>
-        </ul>
+        <nav aria-label="Program sections" class="mb-8">
+          <ul class="flex flex-wrap gap-2 text-sm font-head uppercase tracking-wide">
+            <li><a href="#youth-wrestling" class="inline-flex px-3 py-2 rounded-md border border-ink-line text-slate-200 hover:border-brand hover:text-brand transition-colors">Youth Wrestling</a></li>
+            <li><a href="#girls-wrestling" class="inline-flex px-3 py-2 rounded-md border border-ink-line text-slate-200 hover:border-brand hover:text-brand transition-colors">Girls Wrestling</a></li>
+            <li><a href="#beginner-wrestling" class="inline-flex px-3 py-2 rounded-md border border-ink-line text-slate-200 hover:border-brand hover:text-brand transition-colors">Beginners</a></li>
+            <li><a href="#advanced-wrestling" class="inline-flex px-3 py-2 rounded-md border border-ink-line text-slate-200 hover:border-brand hover:text-brand transition-colors">Intermediate / Advanced</a></li>
+            <li><a href="#private-lessons" class="inline-flex px-3 py-2 rounded-md border border-ink-line text-slate-200 hover:border-brand hover:text-brand transition-colors">Private Lessons</a></li>
+            <li><a href="#free-sunday-practice" class="inline-flex px-3 py-2 rounded-md border border-ink-line text-slate-200 hover:border-brand hover:text-brand transition-colors">Free Sunday Practice</a></li>
+          </ul>
+        </nav>
 
-        <div class="grid sm:grid-cols-3 gap-4">
-          <p class="font-display uppercase text-2xl text-center bg-gradient-to-br from-brand/20 to-transparent border border-brand/30 rounded-xl py-8 px-4">Build Better<br><span class="text-brand">Wrestlers</span></p>
-          <p class="font-display uppercase text-2xl text-center bg-gradient-to-br from-brand/20 to-transparent border border-brand/30 rounded-xl py-8 px-4">Build Better<br><span class="text-brand">People</span></p>
-          <p class="font-display uppercase text-2xl text-center bg-gradient-to-br from-brand/20 to-transparent border border-brand/30 rounded-xl py-8 px-4">Build a Stronger<br><span class="text-brand">Community</span></p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <article id="youth-wrestling" class="bg-ink-card border border-ink-line rounded-xl p-6 hover:border-brand/60 transition-colors scroll-mt-24">
+            <h3 class="font-head font-700 uppercase text-xl text-brand mb-1">Youth Wrestling in Augusta, GA</h3>
+            <p class="text-xs uppercase tracking-wide text-slate-400 mb-4">Elementary, middle school, and high school athletes</p>
+            <p class="text-slate-200 text-sm mb-4">Youth wrestlers build fundamentals, discipline, confidence, conditioning, and match awareness in a positive club environment.</p>
+            <ul class="space-y-1.5 text-slate-200 text-sm">
+              <li>Boys and girls welcome</li><li>First-time and experienced wrestlers</li><li>Folkstyle, Freestyle, and Greco-Roman skills</li>
+            </ul>
+          </article>
+          <article id="girls-wrestling" class="bg-ink-card border border-ink-line rounded-xl p-6 hover:border-brand/60 transition-colors scroll-mt-24">
+            <h3 class="font-head font-700 uppercase text-xl text-brand mb-1">Girls Wrestling Program in Augusta, GA</h3>
+            <p class="text-xs uppercase tracking-wide text-slate-400 mb-4">For female athletes</p>
+            <p class="text-slate-200 text-sm mb-4">A dedicated program developing female wrestlers in one of America's fastest-growing sports, with coaching for new wrestlers and competitors.</p>
+            <p class="text-xs uppercase tracking-wide text-brand font-semibold">All skill levels welcome</p>
+          </article>
+          <article id="beginner-wrestling" class="bg-ink-card border border-ink-line rounded-xl p-6 hover:border-brand/60 transition-colors scroll-mt-24">
+            <h3 class="font-head font-700 uppercase text-xl text-brand mb-1">Beginner Wrestling Classes</h3>
+            <p class="text-xs uppercase tracking-wide text-slate-400 mb-4">New to the mat</p>
+            <p class="text-slate-200 text-sm mb-4">Beginner wrestlers learn stance, motion, takedowns, defense, mat safety, and the habits needed to enjoy wrestling and improve.</p>
+            <ul class="space-y-1.5 text-slate-200 text-sm">
+              <li>Fundamentals &amp; stance</li><li>Athletic development</li><li>Confidence building</li>
+            </ul>
+          </article>
+          <article id="advanced-wrestling" class="bg-ink-card border border-ink-line rounded-xl p-6 hover:border-brand/60 transition-colors scroll-mt-24">
+            <h3 class="font-head font-700 uppercase text-xl text-brand mb-1">Intermediate and Advanced Wrestling in Augusta, GA</h3>
+            <p class="text-xs uppercase tracking-wide text-slate-400 mb-4">Developing and tournament-level athletes</p>
+            <p class="text-slate-200 text-sm mb-4">Intermediate and advanced wrestlers train chain wrestling, live wrestling, conditioning, situational wrestling, and state, regional, and national preparation.</p>
+            <ul class="space-y-1.5 text-slate-200 text-sm">
+              <li>Technique &amp; chain wrestling</li><li>Mental toughness</li><li>Competition preparation</li>
+            </ul>
+          </article>
+          <article id="private-lessons" class="bg-ink-card border border-ink-line rounded-xl p-6 hover:border-brand/60 transition-colors scroll-mt-24">
+            <h3 class="font-head font-700 uppercase text-xl text-brand mb-1">Private Wrestling Lessons in Augusta, GA</h3>
+            <p class="text-xs uppercase tracking-wide text-slate-400 mb-4">One-on-one coaching</p>
+            <p class="text-slate-200 text-sm mb-4">Private lessons help wrestlers address specific skills, prepare for competition, or accelerate progress with individualized instruction.</p>
+            <a href="https://calendar.app.google/YWEA7KkwjzbzRbXF7" target="_blank" rel="noopener noreferrer" class="text-brand font-semibold text-sm underline underline-offset-2">Book a private lesson <span class="sr-only">(opens in new window)</span> →</a>
+          </article>
+          <article id="free-sunday-practice" class="bg-ink-card border border-ink-line rounded-xl p-6 hover:border-brand/60 transition-colors scroll-mt-24">
+            <h3 class="font-head font-700 uppercase text-xl text-brand mb-1">Free Sunday CSRA Folkstyle Practice</h3>
+            <p class="text-xs uppercase tracking-wide text-slate-400 mb-4">Sundays • open to everyone</p>
+            <p class="text-slate-200 text-sm">Free folkstyle practice is open to wrestlers across the CSRA, including Augusta, Evans, Martinez, Grovetown, North Augusta, Aiken, and Fort Eisenhower. See the <a href="#schedule" class="text-brand underline underline-offset-2">schedule</a> for times.</p>
+          </article>
+        </div>
+        <p class="text-slate-400 text-sm mt-6">All programs are open to wrestlers of every age — placement is by experience level. Not sure where you fit? <a href="#contact" class="text-brand underline underline-offset-2">Reach out</a> and we'll help. You can also jump to <a href="#schedule" class="text-brand underline underline-offset-2">schedule</a> or <a href="#pricing" class="text-brand underline underline-offset-2">pricing</a>.</p>
+      </div>
+    </section>
+
+    <!-- ============ SCHEDULE ============ -->
+    <section id="schedule" class="bg-ink-soft py-20 sm:py-24 border-b border-ink-line">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="max-w-2xl mb-12">
+          <div class="section-rule mb-5"></div>
+          <h2 class="font-display uppercase text-4xl sm:text-5xl mb-4">Weekly Training Schedule</h2>
+          <p class="text-slate-300">Train Hard. Wrestle Tough. Get Better Together.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4">
+          <!-- Beginners -->
+          <div class="bg-ink-card border border-ink-line rounded-xl p-5">
+            <p class="font-display uppercase text-2xl mb-3">Beginners Program</p>
+            <ul class="space-y-1 text-slate-200">
+              <li class="flex justify-between gap-4"><span>Monday · Wednesday · Friday</span><span class="text-brand font-head font-700 whitespace-nowrap">5:00 PM</span></li>
+            </ul>
+          </div>
+          <!-- Intermediate -->
+          <div class="bg-ink-card border border-ink-line rounded-xl p-5">
+            <p class="font-display uppercase text-2xl mb-3">Intermediate Program</p>
+            <ul class="space-y-1 text-slate-200">
+              <li class="flex justify-between gap-4"><span>Monday · Wednesday</span><span class="text-brand font-head font-700 whitespace-nowrap">6:00 PM</span></li>
+              <li class="flex justify-between gap-4"><span>Tuesday · Thursday · Friday</span><span class="text-brand font-head font-700 whitespace-nowrap">5:00 PM</span></li>
+            </ul>
+          </div>
+          <!-- Girls Only -->
+          <div class="bg-ink-card border border-brand/40 rounded-xl p-5">
+            <p class="font-display uppercase text-2xl mb-3">Girls Program</p>
+            <ul class="space-y-1 text-slate-200">
+              <li class="flex justify-between gap-4"><span>Tuesday · Thursday</span><span class="text-brand font-head font-700 whitespace-nowrap">6:00–7:15 PM</span></li>
+            </ul>
+          </div>
+          <!-- Advanced Competition Team -->
+          <div class="bg-ink-card border border-ink-line rounded-xl p-5">
+            <p class="font-display uppercase text-2xl mb-3">Advanced Competition Team</p>
+            <ul class="space-y-1 text-slate-200">
+              <li class="flex justify-between gap-4"><span>Monday · Wednesday <span class="text-slate-400">— Middle School &amp; Beyond</span></span><span class="text-brand font-head font-700 whitespace-nowrap">7:15 PM</span></li>
+              <li class="flex justify-between gap-4"><span>Tuesday · Thursday <span class="text-slate-400">— Olympic Styles (freestyle &amp; Greco)</span></span><span class="text-brand font-head font-700 whitespace-nowrap">7:15 PM</span></li>
+              <li class="flex justify-between gap-4"><span>Friday <span class="text-slate-400">— Middle School &amp; Beyond</span></span><span class="text-brand font-head font-700 whitespace-nowrap">6:30 PM</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Sunday highlight -->
+        <div class="mt-4 bg-gradient-to-r from-brand/20 to-brand/5 border border-brand/50 rounded-xl p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center gap-6">
+          <div class="sm:flex-shrink-0">
+            <p class="font-display uppercase text-3xl sm:text-4xl">Sunday</p>
+            <p class="font-head uppercase text-brand tracking-wide">Free CSRA Folkstyle Practice • 2:00–4:00 PM</p>
+          </div>
+          <div class="sm:border-l sm:border-brand/30 sm:pl-6 flex-1">
+            <p class="text-slate-200 mb-3"><strong class="text-white">Open to all wrestlers in the CSRA</strong> — free for youth, middle school, high school, club wrestlers, beginners &amp; experienced athletes.</p>
+            <ul class="flex flex-wrap gap-x-5 gap-y-1 text-sm text-slate-300">
+              <li>✔ Technique instruction</li>
+              <li>✔ Live wrestling</li>
+              <li>✔ Situational training</li>
+              <li>✔ New training partners</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Live calendar link -->
+        <div class="mt-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-ink-card border border-ink-line rounded-xl p-6">
+          <p class="text-slate-300 text-sm sm:max-w-md">See our live calendar for the latest practice times, special events, and to <strong class="text-white">book a private lesson</strong>.</p>
+          <a href="https://calendar.app.google/YWEA7KkwjzbzRbXF7" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center justify-center gap-2 bg-brand text-ink font-head font-700 uppercase tracking-wide text-sm px-6 py-3 rounded-md hover:bg-brand-dark transition-colors whitespace-nowrap self-start sm:self-auto">
+            View Full Calendar
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- ============ ABOUT ============ -->
-    <section id="about" class="py-20 sm:py-24 border-b border-ink-line">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
-        <div>
+    <!-- ============ MEMBERSHIP & PAYMENTS ============ -->
+    <section id="pricing" class="py-20 sm:py-24 border-b border-ink-line">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="max-w-2xl mb-12">
           <div class="section-rule mb-5"></div>
-          <h2 class="font-display uppercase text-4xl sm:text-5xl mb-6">About Backyard Bullies</h2>
-          <p class="text-slate-300 mb-5">
-            Backyard Bullies Wrestling Club welcomes athletes from all backgrounds and experience levels.
-            Whether you're stepping on the mat for the first time or chasing a state title, we have a place for you.
-          </p>
-          <ul class="space-y-2 mb-6 text-slate-200">
-            <li class="flex gap-3"><span class="text-brand font-bold" aria-hidden="true">›</span> Wrestling for the first time</li>
-            <li class="flex gap-3"><span class="text-brand font-bold" aria-hidden="true">›</span> Preparing for your school season</li>
-            <li class="flex gap-3"><span class="text-brand font-bold" aria-hidden="true">›</span> Looking to compete at a higher level</li>
-            <li class="flex gap-3"><span class="text-brand font-bold" aria-hidden="true">›</span> Training for state or national competition</li>
+          <h2 class="font-display uppercase text-4xl sm:text-5xl mb-4">Membership &amp; Payments</h2>
+          <p class="text-slate-300">First class free, year-round training, and simple billing — we send an invoice by email, or you can pay in person. Call or text us to get started.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-5 mb-8">
+          <!-- Monthly membership rates -->
+          <article class="lg:col-span-2 bg-ink-card border border-ink-line rounded-xl p-6 flex flex-col">
+            <h3 class="font-head font-700 uppercase text-xl mb-1">Monthly Membership Rates</h3>
+            <p class="text-slate-400 text-sm mb-5">Pick the number of practices that fits your week — every program included.</p>
+            <ul class="divide-y divide-ink-line">
+              <li class="flex items-baseline justify-between py-3">
+                <span class="text-slate-200">2 practices per week</span>
+                <span class="font-display text-3xl text-brand">$90<span class="text-xs uppercase tracking-wide text-slate-400 font-body">/mo</span></span>
+              </li>
+              <li class="flex items-baseline justify-between py-3">
+                <span class="text-slate-200">3 practices per week</span>
+                <span class="font-display text-3xl text-brand">$115<span class="text-xs uppercase tracking-wide text-slate-400 font-body">/mo</span></span>
+              </li>
+              <li class="flex items-baseline justify-between py-3">
+                <span class="text-slate-200">4 practices per week</span>
+                <span class="font-display text-3xl text-brand">$130<span class="text-xs uppercase tracking-wide text-slate-400 font-body">/mo</span></span>
+              </li>
+              <li class="flex items-baseline justify-between py-3">
+                <span class="text-slate-200">5 practices per week</span>
+                <span class="font-display text-3xl text-brand">$150<span class="text-xs uppercase tracking-wide text-slate-400 font-body">/mo</span></span>
+              </li>
+            </ul>
+            <a href="tel:+17062500186"
+               class="mt-6 inline-flex items-center justify-center gap-2 bg-brand text-ink font-head font-700 uppercase text-sm px-5 py-3 rounded-md hover:bg-brand-dark transition-colors">
+              Call / Text to Enroll
+            </a>
+          </article>
+
+          <div class="flex flex-col gap-5">
+            <!-- Open mat / drop-in -->
+            <article class="bg-ink-card border border-ink-line rounded-xl p-6 flex flex-col flex-1">
+              <h3 class="font-head font-700 uppercase text-xl mb-1">Open Mat / Drop-In</h3>
+              <p class="text-slate-400 text-sm mb-4">Single session, any program.</p>
+              <p class="font-display text-4xl text-brand mb-1">$15</p>
+              <p class="text-xs uppercase tracking-wide text-slate-400 mb-6">per session</p>
+              <a href="https://checkout.square.site/merchant/MLTT3JBJQKJJ0/checkout/WXO7K52ZS4BHQTZK4USTYYZW" target="_blank" rel="noopener noreferrer"
+                 class="mt-auto inline-flex items-center justify-center gap-2 bg-brand text-ink font-head font-700 uppercase text-sm px-5 py-3 rounded-md hover:bg-brand-dark transition-colors">
+                Pay Drop-In Online
+              </a>
+              <p class="text-slate-400 text-xs mt-3">Or pay in person at the door.</p>
+            </article>
+
+            <!-- Private lessons -->
+            <article class="bg-ink-card border border-ink-line rounded-xl p-6 flex flex-col flex-1">
+              <h3 class="font-head font-700 uppercase text-xl mb-1">Private Lessons</h3>
+              <p class="text-slate-400 text-sm mb-4">One-on-one coaching. Book a session on our calendar, or call for rates.</p>
+              <a href="https://calendar.app.google/YWEA7KkwjzbzRbXF7" target="_blank" rel="noopener noreferrer"
+                 class="mt-auto inline-flex items-center justify-center gap-2 border border-brand/60 text-brand font-head font-700 uppercase text-sm px-5 py-3 rounded-md hover:bg-brand hover:text-ink transition-colors">
+                Book a Private Lesson
+              </a>
+            </article>
+          </div>
+        </div>
+
+        <!-- Discounts -->
+        <div class="bg-gradient-to-r from-brand/15 to-brand/5 border border-brand/40 rounded-xl p-6 mb-6 flex flex-col sm:flex-row sm:items-center gap-5">
+          <p class="font-head uppercase text-brand text-sm tracking-wide sm:w-40 sm:flex-shrink-0">Discounts Available</p>
+          <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-2 text-slate-200 text-sm flex-1">
+            <li class="flex gap-3"><span class="text-brand font-bold" aria-hidden="true">★</span> <span><strong class="text-white">U.S. Military Appreciation Discount</strong> — ask our admin about this discount.</span></li>
+            <li class="flex gap-3"><span class="text-brand font-bold" aria-hidden="true">★</span> <span><strong class="text-white">Sibling Discount</strong> — ask our admin about this discount.</span></li>
           </ul>
-          <p class="text-slate-300">
-            Founded in 2023, Backyard Bullies has quickly become a home for wrestlers throughout the CSRA who want
-            high-level instruction, challenging training, and a supportive team culture.
-          </p>
         </div>
-        <div class="relative">
-          <img src="images/about-new.jpg" alt="Backyard Bullies coaches and young wrestlers gathered together in the club's training room" class="rounded-xl w-full aspect-[4/3] object-cover shadow-2xl shadow-black/50 border border-ink-line" loading="lazy" />
-          <div class="absolute -bottom-4 -left-4 bg-brand text-ink font-display uppercase text-xl px-5 py-3 rounded-lg shadow-lg">Est. 2023</div>
+
+        <div class="bg-ink-card border border-ink-line rounded-xl p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <div class="flex-1">
+            <p class="font-head uppercase text-brand text-sm tracking-wide mb-1">How to pay</p>
+            <p class="text-slate-300 text-sm">We keep it simple — we'll <strong class="text-white">send an invoice by email</strong>, or you can <strong class="text-white">pay in person</strong>. Questions about pricing, discounts, or getting signed up? Call or text <a href="tel:+17062500186" class="text-brand underline underline-offset-2">706-250-0186</a>.</p>
+          </div>
+          <a href="tel:+17062500186" class="inline-flex items-center gap-2 bg-brand text-ink font-head font-700 uppercase text-sm px-5 py-3 rounded-md hover:bg-brand-dark transition-colors whitespace-nowrap">
+            Call / Text Us
+          </a>
         </div>
+      </div>
+    </section>
+
+    <!-- ============ REVIEWS ============ -->
+    <section id="reviews" class="bg-ink-soft py-20 sm:py-24 border-b border-ink-line">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="max-w-2xl mb-12">
+          <div class="section-rule mb-5"></div>
+          <h2 class="font-display uppercase text-4xl sm:text-5xl mb-4">Reviews and Testimonials</h2>
+          <p class="text-slate-300">Families and wrestlers recommend Backyard Bullies for coaching quality, athlete growth, and a welcoming room for beginners through experienced competitors.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4 mb-8">
+          <p class="bg-ink-card border border-ink-line rounded-xl p-5 font-head uppercase text-xl text-white">Rated <span class="text-brand">5.0</span> on Google from 18 reviews.</p>
+          <p class="bg-ink-card border border-ink-line rounded-xl p-5 font-head uppercase text-xl text-white"><span class="text-brand">100%</span> recommended on Facebook from 5 reviews.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-5">
+          <article class="bg-ink-card border border-ink-line rounded-xl p-6">
+            <div class="flex items-center gap-4 mb-5">
+              <div class="w-12 h-12 rounded-full bg-brand text-ink font-head font-700 flex items-center justify-center" aria-hidden="true">KH</div>
+              <div>
+                <h3 class="font-head font-700 uppercase text-xl text-white">Katie H.</h3>
+                <p class="text-xs uppercase tracking-wide text-brand">Recommended on Facebook · October 2023</p>
+              </div>
+            </div>
+            <blockquote class="text-slate-300 text-sm leading-6">“My 4 kids have learned so much. The amount of growth I’ve seen is incredible. The coaches are extremely knowledgeable and caring.”</blockquote>
+            <a href="https://www.facebook.com/share/p/1KKSTi1Xim/" target="_blank" rel="noopener noreferrer" class="inline-flex mt-5 text-brand font-semibold text-sm underline underline-offset-2">Read Katie's recommendation <span class="sr-only">(opens in new window)</span> →</a>
+          </article>
+
+          <article class="bg-ink-card border border-ink-line rounded-xl p-6">
+            <div class="flex items-center gap-4 mb-5">
+              <div class="w-12 h-12 rounded-full bg-brand text-ink font-head font-700 flex items-center justify-center" aria-hidden="true">FM</div>
+              <div>
+                <h3 class="font-head font-700 uppercase text-xl text-white">Frank M.</h3>
+                <p class="text-xs uppercase tracking-wide text-brand">★★★★★ Google review · 3 months ago</p>
+              </div>
+            </div>
+            <blockquote class="text-slate-300 text-sm leading-6">“If you ever considered wrestling for your children, Backyard Bullies is the place to start! You will find world class instruction.”</blockquote>
+            <a href="https://share.google/U9OB7XFtm8iSvi0ec" target="_blank" rel="noopener noreferrer" class="inline-flex mt-5 text-brand font-semibold text-sm underline underline-offset-2">Read Frank's review <span class="sr-only">(opens in new window)</span> →</a>
+          </article>
+
+          <article class="bg-ink-card border border-ink-line rounded-xl p-6">
+            <div class="flex items-center gap-4 mb-5">
+              <div class="w-12 h-12 rounded-full bg-brand text-ink font-head font-700 flex items-center justify-center" aria-hidden="true">JG</div>
+              <div>
+                <h3 class="font-head font-700 uppercase text-xl text-white">James G.</h3>
+                <p class="text-xs uppercase tracking-wide text-brand">★★★★★ Google review</p>
+              </div>
+            </div>
+            <blockquote class="text-slate-300 text-sm leading-6">“Good place to wrestle for beginners all the way up to state champions.”</blockquote>
+            <a href="https://share.google/j5w1vYfewrY760xVf" target="_blank" rel="noopener noreferrer" class="inline-flex mt-5 text-brand font-semibold text-sm underline underline-offset-2">Read James's review <span class="sr-only">(opens in new window)</span> →</a>
+          </article>
+        </div>
+
+        <p class="text-slate-400 text-sm mt-6">Families who have trained with Backyard Bullies are encouraged to leave an honest review on <a href="https://www.google.com/maps/place/Backyard+Bullies+Wrestling+Club,+LLC/@33.5025076,-82.089833,17z/data=!4m8!3m7!1s0x88f9d3fb76b49ec9:0x3ff9277334633790!8m2!3d33.5025032!4d-82.0872581!9m1!1b1!16s%2Fg%2F11k9sbzdwf?hl=en-US&amp;entry=ttu&amp;g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="text-brand underline underline-offset-2">Google Business Profile<span class="sr-only"> (opens in new window)</span></a> or <a href="https://www.facebook.com/BackyardBulliesWC/reviews" target="_blank" rel="noopener noreferrer" class="text-brand underline underline-offset-2">Facebook<span class="sr-only"> (opens in new window)</span></a>.</p>
       </div>
     </section>
 
     <!-- ============ COACHES ============ -->
-    <section id="coaches" class="bg-ink-soft py-20 sm:py-24 border-b border-ink-line">
+    <section id="coaches" class="py-20 sm:py-24 border-b border-ink-line">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="max-w-2xl mb-12">
           <div class="section-rule mb-5"></div>
           <h2 class="font-display uppercase text-4xl sm:text-5xl mb-4">Meet the Coaches</h2>
           <p class="text-slate-300">Experienced coaches dedicated to developing better wrestlers and better people, on and off the mat.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-8">
+          <p class="bg-ink-card border border-ink-line rounded-lg p-4 text-sm text-slate-200"><strong class="block text-brand font-head uppercase text-base mb-1">All-Army Experience</strong> Coached by former All-Army wrestler Justin Boyden.</p>
+          <p class="bg-ink-card border border-ink-line rounded-lg p-4 text-sm text-slate-200"><strong class="block text-brand font-head uppercase text-base mb-1">State Champion Coach</strong> Assistant coach Dale Schmacht is a former Illinois state champion.</p>
+          <p class="bg-ink-card border border-ink-line rounded-lg p-4 text-sm text-slate-200"><strong class="block text-brand font-head uppercase text-base mb-1">3x NCAA All-American</strong> Coach Schmacht is a three-time NCAA Division III All-American.</p>
+          <p class="bg-ink-card border border-ink-line rounded-lg p-4 text-sm text-slate-200"><strong class="block text-brand font-head uppercase text-base mb-1">Styles Taught</strong> Folkstyle, Freestyle, and Greco-Roman wrestling.</p>
         </div>
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -435,353 +698,63 @@
       </div>
     </section>
 
-    <!-- ============ PROGRAMS ============ -->
-    <section id="programs" class="py-20 sm:py-24 border-b border-ink-line">
+    <!-- ============ FAQ ============ -->
+    <section id="faq" class="bg-ink-soft py-20 sm:py-24 border-b border-ink-line">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="max-w-2xl mb-12">
           <div class="section-rule mb-5"></div>
-          <h2 class="font-display uppercase text-4xl sm:text-5xl mb-4">Programs</h2>
-          <p class="text-slate-300">Year-round training for every age and skill level. Your first class is always free.</p>
+          <h2 class="font-display uppercase text-4xl sm:text-5xl mb-4">Wrestling FAQ</h2>
+          <p class="text-slate-300">Answers to common questions from parents and athletes looking for wrestling in Augusta, GA and across the CSRA.</p>
         </div>
 
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          <!-- Beginners -->
-          <article class="bg-ink-card border border-ink-line rounded-xl p-6 hover:border-brand/60 transition-colors">
-            <h3 class="font-head font-700 uppercase text-xl text-brand mb-1">Beginners Program</h3>
-            <p class="text-xs uppercase tracking-wide text-slate-400 mb-4">New to the mat</p>
-            <ul class="space-y-1.5 text-slate-200 text-sm">
-              <li>Fundamentals &amp; stance</li><li>Athletic development</li><li>Confidence building</li><li>First-time wrestlers welcome</li>
-            </ul>
+        <div class="grid md:grid-cols-2 gap-5">
+          <article class="bg-ink-card border border-ink-line rounded-xl p-6">
+            <h3 class="font-head font-700 uppercase text-xl text-brand mb-3">Is Backyard Bullies good for beginner wrestlers?</h3>
+            <p class="text-slate-300 text-sm">Yes. Beginner wrestlers learn stance, motion, basic attacks, defense, mat safety, and how practice works. Coaches focus on confidence, discipline, and steady progress, not throwing new athletes into situations before they are ready. Your first class is free.</p>
           </article>
-          <!-- Intermediate -->
-          <article class="bg-ink-card border border-ink-line rounded-xl p-6 hover:border-brand/60 transition-colors">
-            <h3 class="font-head font-700 uppercase text-xl text-brand mb-1">Intermediate Program</h3>
-            <p class="text-xs uppercase tracking-wide text-slate-400 mb-4">Developing competitors</p>
-            <ul class="space-y-1.5 text-slate-200 text-sm">
-              <li>Technique &amp; chain wrestling</li><li>Conditioning</li><li>Match awareness</li><li>Competitive mindset</li>
-            </ul>
+          <article class="bg-ink-card border border-ink-line rounded-xl p-6">
+            <h3 class="font-head font-700 uppercase text-xl text-brand mb-3">What age can kids start wrestling?</h3>
+            <p class="text-slate-300 text-sm">Backyard Bullies works with youth wrestlers, middle school wrestlers, high school wrestlers, and adults. Younger athletes are placed by readiness, attention span, and experience level. If you are not sure where your child fits, call or text and we will help you choose the right practice.</p>
           </article>
-          <!-- Advanced Competition Team -->
-          <article class="bg-ink-card border border-ink-line rounded-xl p-6 hover:border-brand/60 transition-colors">
-            <h3 class="font-head font-700 uppercase text-xl text-brand mb-1">Advanced Competition Team</h3>
-            <p class="text-xs uppercase tracking-wide text-slate-400 mb-4">Tournament-level athletes</p>
-            <ul class="space-y-1.5 text-slate-200 text-sm">
-              <li>College-level techniques</li><li>Live wrestling</li><li>Mental toughness</li><li>State, regional &amp; national prep</li>
-            </ul>
+          <article class="bg-ink-card border border-ink-line rounded-xl p-6">
+            <h3 class="font-head font-700 uppercase text-xl text-brand mb-3">Do you offer girls wrestling in Augusta?</h3>
+            <p class="text-slate-300 text-sm">Yes. Backyard Bullies offers a girls wrestling program in Augusta, GA for female athletes of all skill levels. Girls can build fundamentals, train with serious partners, and prepare for school, club, and tournament competition.</p>
           </article>
-          <!-- Girls Only -->
-          <article class="bg-gradient-to-br from-brand/15 to-ink-card border border-brand/40 rounded-xl p-6">
-            <h3 class="font-head font-700 uppercase text-xl text-brand mb-1">Girls Program</h3>
-            <p class="text-xs uppercase tracking-wide text-slate-300 mb-4">For female athletes</p>
-            <p class="text-slate-200 text-sm mb-3">A dedicated program developing female wrestlers in one of America's fastest-growing sports.</p>
-            <p class="text-xs uppercase tracking-wide text-brand font-semibold">All skill levels welcome</p>
+          <article class="bg-ink-card border border-ink-line rounded-xl p-6">
+            <h3 class="font-head font-700 uppercase text-xl text-brand mb-3">Do you train middle school and high school wrestlers?</h3>
+            <p class="text-slate-300 text-sm">Yes. Middle school and high school wrestlers train technique, conditioning, live wrestling, situational wrestling, and competition skills. Advanced athletes can prepare for folkstyle season, freestyle and Greco-Roman events, and higher-level tournaments.</p>
           </article>
-          <!-- Private -->
-          <article class="bg-ink-card border border-ink-line rounded-xl p-6 hover:border-brand/60 transition-colors">
-            <h3 class="font-head font-700 uppercase text-xl text-brand mb-1">Private Lessons</h3>
-            <p class="text-xs uppercase tracking-wide text-slate-400 mb-4">One-on-one coaching</p>
-            <p class="text-slate-200 text-sm mb-4">Accelerate growth and address specific needs with individualized instruction.</p>
-            <a href="https://calendar.app.google/YWEA7KkwjzbzRbXF7" target="_blank" rel="noopener noreferrer" class="text-brand font-semibold text-sm underline underline-offset-2">Book a private lesson →</a>
+          <article class="bg-ink-card border border-ink-line rounded-xl p-6">
+            <h3 class="font-head font-700 uppercase text-xl text-brand mb-3">What is the difference between beginner, intermediate, and advanced practices?</h3>
+            <p class="text-slate-300 text-sm">Beginner practices focus on fundamentals and confidence. Intermediate practices add more technique, chain wrestling, conditioning, and match awareness. Advanced practices are for wrestlers preparing for tougher competition, live situations, and state, regional, or national goals.</p>
           </article>
-          <!-- Free Sunday -->
-          <article class="bg-ink-card border border-dashed border-brand/50 rounded-xl p-6">
-            <h3 class="font-head font-700 uppercase text-xl text-brand mb-1">Free CSRA Folkstyle Practice</h3>
-            <p class="text-xs uppercase tracking-wide text-slate-400 mb-4">Sundays • open to everyone</p>
-            <p class="text-slate-200 text-sm">Open to <strong>all wrestlers in the CSRA</strong> — beginner to experienced, every age. Always free. See the <a href="#schedule" class="text-brand underline underline-offset-2">schedule</a> for times.</p>
+          <article class="bg-ink-card border border-ink-line rounded-xl p-6">
+            <h3 class="font-head font-700 uppercase text-xl text-brand mb-3">What days and times are practices?</h3>
+            <p class="text-slate-300 text-sm">Practices run throughout the week, with beginner, intermediate, girls, and advanced sessions scheduled Monday through Friday. Free CSRA Folkstyle Practice is Sunday from 2:00-4:00 PM. Check the <a href="#schedule" class="text-brand underline underline-offset-2">weekly schedule</a> for the current breakdown.</p>
+          </article>
+          <article class="bg-ink-card border border-ink-line rounded-xl p-6">
+            <h3 class="font-head font-700 uppercase text-xl text-brand mb-3">How much does wrestling training cost?</h3>
+            <p class="text-slate-300 text-sm">Monthly membership starts at $90 for two practices per week and goes up to $150 for five practices per week. Drop-in sessions are $15. See <a href="#pricing" class="text-brand underline underline-offset-2">membership and pricing</a> for the full list.</p>
+          </article>
+          <article class="bg-ink-card border border-ink-line rounded-xl p-6">
+            <h3 class="font-head font-700 uppercase text-xl text-brand mb-3">Can my child try a class before signing up?</h3>
+            <p class="text-slate-300 text-sm">Yes. Your first class is free so your child can meet the coaches, try practice, and see whether Backyard Bullies is a good fit. Call or text before you come in so we can point you to the right session.</p>
           </article>
         </div>
-        <p class="text-slate-400 text-sm mt-6">All programs are open to wrestlers of every age — placement is by experience level. Not sure where you fit? <a href="#contact" class="text-brand underline underline-offset-2">Reach out</a> and we'll help.</p>
-      </div>
-    </section>
-
-    <!-- ============ SCHEDULE ============ -->
-    <section id="schedule" class="bg-ink-soft py-20 sm:py-24 border-b border-ink-line">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="max-w-2xl mb-12">
-          <div class="section-rule mb-5"></div>
-          <h2 class="font-display uppercase text-4xl sm:text-5xl mb-4">Weekly Training Schedule</h2>
-          <p class="text-slate-300">Train Hard. Wrestle Tough. Get Better Together.</p>
-        </div>
-
-        <div class="grid sm:grid-cols-2 gap-4">
-          <!-- Beginners -->
-          <div class="bg-ink-card border border-ink-line rounded-xl p-5">
-            <p class="font-display uppercase text-2xl mb-3">Beginners Program</p>
-            <ul class="space-y-1 text-slate-200">
-              <li class="flex justify-between gap-4"><span>Monday · Wednesday · Friday</span><span class="text-brand font-head font-700 whitespace-nowrap">5:00 PM</span></li>
-            </ul>
-          </div>
-          <!-- Intermediate -->
-          <div class="bg-ink-card border border-ink-line rounded-xl p-5">
-            <p class="font-display uppercase text-2xl mb-3">Intermediate Program</p>
-            <ul class="space-y-1 text-slate-200">
-              <li class="flex justify-between gap-4"><span>Monday · Wednesday</span><span class="text-brand font-head font-700 whitespace-nowrap">6:00 PM</span></li>
-              <li class="flex justify-between gap-4"><span>Tuesday · Thursday · Friday</span><span class="text-brand font-head font-700 whitespace-nowrap">5:00 PM</span></li>
-            </ul>
-          </div>
-          <!-- Girls Only -->
-          <div class="bg-ink-card border border-brand/40 rounded-xl p-5">
-            <p class="font-display uppercase text-2xl mb-3">Girls Program</p>
-            <ul class="space-y-1 text-slate-200">
-              <li class="flex justify-between gap-4"><span>Tuesday · Thursday</span><span class="text-brand font-head font-700 whitespace-nowrap">6:00–7:15 PM</span></li>
-            </ul>
-          </div>
-          <!-- Advanced Competition Team -->
-          <div class="bg-ink-card border border-ink-line rounded-xl p-5">
-            <p class="font-display uppercase text-2xl mb-3">Advanced Competition Team</p>
-            <ul class="space-y-1 text-slate-200">
-              <li class="flex justify-between gap-4"><span>Monday · Wednesday <span class="text-slate-400">— Middle School &amp; Beyond</span></span><span class="text-brand font-head font-700 whitespace-nowrap">7:15 PM</span></li>
-              <li class="flex justify-between gap-4"><span>Tuesday · Thursday <span class="text-slate-400">— Olympic Styles (freestyle &amp; Greco)</span></span><span class="text-brand font-head font-700 whitespace-nowrap">7:15 PM</span></li>
-              <li class="flex justify-between gap-4"><span>Friday <span class="text-slate-400">— Middle School &amp; Beyond</span></span><span class="text-brand font-head font-700 whitespace-nowrap">6:30 PM</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Sunday highlight -->
-        <div class="mt-4 bg-gradient-to-r from-brand/20 to-brand/5 border border-brand/50 rounded-xl p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center gap-6">
-          <div class="sm:flex-shrink-0">
-            <p class="font-display uppercase text-3xl sm:text-4xl">Sunday</p>
-            <p class="font-head uppercase text-brand tracking-wide">Free CSRA Folkstyle Practice • 2:00–4:00 PM</p>
-          </div>
-          <div class="sm:border-l sm:border-brand/30 sm:pl-6 flex-1">
-            <p class="text-slate-200 mb-3"><strong class="text-white">Open to all wrestlers in the CSRA</strong> — free for youth, middle school, high school, club wrestlers, beginners &amp; experienced athletes.</p>
-            <ul class="flex flex-wrap gap-x-5 gap-y-1 text-sm text-slate-300">
-              <li>✔ Technique instruction</li>
-              <li>✔ Live wrestling</li>
-              <li>✔ Situational training</li>
-              <li>✔ New training partners</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Live calendar link -->
-        <div class="mt-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-ink-card border border-ink-line rounded-xl p-6">
-          <p class="text-slate-300 text-sm sm:max-w-md">See our live calendar for the latest practice times, special events, and to <strong class="text-white">book a private lesson</strong>.</p>
-          <a href="https://calendar.app.google/YWEA7KkwjzbzRbXF7" target="_blank" rel="noopener noreferrer"
-             class="inline-flex items-center justify-center gap-2 bg-brand text-ink font-head font-700 uppercase tracking-wide text-sm px-6 py-3 rounded-md hover:bg-brand-dark transition-colors whitespace-nowrap self-start sm:self-auto">
-            View Full Calendar
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ MEMBERSHIP & PAYMENTS ============ -->
-    <section id="pricing" class="py-20 sm:py-24 border-b border-ink-line">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="max-w-2xl mb-12">
-          <div class="section-rule mb-5"></div>
-          <h2 class="font-display uppercase text-4xl sm:text-5xl mb-4">Membership &amp; Payments</h2>
-          <p class="text-slate-300">First class free, year-round training, and simple billing — we send an invoice by email, or you can pay in person. Call or text us to get started.</p>
-        </div>
-
-        <div class="grid lg:grid-cols-3 gap-5 mb-8">
-          <!-- Monthly membership rates -->
-          <article class="lg:col-span-2 bg-ink-card border border-ink-line rounded-xl p-6 flex flex-col">
-            <h3 class="font-head font-700 uppercase text-xl mb-1">Monthly Membership Rates</h3>
-            <p class="text-slate-400 text-sm mb-5">Pick the number of practices that fits your week — every program included.</p>
-            <ul class="divide-y divide-ink-line">
-              <li class="flex items-baseline justify-between py-3">
-                <span class="text-slate-200">2 practices per week</span>
-                <span class="font-display text-3xl text-brand">$90<span class="text-xs uppercase tracking-wide text-slate-400 font-body">/mo</span></span>
-              </li>
-              <li class="flex items-baseline justify-between py-3">
-                <span class="text-slate-200">3 practices per week</span>
-                <span class="font-display text-3xl text-brand">$115<span class="text-xs uppercase tracking-wide text-slate-400 font-body">/mo</span></span>
-              </li>
-              <li class="flex items-baseline justify-between py-3">
-                <span class="text-slate-200">4 practices per week</span>
-                <span class="font-display text-3xl text-brand">$130<span class="text-xs uppercase tracking-wide text-slate-400 font-body">/mo</span></span>
-              </li>
-              <li class="flex items-baseline justify-between py-3">
-                <span class="text-slate-200">5 practices per week</span>
-                <span class="font-display text-3xl text-brand">$150<span class="text-xs uppercase tracking-wide text-slate-400 font-body">/mo</span></span>
-              </li>
-            </ul>
-            <a href="tel:+17062500186"
-               class="mt-6 inline-flex items-center justify-center gap-2 bg-brand text-ink font-head font-700 uppercase text-sm px-5 py-3 rounded-md hover:bg-brand-dark transition-colors">
-              Call / Text to Enroll
-            </a>
-          </article>
-
-          <div class="flex flex-col gap-5">
-            <!-- Open mat / drop-in -->
-            <article class="bg-ink-card border border-ink-line rounded-xl p-6 flex flex-col flex-1">
-              <h3 class="font-head font-700 uppercase text-xl mb-1">Open Mat / Drop-In</h3>
-              <p class="text-slate-400 text-sm mb-4">Single session, any program.</p>
-              <p class="font-display text-4xl text-brand mb-1">$15</p>
-              <p class="text-xs uppercase tracking-wide text-slate-400 mb-6">per session</p>
-              <a href="https://checkout.square.site/merchant/MLTT3JBJQKJJ0/checkout/WXO7K52ZS4BHQTZK4USTYYZW" target="_blank" rel="noopener noreferrer"
-                 class="mt-auto inline-flex items-center justify-center gap-2 bg-brand text-ink font-head font-700 uppercase text-sm px-5 py-3 rounded-md hover:bg-brand-dark transition-colors">
-                Pay Drop-In Online
-              </a>
-              <p class="text-slate-400 text-xs mt-3">Or pay in person at the door.</p>
-            </article>
-
-            <!-- Private lessons -->
-            <article class="bg-ink-card border border-ink-line rounded-xl p-6 flex flex-col flex-1">
-              <h3 class="font-head font-700 uppercase text-xl mb-1">Private Lessons</h3>
-              <p class="text-slate-400 text-sm mb-4">One-on-one coaching. Book a session on our calendar, or call for rates.</p>
-              <a href="https://calendar.app.google/YWEA7KkwjzbzRbXF7" target="_blank" rel="noopener noreferrer"
-                 class="mt-auto inline-flex items-center justify-center gap-2 border border-brand/60 text-brand font-head font-700 uppercase text-sm px-5 py-3 rounded-md hover:bg-brand hover:text-ink transition-colors">
-                Book a Private Lesson
-              </a>
-            </article>
-          </div>
-        </div>
-
-        <!-- Discounts -->
-        <div class="bg-gradient-to-r from-brand/15 to-brand/5 border border-brand/40 rounded-xl p-6 mb-6 flex flex-col sm:flex-row sm:items-center gap-5">
-          <p class="font-head uppercase text-brand text-sm tracking-wide sm:w-40 sm:flex-shrink-0">Discounts Available</p>
-          <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-2 text-slate-200 text-sm flex-1">
-            <li class="flex gap-3"><span class="text-brand font-bold" aria-hidden="true">★</span> <span><strong class="text-white">U.S. Military Appreciation Discount</strong> — ask our admin about this discount.</span></li>
-            <li class="flex gap-3"><span class="text-brand font-bold" aria-hidden="true">★</span> <span><strong class="text-white">Sibling Discount</strong> — ask our admin about this discount.</span></li>
-          </ul>
-        </div>
-
-        <div class="bg-ink-card border border-ink-line rounded-xl p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-          <div class="flex-1">
-            <p class="font-head uppercase text-brand text-sm tracking-wide mb-1">How to pay</p>
-            <p class="text-slate-300 text-sm">We keep it simple — we'll <strong class="text-white">send an invoice by email</strong>, or you can <strong class="text-white">pay in person</strong>. Questions about pricing, discounts, or getting signed up? Call or text <a href="tel:+17062500186" class="text-brand underline underline-offset-2">706-250-0186</a>.</p>
-          </div>
-          <a href="tel:+17062500186" class="inline-flex items-center gap-2 bg-brand text-ink font-head font-700 uppercase text-sm px-5 py-3 rounded-md hover:bg-brand-dark transition-colors whitespace-nowrap">
-            Call / Text Us
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ TEAM STORE ============ -->
-    <section id="store" class="relative overflow-hidden py-20 sm:py-24 border-b border-ink-line bg-gradient-to-br from-brand/15 via-ink to-ink">
-      <!-- faint brand watermark (decorative) -->
-      <img src="images/logo.jpg" alt="" aria-hidden="true"
-           class="pointer-events-none select-none absolute -right-20 -bottom-24 w-[460px] max-w-none rounded-full opacity-[0.05]" />
-
-      <div class="relative max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
-        <!-- Product montage -->
-        <ul class="order-2 lg:order-1 grid grid-cols-3 gap-3">
-          <li class="bg-white rounded-lg p-2 aspect-square flex items-center justify-center"><img src="images/store/singlet-blue.jpg" alt="Backyard Bullies blue team singlet" class="max-h-full w-auto object-contain" loading="lazy" /></li>
-          <li class="bg-white rounded-lg p-2 aspect-square flex items-center justify-center"><img src="images/store/hoodie.jpg" alt="Backyard Bullies logo hoodie" class="max-h-full w-auto object-contain" loading="lazy" /></li>
-          <li class="bg-white rounded-lg p-2 aspect-square flex items-center justify-center"><img src="images/store/singlet-pink.jpg" alt="Backyard Bullies pink team singlet" class="max-h-full w-auto object-contain" loading="lazy" /></li>
-          <li class="bg-white rounded-lg p-2 aspect-square flex items-center justify-center"><img src="images/store/windbreaker.jpg" alt="Backyard Bullies sublimated windbreaker jacket" class="max-h-full w-auto object-contain" loading="lazy" /></li>
-          <li class="bg-white rounded-lg p-2 aspect-square flex items-center justify-center"><img src="images/store/headgear.jpg" alt="Backyard Bullies wrestling headgear" class="max-h-full w-auto object-contain" loading="lazy" /></li>
-          <li class="bg-white rounded-lg p-2 aspect-square flex items-center justify-center"><img src="images/store/gearbag.jpg" alt="Backyard Bullies team gear bag" class="max-h-full w-auto object-contain" loading="lazy" /></li>
-        </ul>
-
-        <!-- Copy + CTA -->
-        <div class="order-1 lg:order-2">
-          <div class="section-rule mb-5"></div>
-          <h2 class="font-display uppercase text-4xl sm:text-5xl mb-4">Rep the Bullies</h2>
-          <p class="text-lg text-slate-300 mb-3">Gear up in official Backyard Bullies apparel — custom singlets, hoodies, warmups, tees, gear bags, and headgear, all repping the team.</p>
-          <p class="text-slate-400 text-sm mb-8">Designs and sizes are managed in our online team store. Store windows open periodically — check current availability there.</p>
-          <a href="https://backyardbullies.itemorder.com/shop/home/" target="_blank" rel="noopener noreferrer"
-             class="inline-flex items-center gap-2 bg-brand text-ink font-head font-700 uppercase tracking-wide text-base px-7 py-3.5 rounded-md hover:bg-brand-dark transition-colors">
-            Shop the Team Store
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-          </a>
-          <p class="text-xs text-slate-400 mt-3">Opens in a new tab · powered by Gold Medal Gear</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ SPONSORS ============ -->
-    <section id="sponsors" class="py-20 sm:py-24 border-b border-ink-line">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="max-w-2xl mb-12">
-          <div class="section-rule mb-5"></div>
-          <h2 class="font-display uppercase text-4xl sm:text-5xl mb-4">Thank You Sponsors</h2>
-          <p class="text-slate-300">Backyard Bullies is supported by local businesses and community partners who help keep wrestling growing across the CSRA.</p>
-        </div>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-5 auto-rows-fr gap-5">
-          <a href="https://theathleticstandard.com/" target="_blank" rel="noopener noreferrer"
-             class="group bg-ink-card border border-ink-line rounded-xl p-5 min-h-64 h-full flex flex-col justify-between hover:border-brand/70 transition-colors">
-            <span class="h-32 bg-white rounded-lg p-4 flex items-center justify-center">
-              <img src="images/sponsors/the-athletic-standard.jpg" alt="The Athletic Standard logo" class="max-h-28 w-auto object-contain" loading="lazy" />
-            </span>
-            <span class="font-head font-700 uppercase text-xl leading-tight text-white group-hover:text-brand transition-colors">The Athletic Standard<span class="sr-only"> (opens in new window)</span></span>
-            <span class="text-xs uppercase tracking-wide text-brand font-semibold">Sponsor</span>
-          </a>
-
-          <a href="https://letstalkaugusta.com/" target="_blank" rel="noopener noreferrer"
-             class="group bg-ink-card border border-ink-line rounded-xl p-5 min-h-64 h-full flex flex-col justify-between hover:border-brand/70 transition-colors">
-            <span class="h-32 bg-white rounded-lg p-4 flex items-center justify-center">
-              <img src="images/sponsors/lets-talk-augusta.webp" alt="Let's Talk Augusta logo" class="max-h-28 w-auto object-contain" loading="lazy" />
-            </span>
-            <span class="font-head font-700 uppercase text-xl leading-tight text-white group-hover:text-brand transition-colors">Let's Talk Augusta<span class="sr-only"> (opens in new window)</span></span>
-            <span class="text-xs uppercase tracking-wide text-brand font-semibold">Sponsor</span>
-          </a>
-
-          <a href="https://www.rmtus.com/" target="_blank" rel="noopener noreferrer"
-             class="group bg-ink-card border border-ink-line rounded-xl p-5 min-h-64 h-full flex flex-col justify-between hover:border-brand/70 transition-colors">
-            <span class="h-32 bg-white rounded-lg p-4 flex items-center justify-center">
-              <img src="images/sponsors/revolution-machine-tools.png" alt="Revolution Machine Tools logo" class="max-h-28 w-auto object-contain" loading="lazy" />
-            </span>
-            <span class="font-head font-700 uppercase text-xl leading-tight text-white group-hover:text-brand transition-colors">Revolution Machine Tools<span class="sr-only"> (opens in new window)</span></span>
-            <span class="text-xs uppercase tracking-wide text-brand font-semibold">Sponsor</span>
-          </a>
-
-          <a href="https://www.bigwavepoolandpatio.com/" target="_blank" rel="noopener noreferrer"
-             class="group bg-ink-card border border-ink-line rounded-xl p-5 min-h-64 h-full flex flex-col justify-between hover:border-brand/70 transition-colors">
-            <span class="h-32 bg-white rounded-lg p-4 flex items-center justify-center">
-              <img src="images/sponsors/big-wave-pool-patio.png" alt="Big Wave Pool and Patio logo" class="max-h-28 w-auto object-contain" loading="lazy" />
-            </span>
-            <span class="font-head font-700 uppercase text-xl leading-tight text-white group-hover:text-brand transition-colors">Big Wave Pool &amp; Patio<span class="sr-only"> (opens in new window)</span></span>
-            <span class="text-xs uppercase tracking-wide text-brand font-semibold">Sponsor</span>
-          </a>
-
-          <article class="bg-ink-card border border-ink-line rounded-xl p-5 min-h-64 h-full flex flex-col justify-between">
-            <span class="h-32 bg-white rounded-lg p-4 flex items-center justify-center">
-              <img src="images/sponsors/sandman-of-charlotte-clean.png" alt="Sandman of Charlotte logo" class="max-h-28 w-auto object-contain" loading="lazy" />
-            </span>
-            <h3 class="font-head font-700 uppercase text-xl leading-tight text-white">Sandman of Charlotte</h3>
-            <span class="text-xs uppercase tracking-wide text-brand font-semibold">Sponsor</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ LATEST / SOCIAL FEED ============ -->
-    <section id="feed" class="bg-ink-soft py-20 sm:py-24 border-b border-ink-line">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="max-w-2xl mb-10">
-          <div class="section-rule mb-5"></div>
-          <h2 class="font-display uppercase text-4xl sm:text-5xl mb-4">From the Mat</h2>
-          <p class="text-slate-300">The latest straight from our Facebook page — practices, camps &amp; tournaments. Follow
-            <a href="https://www.facebook.com/BackyardBulliesWC/" class="text-brand underline underline-offset-2">@BackyardBulliesWC</a>,
-            <a href="https://www.instagram.com/backyardbullieswc" class="text-brand underline underline-offset-2">Instagram</a> &amp;
-            <a href="https://www.tiktok.com/@backyardbullieswc" class="text-brand underline underline-offset-2">TikTok</a>.</p>
-        </div>
-
-        <!-- Live Facebook feed -->
-        <div class="flex justify-center">
-          <div class="bg-white rounded-xl p-2 sm:p-3 shadow-2xl shadow-black/40 w-full max-w-[500px] overflow-hidden">
-            <div class="fb-page"
-                 data-href="https://www.facebook.com/BackyardBulliesWC/"
-                 data-tabs="timeline"
-                 data-width="500"
-                 data-height="640"
-                 data-small-header="false"
-                 data-adapt-container-width="true"
-                 data-hide-cover="false"
-                 data-show-facepile="true">
-              <blockquote cite="https://www.facebook.com/BackyardBulliesWC/" class="fb-xfbml-parse-ignore">
-                <a href="https://www.facebook.com/BackyardBulliesWC/">Backyard Bullies Wrestling Club on Facebook</a>
-              </blockquote>
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
 
     <!-- ============ CONTACT ============ -->
-    <section id="contact" class="py-20 sm:py-24">
+    <section id="contact" class="py-20 sm:py-24 border-b border-ink-line">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12">
         <div>
           <div class="section-rule mb-5"></div>
           <h2 class="font-display uppercase text-4xl sm:text-5xl mb-4">Get Better Together</h2>
           <p class="text-lg text-slate-300 mb-8">Your first class is free. Call or text us, drop in for Sunday open practice, or come see what Backyard Bullies is all about.</p>
+          <div class="bg-ink-card border border-ink-line rounded-xl p-5 mb-8">
+            <h3 class="font-head font-700 uppercase text-xl text-brand mb-2">Located in Augusta, GA</h3>
+            <p class="text-slate-300 text-sm">Backyard Bullies Wrestling Club is located at 266 Bobby Jones Expressway, rear entrance, Augusta, GA, serving Augusta, Evans, Martinez, Grovetown, North Augusta, Aiken, Fort Eisenhower, and the CSRA.</p>
+          </div>
 
           <div class="grid sm:grid-cols-2 gap-3 mb-8">
             <a href="tel:+17062500186" class="flex items-center gap-3 bg-brand text-ink font-head font-700 uppercase px-5 py-4 rounded-lg hover:bg-brand-dark transition-colors">
@@ -840,6 +813,189 @@
         </div>
       </div>
     </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="bg-ink-soft py-20 sm:py-24 border-b border-ink-line">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="section-rule mb-5"></div>
+          <h2 class="font-display uppercase text-4xl sm:text-5xl mb-6">About Backyard Bullies</h2>
+          <p class="text-slate-300 mb-5">
+            Backyard Bullies Wrestling Club welcomes athletes from all backgrounds and experience levels.
+            Whether you're stepping on the mat for the first time or chasing a state title, we have a place for you.
+          </p>
+          <ul class="space-y-2 mb-6 text-slate-200">
+            <li class="flex gap-3"><span class="text-brand font-bold" aria-hidden="true">›</span> Wrestling for the first time</li>
+            <li class="flex gap-3"><span class="text-brand font-bold" aria-hidden="true">›</span> Preparing for your school season</li>
+            <li class="flex gap-3"><span class="text-brand font-bold" aria-hidden="true">›</span> Looking to compete at a higher level</li>
+            <li class="flex gap-3"><span class="text-brand font-bold" aria-hidden="true">›</span> Training for state or national competition</li>
+          </ul>
+          <p class="text-slate-300">
+            Founded in 2023, Backyard Bullies has quickly become a home for wrestlers throughout the CSRA who want
+            high-level instruction, challenging training, and a supportive team culture.
+          </p>
+        </div>
+        <div class="relative">
+          <img src="images/about-new.jpg" alt="Backyard Bullies coaches and young wrestlers gathered together in the club's training room" class="rounded-xl w-full aspect-[4/3] object-cover shadow-2xl shadow-black/50 border border-ink-line" loading="lazy" />
+          <div class="absolute -bottom-4 -left-4 bg-brand text-ink font-display uppercase text-xl px-5 py-3 rounded-lg shadow-lg">Est. 2023</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MISSION ============ -->
+    <section id="mission" class="py-20 sm:py-24 border-b border-ink-line">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="max-w-3xl">
+          <div class="section-rule mb-5"></div>
+          <h2 class="font-display uppercase text-4xl sm:text-5xl mb-6">Our Mission</h2>
+          <p class="text-lg text-slate-300 mb-5">
+            Since opening in 2023, Backyard Bullies Wrestling Club has focused on creating a positive,
+            competitive environment where wrestlers develop their skills, build confidence, and become
+            leaders both on and off the mat.
+          </p>
+          <p class="text-slate-300 mb-8">We believe wrestling changes lives through:</p>
+        </div>
+
+        <ul class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-12">
+          <li class="bg-ink-card border border-ink-line rounded-lg px-4 py-3 text-center font-head uppercase tracking-wide text-sm">Discipline</li>
+          <li class="bg-ink-card border border-ink-line rounded-lg px-4 py-3 text-center font-head uppercase tracking-wide text-sm">Accountability</li>
+          <li class="bg-ink-card border border-ink-line rounded-lg px-4 py-3 text-center font-head uppercase tracking-wide text-sm">Hard Work</li>
+          <li class="bg-ink-card border border-ink-line rounded-lg px-4 py-3 text-center font-head uppercase tracking-wide text-sm">Respect</li>
+          <li class="bg-ink-card border border-ink-line rounded-lg px-4 py-3 text-center font-head uppercase tracking-wide text-sm">Perseverance</li>
+          <li class="bg-ink-card border border-ink-line rounded-lg px-4 py-3 text-center font-head uppercase tracking-wide text-sm">Leadership</li>
+        </ul>
+
+        <div class="grid sm:grid-cols-3 gap-4">
+          <p class="font-display uppercase text-2xl text-center bg-gradient-to-br from-brand/20 to-transparent border border-brand/30 rounded-xl py-8 px-4">Build Better<br><span class="text-brand">Wrestlers</span></p>
+          <p class="font-display uppercase text-2xl text-center bg-gradient-to-br from-brand/20 to-transparent border border-brand/30 rounded-xl py-8 px-4">Build Better<br><span class="text-brand">People</span></p>
+          <p class="font-display uppercase text-2xl text-center bg-gradient-to-br from-brand/20 to-transparent border border-brand/30 rounded-xl py-8 px-4">Build a Stronger<br><span class="text-brand">Community</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SPONSORS ============ -->
+    <section id="sponsors" class="bg-ink-soft py-20 sm:py-24 border-b border-ink-line">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="max-w-2xl mb-12">
+          <div class="section-rule mb-5"></div>
+          <h2 class="font-display uppercase text-4xl sm:text-5xl mb-4">Thank You Sponsors</h2>
+          <p class="text-slate-300">Backyard Bullies is supported by local businesses and community partners who help keep wrestling growing across the CSRA.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-5 auto-rows-fr gap-5">
+          <a href="https://theathleticstandard.com/" target="_blank" rel="noopener noreferrer"
+             class="group bg-ink-card border border-ink-line rounded-xl p-5 min-h-64 h-full flex flex-col justify-between hover:border-brand/70 transition-colors">
+            <span class="h-32 bg-white rounded-lg p-4 flex items-center justify-center">
+              <img src="images/sponsors/the-athletic-standard.jpg" alt="The Athletic Standard logo" class="max-h-28 w-auto object-contain" loading="lazy" />
+            </span>
+            <span class="font-head font-700 uppercase text-xl leading-tight text-white group-hover:text-brand transition-colors">The Athletic Standard<span class="sr-only"> (opens in new window)</span></span>
+            <span class="text-xs uppercase tracking-wide text-brand font-semibold">Sponsor</span>
+          </a>
+
+          <a href="https://letstalkaugusta.com/" target="_blank" rel="noopener noreferrer"
+             class="group bg-ink-card border border-ink-line rounded-xl p-5 min-h-64 h-full flex flex-col justify-between hover:border-brand/70 transition-colors">
+            <span class="h-32 bg-white rounded-lg p-4 flex items-center justify-center">
+              <img src="images/sponsors/lets-talk-augusta.webp" alt="Let's Talk Augusta logo" class="max-h-28 w-auto object-contain" loading="lazy" />
+            </span>
+            <span class="font-head font-700 uppercase text-xl leading-tight text-white group-hover:text-brand transition-colors">Let's Talk Augusta<span class="sr-only"> (opens in new window)</span></span>
+            <span class="text-xs uppercase tracking-wide text-brand font-semibold">Sponsor</span>
+          </a>
+
+          <a href="https://www.rmtus.com/" target="_blank" rel="noopener noreferrer"
+             class="group bg-ink-card border border-ink-line rounded-xl p-5 min-h-64 h-full flex flex-col justify-between hover:border-brand/70 transition-colors">
+            <span class="h-32 bg-white rounded-lg p-4 flex items-center justify-center">
+              <img src="images/sponsors/revolution-machine-tools.png" alt="Revolution Machine Tools logo" class="max-h-28 w-auto object-contain" loading="lazy" />
+            </span>
+            <span class="font-head font-700 uppercase text-xl leading-tight text-white group-hover:text-brand transition-colors">Revolution Machine Tools<span class="sr-only"> (opens in new window)</span></span>
+            <span class="text-xs uppercase tracking-wide text-brand font-semibold">Sponsor</span>
+          </a>
+
+          <a href="https://www.bigwavepoolandpatio.com/" target="_blank" rel="noopener noreferrer"
+             class="group bg-ink-card border border-ink-line rounded-xl p-5 min-h-64 h-full flex flex-col justify-between hover:border-brand/70 transition-colors">
+            <span class="h-32 bg-white rounded-lg p-4 flex items-center justify-center">
+              <img src="images/sponsors/big-wave-pool-patio.png" alt="Big Wave Pool and Patio logo" class="max-h-28 w-auto object-contain" loading="lazy" />
+            </span>
+            <span class="font-head font-700 uppercase text-xl leading-tight text-white group-hover:text-brand transition-colors">Big Wave Pool &amp; Patio<span class="sr-only"> (opens in new window)</span></span>
+            <span class="text-xs uppercase tracking-wide text-brand font-semibold">Sponsor</span>
+          </a>
+
+          <article class="bg-ink-card border border-ink-line rounded-xl p-5 min-h-64 h-full flex flex-col justify-between">
+            <span class="h-32 bg-white rounded-lg p-4 flex items-center justify-center">
+              <img src="images/sponsors/sandman-of-charlotte-clean.png" alt="Sandman of Charlotte logo" class="max-h-28 w-auto object-contain" loading="lazy" />
+            </span>
+            <h3 class="font-head font-700 uppercase text-xl leading-tight text-white">Sandman of Charlotte</h3>
+            <span class="text-xs uppercase tracking-wide text-brand font-semibold">Sponsor</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TEAM STORE ============ -->
+    <section id="store" class="relative overflow-hidden py-20 sm:py-24 border-b border-ink-line bg-gradient-to-br from-brand/15 via-ink to-ink">
+      <!-- faint brand watermark (decorative) -->
+      <img src="images/logo.jpg" alt="" aria-hidden="true"
+           class="pointer-events-none select-none absolute -right-20 -bottom-24 w-[460px] max-w-none rounded-full opacity-[0.05]" />
+
+      <div class="relative max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+        <!-- Product montage -->
+        <ul class="order-2 lg:order-1 grid grid-cols-3 gap-3">
+          <li class="bg-white rounded-lg p-2 aspect-square flex items-center justify-center"><img src="images/store/singlet-blue.jpg" alt="Backyard Bullies blue team singlet" class="max-h-full w-auto object-contain" loading="lazy" /></li>
+          <li class="bg-white rounded-lg p-2 aspect-square flex items-center justify-center"><img src="images/store/hoodie.jpg" alt="Backyard Bullies logo hoodie" class="max-h-full w-auto object-contain" loading="lazy" /></li>
+          <li class="bg-white rounded-lg p-2 aspect-square flex items-center justify-center"><img src="images/store/singlet-pink.jpg" alt="Backyard Bullies pink team singlet" class="max-h-full w-auto object-contain" loading="lazy" /></li>
+          <li class="bg-white rounded-lg p-2 aspect-square flex items-center justify-center"><img src="images/store/windbreaker.jpg" alt="Backyard Bullies sublimated windbreaker jacket" class="max-h-full w-auto object-contain" loading="lazy" /></li>
+          <li class="bg-white rounded-lg p-2 aspect-square flex items-center justify-center"><img src="images/store/headgear.jpg" alt="Backyard Bullies wrestling headgear" class="max-h-full w-auto object-contain" loading="lazy" /></li>
+          <li class="bg-white rounded-lg p-2 aspect-square flex items-center justify-center"><img src="images/store/gearbag.jpg" alt="Backyard Bullies team gear bag" class="max-h-full w-auto object-contain" loading="lazy" /></li>
+        </ul>
+
+        <!-- Copy + CTA -->
+        <div class="order-1 lg:order-2">
+          <div class="section-rule mb-5"></div>
+          <h2 class="font-display uppercase text-4xl sm:text-5xl mb-4">Rep the Bullies</h2>
+          <p class="text-lg text-slate-300 mb-3">Gear up in official Backyard Bullies apparel — custom singlets, hoodies, warmups, tees, gear bags, and headgear, all repping the team.</p>
+          <p class="text-slate-400 text-sm mb-8">Designs and sizes are managed in our online team store. Store windows open periodically — check current availability there.</p>
+          <a href="https://backyardbullies.itemorder.com/shop/home/" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 bg-brand text-ink font-head font-700 uppercase tracking-wide text-base px-7 py-3.5 rounded-md hover:bg-brand-dark transition-colors">
+            Shop the Team Store
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </a>
+          <p class="text-xs text-slate-400 mt-3">Opens in a new tab · powered by Gold Medal Gear</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LATEST / SOCIAL FEED ============ -->
+    <section id="feed" class="bg-ink-soft py-20 sm:py-24 border-b border-ink-line">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="max-w-2xl mb-10">
+          <div class="section-rule mb-5"></div>
+          <h2 class="font-display uppercase text-4xl sm:text-5xl mb-4">From the Mat</h2>
+          <p class="text-slate-300">The latest straight from our Facebook page — practices, camps &amp; tournaments. Follow
+            <a href="https://www.facebook.com/BackyardBulliesWC/" class="text-brand underline underline-offset-2">@BackyardBulliesWC</a>,
+            <a href="https://www.instagram.com/backyardbullieswc" class="text-brand underline underline-offset-2">Instagram</a> &amp;
+            <a href="https://www.tiktok.com/@backyardbullieswc" class="text-brand underline underline-offset-2">TikTok</a>.</p>
+        </div>
+
+        <!-- Live Facebook feed -->
+        <div class="flex justify-center">
+          <div class="bg-white rounded-xl p-2 sm:p-3 shadow-2xl shadow-black/40 w-full max-w-[500px] overflow-hidden">
+            <div class="fb-page"
+                 data-href="https://www.facebook.com/BackyardBulliesWC/"
+                 data-tabs="timeline"
+                 data-width="500"
+                 data-height="640"
+                 data-small-header="false"
+                 data-adapt-container-width="true"
+                 data-hide-cover="false"
+                 data-show-facepile="true">
+              <blockquote cite="https://www.facebook.com/BackyardBulliesWC/" class="fb-xfbml-parse-ignore">
+                <a href="https://www.facebook.com/BackyardBulliesWC/">Backyard Bullies Wrestling Club on Facebook</a>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
   </main>
 
   <!-- ============ FOOTER ============ -->
@@ -880,6 +1036,7 @@
       var menu = document.getElementById('mobileMenu');
       var iconOpen = document.getElementById('iconOpen');
       var iconClose = document.getElementById('iconClose');
+      var moreMenu = document.getElementById('desktopMoreMenu');
       function setOpen(open) {
         menu.classList.toggle('hidden', !open);
         iconOpen.classList.toggle('hidden', open);
@@ -894,9 +1051,15 @@
       menu.querySelectorAll('a').forEach(function (a) {
         a.addEventListener('click', function () { setOpen(false); });
       });
+      if (moreMenu) {
+        moreMenu.querySelectorAll('a').forEach(function (a) {
+          a.addEventListener('click', function () { moreMenu.removeAttribute('open'); });
+        });
+      }
       // Close on Escape
       document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && !menu.classList.contains('hidden')) { setOpen(false); btn.focus(); }
+        if (e.key === 'Escape' && moreMenu && moreMenu.hasAttribute('open')) { moreMenu.removeAttribute('open'); moreMenu.querySelector('summary').focus(); }
       });
     })();
 
