@@ -33,6 +33,10 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+        env:
+          # Pa11y bundles Puppeteer, which downloads Chrome on install. Skip it —
+          # the audit discovers the Playwright Chromium at runtime (.pa11yci.cjs).
+          PUPPETEER_SKIP_DOWNLOAD: "true"
 
       - name: Lint & format check
         run: |
@@ -48,6 +52,15 @@ jobs:
           cp CNAME _site/
           touch _site/.nojekyll
           npx tailwindcss -i ./src/input.css -o ./_site/assets/tailwind.css --minify
+
+      # Hard accessibility gate: render the assembled _site and fail the deploy on
+      # any WCAG 2.2 AA violation (axe-core via Playwright + Pa11y-CI). Linting
+      # already ran above, so skip it here with --no-lint.
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Accessibility gate (axe + pa11y)
+        run: bash scripts/a11y-audit.sh --no-lint --serve-dir _site
 
       - name: Configure Pages
         uses: actions/configure-pages@v5

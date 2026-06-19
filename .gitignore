@@ -21,6 +21,11 @@ node_modules/
 assets/tailwind.css
 _site/
 
+# Accessibility audit output (also covered by tests/a11y/.gitignore)
+tests/a11y/reports/
+tests/a11y/test-results/
+.cache/
+
 # Local preview / browser-automation artifacts
 .playwright-mcp/
 *-preview.*

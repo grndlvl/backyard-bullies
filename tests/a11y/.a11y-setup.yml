@@ -1,0 +1,12 @@
+version: 1
+layout: tests-a11y-harness
+project_type: static-html
+site_mode: single-site
+node: 20
+notes: >
+  Static single-page site (index.html + compiled Tailwind, no framework).
+  jsx-a11y / PHPCS / Twig / multisite layers do not apply. Layer 1 a11y linting
+  rides the existing html-validate + stylelint (with @double-great/stylelint-a11y)
+  setup. Rendered testing (Playwright+axe, Pa11y-CI) runs against a locally served
+  build and is a hard gate inside .github/workflows/deploy.yml. AI review is local
+  only (no Claude in CI).
