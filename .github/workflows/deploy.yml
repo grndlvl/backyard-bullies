@@ -60,7 +60,7 @@ jobs:
         run: npx playwright install --with-deps chromium
 
       - name: Accessibility gate (axe + pa11y)
-        run: bash scripts/a11y-audit.sh --no-lint --serve-dir _site
+        run: bash scripts/a11y-audit.sh --no-lint --serve-dir=_site
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
