@@ -32,11 +32,13 @@
   <meta name="twitter:description" content="Youth, middle school, high school, girls & adult wrestling in Augusta, GA & across the CSRA. Building the wrestling community since 2023. First class free." />
   <meta name="twitter:image" content="https://www.backyardbullies-wc.com/images/og-image.jpg" />
   <meta name="twitter:image:alt" content="Backyard Bullies Wrestling Club logo" />
+  <link rel="preload" as="image" href="images/optimized/cover.webp" fetchpriority="high" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
 
   <!-- Compiled Tailwind CSS (built by `npm run build:css` / the GitHub Actions deploy) -->
   <link rel="stylesheet" href="assets/tailwind.css" />
@@ -135,14 +137,11 @@
     Skip to main content
   </a>
 
-  <!-- Facebook SDK root (required for the live Page feed) -->
-  <div id="fb-root"></div>
-
   <!-- ============ HEADER / NAV ============ -->
   <header class="fixed top-0 inset-x-0 z-50 bg-ink/90 backdrop-blur border-b border-ink-line">
     <nav class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between" aria-label="Primary">
       <a href="#home" class="flex items-center gap-3 group">
-        <img src="images/logo.jpg" alt="" width="40" height="40" class="logo-badge w-10 h-10 ring-2 ring-brand/40" />
+        <img src="images/optimized/logo-64.webp" alt="" width="64" height="64" class="logo-badge w-10 h-10 ring-2 ring-brand/40" />
         <span class="font-head font-700 uppercase tracking-wide text-sm sm:text-base leading-tight">
           Backyard Bullies <span class="text-brand">Wrestling Club</span>
         </span>
@@ -206,7 +205,7 @@
 
     <!-- ============ HERO ============ -->
     <section id="home" class="relative min-h-[88vh] flex items-center pt-16">
-      <img src="images/cover.jpg" alt="Backyard Bullies wrestlers training on the mat" class="absolute inset-0 w-full h-full object-cover" />
+      <img src="images/optimized/cover.webp" alt="Backyard Bullies wrestlers training on the mat" width="960" height="640" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover" />
       <div class="absolute inset-0 hero-overlay"></div>
 
       <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-16 w-full">
@@ -231,11 +230,11 @@
         <dl class="flex flex-wrap gap-x-8 gap-y-3 text-sm sm:text-base">
           <div class="flex items-center gap-2">
             <dt class="sr-only">Address</dt>
-            <dd><a href="https://maps.google.com/?q=266+Bobby+Jones+Expressway+Augusta+GA+30907" target="_blank" rel="noopener noreferrer" class="text-slate-200 hover:text-brand underline underline-offset-2 transition-colors"><span aria-hidden="true">📍</span> 266 Bobby Jones Expressway (Rear Entrance), Augusta, GA</a></dd>
+            <dd><span aria-hidden="true">📍</span> <a href="https://maps.google.com/?q=266+Bobby+Jones+Expressway+Augusta+GA+30907" target="_blank" rel="noopener noreferrer" class="text-slate-200 hover:text-brand underline underline-offset-2 transition-colors">266 Bobby Jones Expressway (Rear Entrance), Augusta, GA</a></dd>
           </div>
           <div class="flex items-center gap-2">
             <dt class="sr-only">Phone</dt>
-            <dd><a href="tel:+17062500186" class="text-brand underline underline-offset-2 font-semibold"><span aria-hidden="true">📞</span> 706-250-0186</a></dd>
+            <dd><span aria-hidden="true">📞</span> <a href="tel:+17062500186" class="text-brand underline underline-offset-2 font-semibold">706-250-0186</a></dd>
           </div>
         </dl>
       </div>
@@ -540,7 +539,7 @@
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           <article class="bg-ink-card border border-brand/40 rounded-xl p-5 flex flex-col">
             <div class="flex items-center gap-4 mb-4">
-              <img src="images/logo.jpg" alt="" width="72" height="72" class="logo-badge w-20 h-20 ring-2 ring-brand/40 object-cover shrink-0" />
+              <img src="images/optimized/logo-120.webp" alt="" width="120" height="120" class="logo-badge w-20 h-20 ring-2 ring-brand/40 object-cover shrink-0" />
               <div>
                 <h3 class="font-head font-700 uppercase text-xl">Coach Justin Boyden</h3>
                 <p class="text-brand text-xs uppercase tracking-wide">Founder &amp; Head Coach</p>
@@ -580,7 +579,7 @@
 
           <article class="bg-ink-card border border-ink-line rounded-xl p-5 flex flex-col">
             <div class="flex items-center gap-4 mb-4">
-              <img src="images/logo.jpg" alt="" width="72" height="72" class="logo-badge w-20 h-20 ring-2 ring-brand/40 object-cover shrink-0" />
+              <img src="images/optimized/logo-120.webp" alt="" width="120" height="120" class="logo-badge w-20 h-20 ring-2 ring-brand/40 object-cover shrink-0" />
               <div>
                 <h3 class="font-head font-700 uppercase text-xl">Coach Hallee</h3>
                 <p class="text-brand text-xs uppercase tracking-wide">Head Strength Coach</p>
@@ -618,7 +617,7 @@
 
           <article class="bg-ink-card border border-ink-line rounded-xl p-5 flex flex-col">
             <div class="flex items-center gap-4 mb-4">
-              <img src="images/logo.jpg" alt="" width="72" height="72" class="logo-badge w-20 h-20 ring-2 ring-brand/40 object-cover shrink-0" />
+              <img src="images/optimized/logo-120.webp" alt="" width="120" height="120" class="logo-badge w-20 h-20 ring-2 ring-brand/40 object-cover shrink-0" />
               <div>
                 <h3 class="font-head font-700 uppercase text-xl">Coach Katie Huitron</h3>
                 <p class="text-brand text-xs uppercase tracking-wide">Coach</p>
@@ -657,7 +656,7 @@
 
           <article class="bg-ink-card border border-ink-line rounded-xl p-5 flex flex-col">
             <div class="flex items-center gap-4 mb-4">
-              <img src="images/logo.jpg" alt="" width="72" height="72" class="logo-badge w-20 h-20 ring-2 ring-brand/40 object-cover shrink-0" />
+              <img src="images/optimized/logo-120.webp" alt="" width="120" height="120" class="logo-badge w-20 h-20 ring-2 ring-brand/40 object-cover shrink-0" />
               <div>
                 <h3 class="font-head font-700 uppercase text-xl">Coach Dale Schmacht</h3>
                 <p class="text-brand text-xs uppercase tracking-wide">Assistant Coach</p>
@@ -802,14 +801,16 @@
           </ul>
         </div>
 
-        <div class="rounded-xl overflow-hidden border border-ink-line min-h-[360px]">
-          <iframe
-            title="Map to Backyard Bullies Wrestling Club"
-            class="w-full h-full min-h-[360px]"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=266%20Bobby%20Jones%20Expressway%2C%20Augusta%2C%20GA%2030907&output=embed">
-          </iframe>
+        <div class="rounded-xl border border-ink-line min-h-[360px] bg-ink-card p-6 flex flex-col justify-between">
+          <div>
+            <p class="font-display uppercase text-4xl text-brand mb-4">Augusta, GA</p>
+            <p class="text-slate-200 mb-4">266 Bobby Jones Expressway<br />Rear Entrance<br />Augusta, GA 30907</p>
+            <p class="text-slate-400 text-sm">Serving Augusta, Evans, Martinez, Grovetown, North Augusta, Aiken, Fort Eisenhower, and the CSRA.</p>
+          </div>
+          <a href="https://maps.google.com/?q=266+Bobby+Jones+Expressway+Augusta+GA+30907" target="_blank" rel="noopener noreferrer" class="mt-8 inline-flex items-center justify-center gap-2 bg-brand text-ink font-head font-700 uppercase text-sm px-5 py-3 rounded-md hover:bg-brand-dark transition-colors self-start">
+            Open directions
+            <span class="sr-only">(opens in new window)</span>
+          </a>
         </div>
       </div>
     </section>
@@ -836,7 +837,7 @@
           </p>
         </div>
         <div class="relative">
-          <img src="images/about-new.jpg" alt="Backyard Bullies coaches and young wrestlers gathered together in the club's training room" class="rounded-xl w-full aspect-[4/3] object-cover shadow-2xl shadow-black/50 border border-ink-line" loading="lazy" />
+          <img src="images/optimized/about-new.webp" alt="Backyard Bullies coaches and young wrestlers gathered together in the club's training room" width="720" height="586" class="rounded-xl w-full aspect-[4/3] object-cover shadow-2xl shadow-black/50 border border-ink-line" loading="lazy" />
           <div class="absolute -bottom-4 -left-4 bg-brand text-ink font-display uppercase text-xl px-5 py-3 rounded-lg shadow-lg">Est. 2023</div>
         </div>
       </div>
@@ -886,7 +887,7 @@
           <a href="https://theathleticstandard.com/" target="_blank" rel="noopener noreferrer"
              class="group bg-ink-card border border-ink-line rounded-xl p-5 min-h-64 h-full flex flex-col justify-between hover:border-brand/70 transition-colors">
             <span class="h-32 bg-white rounded-lg p-4 flex items-center justify-center">
-              <img src="images/sponsors/the-athletic-standard.jpg" alt="The Athletic Standard logo" class="max-h-28 w-auto object-contain" loading="lazy" />
+              <img src="images/sponsors/optimized/the-athletic-standard.webp" alt="The Athletic Standard logo" width="220" height="217" class="max-h-28 w-auto object-contain" loading="lazy" />
             </span>
             <span class="font-head font-700 uppercase text-xl leading-tight text-white group-hover:text-brand transition-colors">The Athletic Standard<span class="sr-only"> (opens in new window)</span></span>
             <span class="text-xs uppercase tracking-wide text-brand font-semibold">Sponsor</span>
@@ -895,7 +896,7 @@
           <a href="https://letstalkaugusta.com/" target="_blank" rel="noopener noreferrer"
              class="group bg-ink-card border border-ink-line rounded-xl p-5 min-h-64 h-full flex flex-col justify-between hover:border-brand/70 transition-colors">
             <span class="h-32 bg-white rounded-lg p-4 flex items-center justify-center">
-              <img src="images/sponsors/lets-talk-augusta.webp" alt="Let's Talk Augusta logo" class="max-h-28 w-auto object-contain" loading="lazy" />
+              <img src="images/sponsors/lets-talk-augusta.webp" alt="Let's Talk Augusta logo" width="257" height="84" class="max-h-28 w-auto object-contain" loading="lazy" />
             </span>
             <span class="font-head font-700 uppercase text-xl leading-tight text-white group-hover:text-brand transition-colors">Let's Talk Augusta<span class="sr-only"> (opens in new window)</span></span>
             <span class="text-xs uppercase tracking-wide text-brand font-semibold">Sponsor</span>
@@ -904,7 +905,7 @@
           <a href="https://www.rmtus.com/" target="_blank" rel="noopener noreferrer"
              class="group bg-ink-card border border-ink-line rounded-xl p-5 min-h-64 h-full flex flex-col justify-between hover:border-brand/70 transition-colors">
             <span class="h-32 bg-white rounded-lg p-4 flex items-center justify-center">
-              <img src="images/sponsors/revolution-machine-tools.png" alt="Revolution Machine Tools logo" class="max-h-28 w-auto object-contain" loading="lazy" />
+              <img src="images/sponsors/optimized/revolution-machine-tools.webp" alt="Revolution Machine Tools logo" width="220" height="143" class="max-h-28 w-auto object-contain" loading="lazy" />
             </span>
             <span class="font-head font-700 uppercase text-xl leading-tight text-white group-hover:text-brand transition-colors">Revolution Machine Tools<span class="sr-only"> (opens in new window)</span></span>
             <span class="text-xs uppercase tracking-wide text-brand font-semibold">Sponsor</span>
@@ -913,7 +914,7 @@
           <a href="https://www.bigwavepoolandpatio.com/" target="_blank" rel="noopener noreferrer"
              class="group bg-ink-card border border-ink-line rounded-xl p-5 min-h-64 h-full flex flex-col justify-between hover:border-brand/70 transition-colors">
             <span class="h-32 bg-white rounded-lg p-4 flex items-center justify-center">
-              <img src="images/sponsors/big-wave-pool-patio.png" alt="Big Wave Pool and Patio logo" class="max-h-28 w-auto object-contain" loading="lazy" />
+              <img src="images/sponsors/optimized/big-wave-pool-patio.webp" alt="Big Wave Pool and Patio logo" width="320" height="100" class="max-h-28 w-auto object-contain" loading="lazy" />
             </span>
             <span class="font-head font-700 uppercase text-xl leading-tight text-white group-hover:text-brand transition-colors">Big Wave Pool &amp; Patio<span class="sr-only"> (opens in new window)</span></span>
             <span class="text-xs uppercase tracking-wide text-brand font-semibold">Sponsor</span>
@@ -921,7 +922,7 @@
 
           <article class="bg-ink-card border border-ink-line rounded-xl p-5 min-h-64 h-full flex flex-col justify-between">
             <span class="h-32 bg-white rounded-lg p-4 flex items-center justify-center">
-              <img src="images/sponsors/sandman-of-charlotte-clean.png" alt="Sandman of Charlotte logo" class="max-h-28 w-auto object-contain" loading="lazy" />
+              <img src="images/sponsors/optimized/sandman-of-charlotte.webp" alt="Sandman of Charlotte logo" width="220" height="275" class="max-h-28 w-auto object-contain" loading="lazy" />
             </span>
             <h3 class="font-head font-700 uppercase text-xl leading-tight text-white">Sandman of Charlotte</h3>
             <span class="text-xs uppercase tracking-wide text-brand font-semibold">Sponsor</span>
@@ -933,18 +934,18 @@
     <!-- ============ TEAM STORE ============ -->
     <section id="store" class="relative overflow-hidden py-20 sm:py-24 border-b border-ink-line bg-gradient-to-br from-brand/15 via-ink to-ink">
       <!-- faint brand watermark (decorative) -->
-      <img src="images/logo.jpg" alt="" aria-hidden="true"
+      <img src="images/optimized/logo-120.webp" alt="" aria-hidden="true" width="120" height="120"
            class="pointer-events-none select-none absolute -right-20 -bottom-24 w-[460px] max-w-none rounded-full opacity-[0.05]" />
 
       <div class="relative max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
         <!-- Product montage -->
         <ul class="order-2 lg:order-1 grid grid-cols-3 gap-3">
-          <li class="bg-white rounded-lg p-2 aspect-square flex items-center justify-center"><img src="images/store/singlet-blue.jpg" alt="Backyard Bullies blue team singlet" class="max-h-full w-auto object-contain" loading="lazy" /></li>
-          <li class="bg-white rounded-lg p-2 aspect-square flex items-center justify-center"><img src="images/store/hoodie.jpg" alt="Backyard Bullies logo hoodie" class="max-h-full w-auto object-contain" loading="lazy" /></li>
-          <li class="bg-white rounded-lg p-2 aspect-square flex items-center justify-center"><img src="images/store/singlet-pink.jpg" alt="Backyard Bullies pink team singlet" class="max-h-full w-auto object-contain" loading="lazy" /></li>
-          <li class="bg-white rounded-lg p-2 aspect-square flex items-center justify-center"><img src="images/store/windbreaker.jpg" alt="Backyard Bullies sublimated windbreaker jacket" class="max-h-full w-auto object-contain" loading="lazy" /></li>
-          <li class="bg-white rounded-lg p-2 aspect-square flex items-center justify-center"><img src="images/store/headgear.jpg" alt="Backyard Bullies wrestling headgear" class="max-h-full w-auto object-contain" loading="lazy" /></li>
-          <li class="bg-white rounded-lg p-2 aspect-square flex items-center justify-center"><img src="images/store/gearbag.jpg" alt="Backyard Bullies team gear bag" class="max-h-full w-auto object-contain" loading="lazy" /></li>
+          <li class="bg-white rounded-lg p-2 aspect-square flex items-center justify-center"><img src="images/store/optimized/singlet-blue.webp" alt="Backyard Bullies blue team singlet" width="248" height="260" class="max-h-full w-auto object-contain" loading="lazy" /></li>
+          <li class="bg-white rounded-lg p-2 aspect-square flex items-center justify-center"><img src="images/store/optimized/hoodie.webp" alt="Backyard Bullies logo hoodie" width="260" height="208" class="max-h-full w-auto object-contain" loading="lazy" /></li>
+          <li class="bg-white rounded-lg p-2 aspect-square flex items-center justify-center"><img src="images/store/optimized/singlet-pink.webp" alt="Backyard Bullies pink team singlet" width="248" height="260" class="max-h-full w-auto object-contain" loading="lazy" /></li>
+          <li class="bg-white rounded-lg p-2 aspect-square flex items-center justify-center"><img src="images/store/optimized/windbreaker.webp" alt="Backyard Bullies sublimated windbreaker jacket" width="260" height="164" class="max-h-full w-auto object-contain" loading="lazy" /></li>
+          <li class="bg-white rounded-lg p-2 aspect-square flex items-center justify-center"><img src="images/store/optimized/headgear.webp" alt="Backyard Bullies wrestling headgear" width="208" height="260" class="max-h-full w-auto object-contain" loading="lazy" /></li>
+          <li class="bg-white rounded-lg p-2 aspect-square flex items-center justify-center"><img src="images/store/optimized/gearbag.webp" alt="Backyard Bullies team gear bag" width="213" height="260" class="max-h-full w-auto object-contain" loading="lazy" /></li>
         </ul>
 
         <!-- Copy + CTA -->
@@ -975,23 +976,19 @@
             <a href="https://www.tiktok.com/@backyardbullieswc" class="text-brand underline underline-offset-2">TikTok</a>.</p>
         </div>
 
-        <!-- Live Facebook feed -->
-        <div class="flex justify-center">
-          <div class="bg-white rounded-xl p-2 sm:p-3 shadow-2xl shadow-black/40 w-full max-w-[500px] overflow-hidden">
-            <div class="fb-page"
-                 data-href="https://www.facebook.com/BackyardBulliesWC/"
-                 data-tabs="timeline"
-                 data-width="500"
-                 data-height="640"
-                 data-small-header="false"
-                 data-adapt-container-width="true"
-                 data-hide-cover="false"
-                 data-show-facepile="true">
-              <blockquote cite="https://www.facebook.com/BackyardBulliesWC/" class="fb-xfbml-parse-ignore">
-                <a href="https://www.facebook.com/BackyardBulliesWC/">Backyard Bullies Wrestling Club on Facebook</a>
-              </blockquote>
-            </div>
-          </div>
+        <div class="grid sm:grid-cols-3 gap-4">
+          <a href="https://www.facebook.com/BackyardBulliesWC/" target="_blank" rel="noopener noreferrer" class="bg-ink-card border border-ink-line rounded-xl p-6 hover:border-brand/70 transition-colors">
+            <span class="font-head font-700 uppercase text-xl text-brand block mb-2">Facebook</span>
+            <span class="text-slate-300 text-sm">Practice updates, camps, tournaments, and team announcements.<span class="sr-only"> Opens in new window.</span></span>
+          </a>
+          <a href="https://www.instagram.com/backyardbullieswc" target="_blank" rel="noopener noreferrer" class="bg-ink-card border border-ink-line rounded-xl p-6 hover:border-brand/70 transition-colors">
+            <span class="font-head font-700 uppercase text-xl text-brand block mb-2">Instagram</span>
+            <span class="text-slate-300 text-sm">Photos and clips from the room, events, and competition days.<span class="sr-only"> Opens in new window.</span></span>
+          </a>
+          <a href="https://www.tiktok.com/@backyardbullieswc" target="_blank" rel="noopener noreferrer" class="bg-ink-card border border-ink-line rounded-xl p-6 hover:border-brand/70 transition-colors">
+            <span class="font-head font-700 uppercase text-xl text-brand block mb-2">TikTok</span>
+            <span class="text-slate-300 text-sm">Short videos from training, technique, and club culture.<span class="sr-only"> Opens in new window.</span></span>
+          </a>
         </div>
 
       </div>
@@ -1002,7 +999,7 @@
   <footer class="bg-ink-soft border-t border-ink-line py-10">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
       <div class="flex items-center gap-3">
-        <img src="images/logo.jpg" alt="" width="44" height="44" class="logo-badge w-11 h-11 ring-2 ring-brand/40" />
+        <img src="images/optimized/logo-64.webp" alt="" width="64" height="64" class="logo-badge w-11 h-11 ring-2 ring-brand/40" />
         <div>
           <p class="font-head font-700 uppercase text-sm">Backyard Bullies Wrestling Club</p>
           <p class="text-slate-400 text-xs">Building the wrestling community in the CSRA since 2023 🏆</p>
@@ -1024,10 +1021,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- Facebook SDK (loads the live Page feed; no app ID required for social plugins) -->
-  <script async defer crossorigin="anonymous" nonce="byb"
-          src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0"></script>
 
   <script>
     // Mobile nav toggle
