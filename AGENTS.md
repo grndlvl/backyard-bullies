@@ -45,6 +45,11 @@ python3 -m http.server 8000   # then open http://127.0.0.1:8000
   `.prettierignore` — note **`index.html` is intentionally excluded** (its
   hand-tuned markup must not be reflowed) along with build output and assets.
 
+A **Husky pre-commit hook** (`.husky/pre-commit` → `lint-staged`) runs
+automatically on `git commit`: it formats staged files with Prettier, runs
+`stylelint --fix` on staged CSS, and validates `index.html` (html-validate +
+content check). The hook installs via the `prepare` script on `npm ci`/`npm install`.
+
 Serve over HTTP — don't open via `file://` (relative assets and the map/calendar iframes need a real origin).
 
 ## Critical: the CSS is compiled
