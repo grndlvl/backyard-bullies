@@ -243,7 +243,7 @@
             <span class="sr-only">Menu</span>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
           </summary>
-          <nav aria-label="Mobile" class="absolute left-0 right-0 top-16 border-t border-ink-line bg-ink/98">
+          <nav aria-label="Mobile" class="absolute left-0 right-0 top-16 border-t border-ink-line bg-ink shadow-2xl shadow-black/40">
             <ul class="px-4 py-3 space-y-1 font-head uppercase tracking-wide text-sm">
               <li><a href="#programs" class="block py-2.5 hover:text-brand">Programs</a></li>
               <li><a href="#schedule" class="block py-2.5 hover:text-brand">Schedule</a></li>
@@ -868,16 +868,14 @@
           </ul>
         </div>
 
-        <div class="rounded-xl border border-ink-line min-h-[360px] bg-ink-card p-6 flex flex-col justify-between">
-          <div>
-            <p class="font-display uppercase text-4xl text-brand mb-4">Augusta, GA</p>
-            <p class="text-slate-200 mb-4">266 Bobby Jones Expressway<br />Rear Entrance<br />Augusta, GA 30907</p>
-            <p class="text-slate-400 text-sm">Serving Augusta, Evans, Martinez, Grovetown, North Augusta, Aiken, Fort Eisenhower, and the CSRA.</p>
-          </div>
-          <a href="https://maps.google.com/?q=266+Bobby+Jones+Expressway+Augusta+GA+30907" target="_blank" rel="noopener noreferrer" class="mt-8 inline-flex items-center justify-center gap-2 bg-brand text-ink font-head font-700 uppercase text-sm px-5 py-3 rounded-md hover:bg-brand-dark transition-colors self-start">
-            Open directions
-            <span class="sr-only">(opens in new window)</span>
-          </a>
+        <div class="rounded-xl overflow-hidden border border-ink-line min-h-[360px]">
+          <iframe
+            title="Map to Backyard Bullies Wrestling Club, 266 Bobby Jones Expressway, Augusta, GA 30907"
+            class="w-full h-full min-h-[360px]"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=266%20Bobby%20Jones%20Expressway%2C%20Augusta%2C%20GA%2030907&output=embed">
+          </iframe>
         </div>
       </div>
     </section>
