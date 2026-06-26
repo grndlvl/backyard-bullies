@@ -3,6 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VWD6DV9EY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-4VWD6DV9EY');
+  </script>
+
   <title>Backyard Bullies Wrestling Club | Youth to Adult Wrestling in Augusta &amp; the CSRA</title>
   <meta name="description" content="Wrestling in Augusta, GA and across the CSRA for all ages. Backyard Bullies Wrestling Club offers youth, middle school, high school, girls, and adult wrestling programs — building the CSRA wrestling community since 2023. Your first class is free." />
   <meta name="theme-color" content="#0E1116" />
@@ -1533,6 +1544,38 @@
   </footer>
   <script>
     (function () {
+      function trackEvent(name, params) {
+        if (typeof window.gtag !== 'function') return;
+        window.gtag('event', name, params || {});
+      }
+
+      function cleanText(text) {
+        return (text || '')
+          .replace(/\s*\(opens in new window\)\s*/gi, ' ')
+          .replace(/[→+]/g, ' ')
+          .replace(/\s+/g, ' ')
+          .trim();
+      }
+
+      function getLocation(element) {
+        var section = element.closest('section[id]');
+        if (section) return section.id;
+        if (element.closest('header')) return 'header';
+        if (element.closest('footer')) return 'footer';
+        return 'page';
+      }
+
+      function getLinkLabel(link) {
+        return cleanText(link.getAttribute('aria-label') || link.textContent || link.href);
+      }
+
+      function getSocialNetwork(url) {
+        if (url.indexOf('facebook.com') !== -1) return 'facebook';
+        if (url.indexOf('instagram.com') !== -1) return 'instagram';
+        if (url.indexOf('tiktok.com') !== -1) return 'tiktok';
+        return 'social';
+      }
+
       var menus = [
         document.getElementById('desktopMoreMenu'),
         document.getElementById('mobileMenu')
@@ -1570,6 +1613,95 @@
             var summary = menu.querySelector('summary');
             if (summary) summary.focus();
           }
+        });
+      });
+
+      document.addEventListener('click', function (event) {
+        var link = event.target.closest('a[href]');
+        if (!link) return;
+
+        var href = link.getAttribute('href') || '';
+        var location = getLocation(link);
+        var label = getLinkLabel(link);
+
+        if (href.indexOf('tel:') === 0) {
+          trackEvent('contact_click', {
+            contact_method: 'phone',
+            link_location: location,
+            link_text: label
+          });
+        } else if (href.indexOf('sms:') === 0) {
+          trackEvent('contact_click', {
+            contact_method: 'text',
+            link_location: location,
+            link_text: label
+          });
+        } else if (href.indexOf('mailto:') === 0) {
+          trackEvent('contact_click', {
+            contact_method: 'email',
+            link_location: location,
+            link_text: label
+          });
+        } else if (href.indexOf('calendar.app.google') !== -1) {
+          trackEvent('booking_click', {
+            booking_type: 'private_lesson',
+            link_location: location,
+            link_text: label
+          });
+        } else if (href.indexOf('calendar.google.com') !== -1) {
+          trackEvent('calendar_click', {
+            link_location: location,
+            link_text: label
+          });
+        } else if (href.indexOf('checkout.square.site') !== -1) {
+          trackEvent('payment_click', {
+            payment_type: 'drop_in',
+            link_location: location,
+            link_text: label
+          });
+        } else if (href.indexOf('backyardbullies.itemorder.com') !== -1) {
+          trackEvent('store_click', {
+            store_name: 'team_store',
+            link_location: location,
+            link_text: label
+          });
+        } else if (href.indexOf('docs.google.com/forms') !== -1) {
+          trackEvent('registration_click', {
+            link_location: location,
+            link_text: label
+          });
+        } else if (href.indexOf('maps.google.com') !== -1 || href.indexOf('google.com/maps') !== -1) {
+          trackEvent('directions_click', {
+            link_location: location,
+            link_text: label
+          });
+        } else if (href.indexOf('facebook.com') !== -1 || href.indexOf('instagram.com') !== -1 || href.indexOf('tiktok.com') !== -1) {
+          trackEvent('social_click', {
+            social_network: getSocialNetwork(href),
+            link_location: location,
+            link_text: label
+          });
+        }
+      });
+
+      document.querySelectorAll('#coaches details').forEach(function (details) {
+        details.addEventListener('toggle', function () {
+          if (!details.open) return;
+          var coach = details.closest('article');
+          var name = coach ? cleanText(coach.querySelector('h3') && coach.querySelector('h3').textContent) : 'Unknown coach';
+          trackEvent('coach_expand', {
+            coach_name: name.replace(/^Coach\s+/i, ''),
+            link_location: 'coaches'
+          });
+        });
+      });
+
+      document.querySelectorAll('#schedule details').forEach(function (details) {
+        details.addEventListener('toggle', function () {
+          if (!details.open) return;
+          trackEvent('calendar_open', {
+            link_location: 'schedule'
+          });
         });
       });
     })();
