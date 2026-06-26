@@ -142,8 +142,12 @@ test.describe("WCAG 1.4.10 Reflow", () => {
         test.skip(testInfo.project.name !== "Desktop", "reflow viewport matrix runs once");
 
         await browserPage.setViewportSize({ width: viewport.width, height: viewport.height });
-        await browserPage.goto(page.path);
-        await browserPage.waitForLoadState("networkidle");
+        await browserPage.goto(page.path, { waitUntil: "domcontentloaded" });
+        await browserPage.evaluate(() => {
+          if (document.fonts && document.fonts.ready) return document.fonts.ready;
+          return Promise.resolve();
+        });
+        await browserPage.waitForTimeout(300);
 
         const dimensions = await browserPage.evaluate(() => ({
           clientWidth: document.documentElement.clientWidth,
