@@ -10,8 +10,8 @@ const path = require("path");
  * shared with Pa11y and a11y-audit.sh). A11Y_SCOPE selects 'pr' or 'full' — they
  * are identical for this single-page site.
  *
- * Both Playwright projects (Desktop, Mobile) run every test below, so each scan
- * is exercised at 1280px and at 320px.
+ * Playwright projects cover representative desktop, tablet, phone, and
+ * 200%/400% zoom-proxy viewports.
  */
 const SCOPE = process.env.A11Y_SCOPE || "full";
 
@@ -51,8 +51,17 @@ const THIRD_PARTY_EXCLUDES = [
 // their markup, NOT because the rules are waived.)
 const BASELINE_RULES = new Set();
 
-// Reflow (1.4.10) at 320px is a hard assertion.
+// Reflow (1.4.10) is tested at representative viewport widths. The 640px case
+// approximates a 1280px desktop viewport at 200% zoom; 320px approximates 1280px
+// at 400% zoom.
 const BASELINE_REFLOW = false;
+const REFLOW_VIEWPORTS = [
+  { name: "desktop", width: 1280, height: 800 },
+  { name: "tablet", width: 768, height: 1024 },
+  { name: "phone", width: 375, height: 667 },
+  { name: "desktop 200% zoom proxy", width: 640, height: 800 },
+  { name: "desktop 400% zoom proxy", width: 320, height: 568 },
+];
 
 function buildAxe(browserPage) {
   let builder = new AxeBuilder({ page: browserPage }).withTags(WCAG_TAGS);
@@ -126,26 +135,37 @@ test.describe("WCAG 2.2 AA Compliance — disclosures expanded", () => {
 
 test.describe("WCAG 1.4.10 Reflow", () => {
   for (const page of PAGES) {
-    test(`${page.name} (${page.path}) has no horizontal scroll at 320px`, async ({
-      page: browserPage,
-    }) => {
-      await browserPage.setViewportSize({ width: 320, height: 568 });
-      await browserPage.goto(page.path);
-      await browserPage.waitForLoadState("networkidle");
+    for (const viewport of REFLOW_VIEWPORTS) {
+      test(`${page.name} (${page.path}) has no horizontal scroll at ${viewport.name} (${viewport.width}px)`, async ({
+        page: browserPage,
+      }, testInfo) => {
+        test.skip(testInfo.project.name !== "Desktop", "reflow viewport matrix runs once");
 
-      const hasHorizontalScroll = await browserPage.evaluate(
-        () => document.documentElement.scrollWidth > document.documentElement.clientWidth,
-      );
-      if (BASELINE_REFLOW) {
-        if (hasHorizontalScroll) {
-          console.warn(
-            "BASELINE (non-gating): horizontal scroll at 320px — deferred, see tests/a11y/A11Y-BASELINE.md",
-          );
+        await browserPage.setViewportSize({ width: viewport.width, height: viewport.height });
+        await browserPage.goto(page.path);
+        await browserPage.waitForLoadState("networkidle");
+
+        const dimensions = await browserPage.evaluate(() => ({
+          clientWidth: document.documentElement.clientWidth,
+          scrollWidth: document.documentElement.scrollWidth,
+        }));
+        const hasHorizontalScroll = dimensions.scrollWidth > dimensions.clientWidth;
+        if (BASELINE_REFLOW) {
+          if (hasHorizontalScroll) {
+            console.warn(
+              `BASELINE (non-gating): horizontal scroll at ${viewport.name} (${viewport.width}px) — ` +
+                `scrollWidth=${dimensions.scrollWidth}, clientWidth=${dimensions.clientWidth}`,
+            );
+          }
+        } else {
+          expect(
+            hasHorizontalScroll,
+            `${viewport.name} (${viewport.width}px) overflowed: ` +
+              `scrollWidth=${dimensions.scrollWidth}, clientWidth=${dimensions.clientWidth}`,
+          ).toBe(false);
         }
-      } else {
-        expect(hasHorizontalScroll).toBe(false);
-      }
-    });
+      });
+    }
   }
 });
 

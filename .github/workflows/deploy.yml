@@ -54,17 +54,15 @@ jobs:
           npx tailwindcss -i ./src/input.css -o ./_site/assets/tailwind.css --minify
 
       # Accessibility audit: render the assembled _site and run axe-core (via
-      # Playwright) + Pa11y-CI. NON-BLOCKING for now (continue-on-error) — it
-      # reports WCAG 2.2 AA issues without failing the deploy. Flip both steps
-      # back to blocking (remove continue-on-error) once outstanding issues are
-      # resolved. Linting already ran above, so skip it here with --no-lint.
+      # Playwright) + Pa11y-CI. This is blocking: WCAG regressions fail the
+      # deploy before the GitHub Pages artifact is uploaded. Linting already ran
+      # above, so skip it here with --no-lint.
       - name: Install Playwright Chromium
         run: npx playwright install --with-deps chromium
         continue-on-error: true
 
-      - name: Accessibility audit (axe + pa11y, non-blocking)
+      - name: Accessibility audit (axe + pa11y)
         run: bash scripts/a11y-audit.sh --no-lint --serve-dir=_site
-        continue-on-error: true
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
