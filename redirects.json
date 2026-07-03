@@ -1,0 +1,14 @@
+{
+  "cloudflareList": "backyard_bullies_redirects",
+  "allowEmpty": false,
+  "redirects": [
+    {
+      "source": "backyardbullies-wc.com/pno",
+      "target": "https://www.backyardbullies-wc.com/parents-night-out/",
+      "statusCode": 301,
+      "preserveQueryString": true,
+      "includeSubdomains": true,
+      "comment": "Parents Night Out vanity URL"
+    }
+  ]
+}

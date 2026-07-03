@@ -1,5 +1,11 @@
 {
-  "_comment": "Single source of truth for accessibility test URLs. Read by .pa11yci.cjs, ../tests/wcag-audit.spec.js, and ../scripts/a11y-audit.sh. This is a single-page static site, so the homepage is the only route. 'pr' and 'full' are identical here; both keys are kept so the scope plumbing matches the standard harness. Interactive states (mobile menu, coach bios, live calendar) are covered by expanding all <details> in the Playwright spec rather than by separate URLs.",
-  "pr": [{ "name": "Homepage", "path": "/" }],
-  "full": [{ "name": "Homepage", "path": "/" }]
+  "_comment": "Single source of truth for accessibility test URLs. Read by .pa11yci.cjs, ../tests/wcag-audit.spec.js, and ../scripts/a11y-audit.sh. Interactive homepage states (mobile menu, coach bios, live calendar) are covered by expanding all <details> in the Playwright spec.",
+  "pr": [
+    { "name": "Homepage", "path": "/" },
+    { "name": "Parents Night Out", "path": "/parents-night-out/" }
+  ],
+  "full": [
+    { "name": "Homepage", "path": "/" },
+    { "name": "Parents Night Out", "path": "/parents-night-out/" }
+  ]
 }
