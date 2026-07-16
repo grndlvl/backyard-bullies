@@ -72,7 +72,7 @@ const config = {
     // scan so the gate measures our own markup only — mirrors the axe excludes
     // in ../tests/wcag-audit.spec.js.
     hideElements:
-      '.tiktok-embed, iframe[src*="google.com/maps"], iframe[src*="calendar.google.com"]',
+      '.tiktok-embed, a[href*="tiktok.com"][href*="refer=creator_embed"], iframe[src*="google.com/maps"], iframe[src*="calendar.google.com"]',
     // Playwright + axe-core is the canonical color-contrast gate for this site.
     // Pa11y's axe runner misreports contrast on alpha/gradient/image-backed
     // sections that the canonical rendered axe scan passes, so suppress only
