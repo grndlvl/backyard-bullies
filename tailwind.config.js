@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html", "./parents-night-out/**/*.html"],
+  content: [
+    "./index.html",
+    "./parents-night-out/**/*.html",
+    "./homeschool-functional-fitness/**/*.html",
+  ],
   theme: {
     extend: {
       colors: {
