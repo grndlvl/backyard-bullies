@@ -62,8 +62,15 @@ body {
   pointer-events: none;
   background-image: url("../images/camps/homeschool-splatter.webp");
   background-repeat: no-repeat;
-  background-size: 200% 100%;
+  background-size: auto 100%;
   opacity: 0.5;
+}
+
+@media (width <= 640px) {
+  .homeschool-page .paint-zone::before {
+    width: 88vw;
+    background-size: auto 92%;
+  }
 }
 
 .homeschool-page .paint-blue-left::before {
