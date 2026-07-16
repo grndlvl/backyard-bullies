@@ -250,6 +250,33 @@
     },
     {
       "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Homeschool Functional Fitness + Wrestling",
+      "description": "Weekly functional fitness with optional wrestling for homeschool athletes in a positive, encouraging environment.",
+      "url": "https://www.backyardbullies-wc.com/homeschool-functional-fitness/",
+      "image": "https://www.backyardbullies-wc.com/images/camps/homeschool-functional-fitness.webp",
+      "provider": {
+        "@type": "SportsActivityLocation",
+        "name": "Backyard Bullies Wrestling Club",
+        "url": "https://www.backyardbullies-wc.com/"
+      },
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "onsite",
+        "startDate": "2026-08-05",
+        "location": {
+          "@type": "Place",
+          "name": "Backyard Bullies Wrestling Club",
+          "address": "266 Bobby Jones Expressway (Rear Entrance), Augusta, GA 30907"
+        }
+      },
+      "offers": [
+        {"@type": "Offer", "name": "Functional Fitness", "price": 50, "priceCurrency": "USD", "category": "monthly"},
+        {"@type": "Offer", "name": "Functional Fitness + Wrestling", "price": 90, "priceCurrency": "USD", "category": "monthly"}
+      ]
+    },
+    {
+      "@context": "https://schema.org",
       "@type": "Event",
       "name": "Backyard Bullies Summer Day Camp v4.0",
       "description": "A nine-week summer day camp (Monday-Friday, 9:00 AM - 3:00 PM) at Backyard Bullies Wrestling Club in Augusta, GA, building functional fitness, agility, speed, confidence, respect, communication, and leadership.",
@@ -615,6 +642,25 @@
         </article>
 
         <div class="grid md:grid-cols-2 gap-6">
+          <!-- Homeschool Functional Fitness + Wrestling -->
+          <article class="bg-ink-card border border-ink-line rounded-xl p-6 flex flex-col">
+            <div class="min-h-20">
+              <h3 class="font-head font-700 uppercase text-xl text-brand mb-1">Homeschool Functional Fitness + Wrestling</h3>
+              <p class="text-xs uppercase tracking-wide text-slate-400">Begins August 5, 2026 • Wednesdays + optional Fridays</p>
+            </div>
+            <a href="images/camps/homeschool-functional-fitness.webp" target="_blank" rel="noopener noreferrer" class="mb-5 h-80 w-60 self-center overflow-hidden rounded-lg bg-ink ring-1 ring-ink-line focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand">
+              <img src="images/camps/homeschool-functional-fitness.webp" alt="Homeschool Functional Fitness and Wrestling promotional flyer" width="1024" height="1536" loading="lazy" class="h-full w-full object-fill" />
+              <span class="sr-only">View the full Homeschool Functional Fitness and Wrestling flyer (opens in new window)</span>
+            </a>
+            <p class="text-slate-200 text-sm mb-4">A welcoming weekly program where homeschool athletes build strength, athleticism, confidence, discipline, and wrestling skills in a fun, safe environment.</p>
+            <ul class="list-disc pl-5 space-y-1.5 text-slate-200 text-sm mb-6">
+              <li>Wednesday functional fitness with Coach Olivia: $50/month</li>
+              <li>Add Friday wrestling with Coach Boyden: $90/month total</li>
+              <li>Four or eight sessions per month</li>
+            </ul>
+            <a href="homeschool-functional-fitness/" class="mt-auto inline-flex items-center justify-center gap-2 bg-brand text-ink font-head font-700 uppercase text-sm px-5 py-3 rounded-md hover:bg-brand-dark transition-colors">View program details &amp; register</a>
+          </article>
+
           <!-- Summer Day Camp v4.0 -->
           <article class="bg-ink-card border border-ink-line rounded-xl p-6 flex flex-col">
             <div class="min-h-20">
