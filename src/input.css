@@ -55,31 +55,21 @@ body {
 .homeschool-page .paint-zone::before {
   position: absolute;
   z-index: -1;
-  top: -2rem;
-  bottom: -2rem;
-  width: min(58rem, 72vw);
+  inset: -2rem 0;
   content: "";
   pointer-events: none;
-  background-image: url("../images/camps/homeschool-splatter.webp");
   background-repeat: no-repeat;
   background-size: auto 100%;
   opacity: 0.5;
 }
 
-@media (width <= 640px) {
-  .homeschool-page .paint-zone::before {
-    width: 88vw;
-    background-size: auto 92%;
-  }
-}
-
 .homeschool-page .paint-blue-left::before {
-  left: -2rem;
+  background-image: url("../images/camps/homeschool-splatter-blue.webp");
   background-position: left center;
 }
 
 .homeschool-page .paint-lime-right::before {
-  right: -2rem;
+  background-image: url("../images/camps/homeschool-splatter-lime.webp");
   background-position: right center;
 }
 
