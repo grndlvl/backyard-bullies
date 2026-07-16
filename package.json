@@ -7,7 +7,7 @@
     "build:css": "tailwindcss -i ./src/input.css -o ./assets/tailwind.css --minify",
     "watch:css": "tailwindcss -i ./src/input.css -o ./assets/tailwind.css --watch",
     "lint": "npm run lint:html && npm run lint:css && npm run lint:content && npm run lint:redirects",
-    "lint:html": "html-validate index.html \"parents-night-out/**/*.html\"",
+    "lint:html": "html-validate index.html \"parents-night-out/**/*.html\" \"homeschool-functional-fitness/**/*.html\"",
     "lint:css": "stylelint \"src/**/*.css\"",
     "lint:content": "node scripts/check-content.mjs",
     "lint:redirects": "node scripts/sync-cloudflare-redirects.mjs --check",
@@ -45,6 +45,9 @@
       "node scripts/check-content.mjs"
     ],
     "parents-night-out/**/*.html": [
+      "html-validate"
+    ],
+    "homeschool-functional-fitness/**/*.html": [
       "html-validate"
     ]
   }

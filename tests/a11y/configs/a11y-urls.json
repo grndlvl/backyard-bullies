@@ -2,10 +2,18 @@
   "_comment": "Single source of truth for accessibility test URLs. Read by .pa11yci.cjs, ../tests/wcag-audit.spec.js, and ../scripts/a11y-audit.sh. Interactive homepage states (mobile menu, coach bios, live calendar) are covered by expanding all <details> in the Playwright spec.",
   "pr": [
     { "name": "Homepage", "path": "/" },
-    { "name": "Parents Night Out", "path": "/parents-night-out/" }
+    { "name": "Parents Night Out", "path": "/parents-night-out/" },
+    {
+      "name": "Homeschool Functional Fitness",
+      "path": "/homeschool-functional-fitness/"
+    }
   ],
   "full": [
     { "name": "Homepage", "path": "/" },
-    { "name": "Parents Night Out", "path": "/parents-night-out/" }
+    { "name": "Parents Night Out", "path": "/parents-night-out/" },
+    {
+      "name": "Homeschool Functional Fitness",
+      "path": "/homeschool-functional-fitness/"
+    }
   ]
 }

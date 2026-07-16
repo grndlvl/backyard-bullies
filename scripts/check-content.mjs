@@ -11,6 +11,10 @@ const pages = [
     name: "parents-night-out/index.html",
     url: new URL("../parents-night-out/index.html", import.meta.url),
   },
+  {
+    name: "homeschool-functional-fitness/index.html",
+    url: new URL("../homeschool-functional-fitness/index.html", import.meta.url),
+  },
 ].map((page) => ({ ...page, html: readFileSync(page.url, "utf8") }));
 const homepage = pages[0].html;
 const errors = [];
