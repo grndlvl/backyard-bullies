@@ -570,7 +570,7 @@
         <div class="grid lg:grid-cols-3 gap-6">
           <!-- Homeschool Functional Fitness + Wrestling -->
           <article class="bg-ink-card border border-ink-line rounded-xl p-6 flex flex-col">
-            <div class="min-h-20">
+            <div class="min-h-20 mb-3">
               <h3 class="font-head font-700 uppercase text-xl text-brand mb-1">Homeschool Functional Fitness + Wrestling</h3>
               <p class="text-xs uppercase tracking-wide text-slate-400">Begins August 5, 2026 • Wednesdays + optional Fridays</p>
             </div>
@@ -589,7 +589,7 @@
 
           <!-- Summer Day Camp v4.0 -->
           <article class="bg-ink-card border border-ink-line rounded-xl p-6 flex flex-col">
-            <div class="min-h-20">
+            <div class="min-h-20 mb-3">
               <h3 class="font-head font-700 uppercase text-xl text-brand mb-1">Summer Day Camp v4.0</h3>
               <p class="text-xs uppercase tracking-wide text-slate-400">June &amp; July • Monday–Friday, 9:00 AM – 3:00 PM • 9 weeks</p>
             </div>
@@ -613,7 +613,7 @@
 
           <!-- JJ Howland Wrestling Clinic -->
           <article class="bg-ink-card border border-ink-line rounded-xl p-6 flex flex-col">
-            <div class="min-h-20">
+            <div class="min-h-20 mb-3">
               <h3 class="font-head font-700 uppercase text-xl text-brand mb-1">JJ Howland Wrestling Clinic</h3>
               <p class="text-xs uppercase tracking-wide text-slate-400">Saturday, September 26, 2026 • 10:00 AM – 5:00 PM</p>
             </div>
@@ -1684,6 +1684,16 @@
         return cleanText(summary && summary.textContent);
       }
 
+      function expandLinkedCoachBio(hash) {
+        if (!hash || hash.indexOf('#coach-') !== 0) return;
+
+        var coach = document.getElementById(hash.substring(1));
+        if (!coach || !coach.closest('#coaches')) return;
+
+        var bio = coach.querySelector('details');
+        if (bio) bio.open = true;
+      }
+
       var menus = [
         document.getElementById('desktopMoreMenu'),
         document.getElementById('mobileMenu')
@@ -1736,6 +1746,7 @@
         if (!link) return;
 
         var href = link.getAttribute('href') || '';
+        expandLinkedCoachBio(href);
         var location = getLocation(link);
         var label = getLinkLabel(link);
         var target = getLinkTarget(href);
@@ -1867,6 +1878,12 @@
           }
         });
       });
+
+      window.addEventListener('hashchange', function () {
+        expandLinkedCoachBio(window.location.hash);
+      });
+
+      expandLinkedCoachBio(window.location.hash);
     })();
   </script>
 
