@@ -179,8 +179,8 @@ test.describe("WCAG 2.3.3 Reduced Motion", () => {
       page: browserPage,
     }) => {
       await browserPage.emulateMedia({ reducedMotion: "reduce" });
-      await browserPage.goto(page.path);
-      await browserPage.waitForLoadState("networkidle");
+      await browserPage.goto(page.path, { waitUntil: "domcontentloaded" });
+      await expect(browserPage.locator("main")).toBeVisible();
 
       const runningAnimations = await browserPage.evaluate(() => {
         const allElements = document.querySelectorAll("*");
