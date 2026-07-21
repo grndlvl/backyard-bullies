@@ -50,16 +50,7 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
 
       - name: Assemble site and compile Tailwind CSS
-        run: |
-          mkdir -p _site/assets
-          cp index.html _site/
-          cp -r parents-night-out _site/
-          cp -r homeschool-functional-fitness _site/
-          cp -r images _site/
-          cp robots.txt sitemap.xml llms.txt _site/
-          cp CNAME _site/
-          touch _site/.nojekyll
-          npx tailwindcss -i ./src/input.css -o ./_site/assets/tailwind.css --minify
+        run: bash scripts/build-site.sh
 
       # Accessibility audit: render the assembled _site and run axe-core (via
       # Playwright) + Pa11y-CI. This is blocking: WCAG regressions fail the
