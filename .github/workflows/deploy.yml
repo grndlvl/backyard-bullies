@@ -55,6 +55,7 @@ jobs:
           cp index.html _site/
           cp -r parents-night-out _site/
           cp -r homeschool-functional-fitness _site/
+          cp -r scholarship _site/
           cp -r images _site/
           cp robots.txt sitemap.xml llms.txt _site/
           cp CNAME _site/
