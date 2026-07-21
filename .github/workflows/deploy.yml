@@ -62,6 +62,17 @@ jobs:
           touch _site/.nojekyll
           npx tailwindcss -i ./src/input.css -o ./_site/assets/tailwind.css --minify
 
+          # Cache-bust the stylesheet. assets/tailwind.css is a stable filename
+          # with mutable content sitting behind a 4-hour Cloudflare TTL, so a
+          # deploy that adds classes serves stale CSS until the TTL expires and
+          # new pages render unstyled. Stamping the content hash onto the href
+          # gives changed CSS a URL the CDN has never cached.
+          CSS_HASH="$(sha256sum _site/assets/tailwind.css | cut -c1-12)"
+          find _site -name '*.html' -exec \
+            sed -i "s|assets/tailwind\.css|assets/tailwind.css?v=${CSS_HASH}|g" {} +
+          echo "Stylesheet versioned as ?v=${CSS_HASH}"
+          grep -rho 'assets/tailwind\.css?v=[a-f0-9]*' _site --include='*.html' | sort -u
+
       # Accessibility audit: render the assembled _site and run axe-core (via
       # Playwright) + Pa11y-CI. This is blocking: WCAG regressions fail the
       # deploy before the GitHub Pages artifact is uploaded. Linting already ran
