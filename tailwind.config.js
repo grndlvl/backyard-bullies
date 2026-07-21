@@ -4,6 +4,7 @@ module.exports = {
     "./index.html",
     "./parents-night-out/**/*.html",
     "./homeschool-functional-fitness/**/*.html",
+    "./scholarship/**/*.html",
   ],
   theme: {
     extend: {

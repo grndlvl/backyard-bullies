@@ -15,39 +15,51 @@ const pages = [
     name: "homeschool-functional-fitness/index.html",
     url: new URL("../homeschool-functional-fitness/index.html", import.meta.url),
   },
+  {
+    name: "scholarship/index.html",
+    url: new URL("../scholarship/index.html", import.meta.url),
+  },
 ].map((page) => ({ ...page, html: readFileSync(page.url, "utf8") }));
-const homepage = pages[0].html;
 const errors = [];
 
 // 1) JSON-LD validity
 const blocks = pages.flatMap((page) =>
   [...page.html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(
-    (match) => ({ page: page.name, raw: match[1] }),
+    (match) => ({ page, raw: match[1] }),
   ),
 );
 if (blocks.length === 0) errors.push("No JSON-LD blocks found in <head>");
 
-let faqMarkupCount = null;
 blocks.forEach((block, i) => {
   try {
     const data = JSON.parse(block.raw);
-    if (data["@type"] === "FAQPage") faqMarkupCount = (data.mainEntity || []).length;
+    if (data["@type"] === "FAQPage") block.page.faqMarkupCount = (data.mainEntity || []).length;
   } catch (e) {
-    errors.push(`${block.page} JSON-LD block ${i + 1} is invalid JSON: ${e.message}`);
+    errors.push(`${block.page.name} JSON-LD block ${i + 1} is invalid JSON: ${e.message}`);
   }
 });
 
-// 2) FAQ parity (visible cards vs FAQPage markup)
-const faqStart = homepage.indexOf('id="faq"');
-let visibleFaq = null;
-if (faqStart !== -1) {
-  const slice = homepage.slice(faqStart, homepage.indexOf("</section>", faqStart));
-  visibleFaq = (slice.match(/<h3/g) || []).length;
-  if (faqMarkupCount !== null && faqMarkupCount !== visibleFaq) {
+// 2) FAQ parity, per page (visible cards vs that page's FAQPage markup)
+const faqSummary = [];
+for (const page of pages) {
+  const faqStart = page.html.indexOf('id="faq"');
+  if (faqStart === -1 && page.faqMarkupCount === undefined) continue;
+  if (faqStart === -1) {
+    errors.push(`${page.name} has FAQPage markup but no visible FAQ section (id="faq")`);
+    continue;
+  }
+  const slice = page.html.slice(faqStart, page.html.indexOf("</section>", faqStart));
+  const visibleFaq = (slice.match(/<h3/g) || []).length;
+  if (page.faqMarkupCount === undefined) {
+    errors.push(`${page.name} has a visible FAQ section but no FAQPage JSON-LD`);
+    continue;
+  }
+  if (page.faqMarkupCount !== visibleFaq) {
     errors.push(
-      `FAQ mismatch: FAQPage markup has ${faqMarkupCount} questions but the page shows ${visibleFaq} FAQ cards`,
+      `${page.name} FAQ mismatch: FAQPage markup has ${page.faqMarkupCount} questions but the page shows ${visibleFaq} FAQ cards`,
     );
   }
+  faqSummary.push(`${page.name} ${visibleFaq}=${page.faqMarkupCount}`);
 }
 
 // 3) Internal anchor integrity
@@ -69,5 +81,5 @@ if (errors.length) {
   process.exit(1);
 }
 console.log(
-  `✓ Content checks passed — ${blocks.length} JSON-LD block(s), FAQ ${visibleFaq}=${faqMarkupCount}, ${anchorCount} anchors resolve across ${pages.length} pages`,
+  `✓ Content checks passed — ${blocks.length} JSON-LD block(s), FAQ parity ${faqSummary.join(", ")}, ${anchorCount} anchors resolve across ${pages.length} pages`,
 );
