@@ -1,0 +1,764 @@
+@import url("vendor/fonts/fonts.css");
+
+:root {
+  --brand: #3fc8f4;
+  --brand-dark: #16a6dc;
+  --ink: #0e1116;
+  --ink-soft: #161b22;
+  --ink-card: #1b2230;
+  --ink-line: #2a3343;
+  --white: #f8fafc;
+  --muted: #b7c1cf;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+.reveal-viewport,
+.reveal {
+  background: var(--ink) !important;
+  height: 100%;
+  margin: 0;
+  min-height: 100%;
+  width: 100%;
+}
+
+body {
+  overflow: hidden;
+}
+
+.reveal-viewport {
+  background:
+    linear-gradient(115deg, rgb(14 17 22 / 96%), rgb(22 27 34 / 91%)),
+    radial-gradient(circle at 85% 15%, rgb(63 200 244 / 24%), transparent 35%) !important;
+  background-color: var(--ink) !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+
+.reveal-viewport:has(.hero.present) {
+  background-image:
+    linear-gradient(
+      90deg,
+      rgb(14 17 22 / 98%) 0%,
+      rgb(14 17 22 / 88%) 48%,
+      rgb(14 17 22 / 25%) 100%
+    ),
+    url("assets/cover.webp") !important;
+}
+
+.reveal {
+  color: var(--white);
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 34px;
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal .slides section {
+  height: 100%;
+  padding: 56px 64px;
+  background: transparent;
+  overflow: hidden;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal p {
+  margin: 0;
+}
+
+.reveal h1,
+.reveal h2 {
+  color: var(--white);
+  font-family: "Anton", "Arial Narrow", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 0.98;
+  text-transform: uppercase;
+}
+
+.reveal h1 {
+  font-size: 3.15em;
+}
+.reveal h2 {
+  font-size: 2.25em;
+}
+.reveal h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.05em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  color: var(--brand);
+  font-family: "Oswald", sans-serif;
+  font-size: 0.55em;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  margin-bottom: 18px !important;
+  text-transform: uppercase;
+}
+
+.accent {
+  color: var(--brand);
+}
+.lead {
+  color: var(--muted);
+  font-size: 0.78em;
+  line-height: 1.45;
+}
+.rule {
+  background: var(--brand);
+  height: 7px;
+  margin: 24px 0 30px;
+  width: 110px;
+}
+
+.slide-footer {
+  align-items: center;
+  bottom: 34px;
+  color: #b7c1cf;
+  display: flex;
+  font-family: "Oswald", sans-serif;
+  font-size: 0.46em;
+  gap: 15px;
+  left: 74px;
+  letter-spacing: 0.08em;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+.slide-footer img {
+  height: 56px;
+  width: 56px;
+}
+
+.hero {
+  align-items: center;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgb(14 17 22 / 98%) 0%,
+      rgb(14 17 22 / 88%) 48%,
+      rgb(14 17 22 / 25%) 100%
+    ),
+    url("assets/cover.webp") !important;
+  background-position: center !important;
+  background-size: cover !important;
+  display: flex !important;
+}
+
+.hero-copy {
+  max-width: 65%;
+}
+.hero-logo {
+  height: 125px;
+  margin-bottom: 24px;
+  width: 125px;
+}
+.hero .tagline {
+  color: var(--muted);
+  font-size: 0.8em;
+  margin-top: 24px;
+}
+
+.mission-layout,
+.expectation-layout,
+.family-layout {
+  display: grid;
+  gap: 48px;
+  grid-template-columns: 1.08fr 0.92fr;
+  height: 82%;
+  align-items: center;
+}
+
+.parent-expectations .expectation-layout {
+  grid-template-columns: 0.92fr 1.08fr;
+}
+
+.value-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.mission-visual {
+  display: grid;
+  gap: 18px;
+}
+.mission-visual img {
+  border: 2px solid var(--ink-line);
+  border-radius: 16px;
+  height: 300px;
+  object-fit: cover;
+  width: 100%;
+}
+.value {
+  background: linear-gradient(135deg, rgb(63 200 244 / 14%), rgb(27 34 48 / 72%));
+  border: 1px solid rgb(63 200 244 / 32%);
+  border-radius: 14px;
+  font-family: "Oswald", sans-serif;
+  font-size: 0.66em;
+  font-weight: 700;
+  padding: 22px 16px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.coach-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 28px;
+}
+.coach-card {
+  background: var(--ink-card);
+  border: 1px solid var(--ink-line);
+  border-radius: 16px;
+  min-height: 180px;
+  padding: 23px;
+}
+.coach-card .initials {
+  align-items: center;
+  background: var(--brand);
+  border-radius: 50%;
+  color: var(--ink);
+  display: flex;
+  font-family: "Oswald", sans-serif;
+  font-size: 0.72em;
+  font-weight: 700;
+  height: 58px;
+  justify-content: center;
+  margin-bottom: 16px;
+  width: 58px;
+}
+.coach-card .role {
+  color: var(--brand);
+  font-size: 0.39em;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  margin-top: 8px;
+  text-transform: uppercase;
+}
+.coach-card .bio {
+  color: var(--muted);
+  font-size: 0.41em;
+  line-height: 1.4;
+  margin-top: 12px;
+}
+
+.coach-video-layout {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: 0.62fr 1.38fr;
+  margin-top: 24px;
+}
+
+.coach-video-layout-reversed {
+  grid-template-columns: 1.38fr 0.62fr;
+}
+
+.coach-video-layout > iframe,
+.coach-video-layout > video {
+  background: var(--ink-card);
+  border: 2px solid var(--ink-line);
+  border-radius: 16px;
+  height: 615px;
+  width: 100%;
+}
+
+.coach-video-layout > video {
+  object-fit: cover;
+}
+
+.coach-video-layout .coach-grid {
+  gap: 14px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 0;
+}
+
+.coach-video-layout .coach-card {
+  min-height: 0;
+  padding: 18px;
+}
+
+.coach-video-layout .coach-card .initials {
+  height: 46px;
+  margin-bottom: 10px;
+  width: 46px;
+}
+
+.coach-video-layout .coach-card .bio {
+  margin-top: 7px;
+}
+
+.expect-list {
+  display: grid;
+  gap: 16px;
+  margin: 30px 0 0;
+  padding: 0;
+}
+.expect-list li {
+  align-items: center;
+  background: var(--ink-card);
+  border-left: 6px solid var(--brand);
+  border-radius: 9px;
+  display: flex;
+  font-size: 0.6em;
+  line-height: 1.25;
+  list-style: none;
+  min-height: 72px;
+  padding: 14px 22px;
+}
+.expect-quote {
+  color: var(--white);
+  font-family: "Oswald", sans-serif;
+  font-size: 1.18em;
+  font-weight: 700;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+.expect-note {
+  color: var(--muted);
+  font-size: 0.55em;
+  line-height: 1.5;
+  margin-top: 24px !important;
+}
+
+.expect-image-wrap {
+  text-align: center;
+}
+
+.expect-media {
+  border: 2px solid var(--ink-line);
+  border-radius: 16px;
+  height: 560px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.expect-image-wrap .expect-quote {
+  font-size: 0.62em;
+  margin-top: 16px;
+}
+
+.parent-photo {
+  border: 2px solid var(--ink-line);
+  border-radius: 16px;
+  height: 500px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.parent-visual .expect-quote {
+  font-size: 0.72em;
+  margin-top: 18px;
+}
+
+.sponsor-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 32px;
+}
+.sponsor {
+  align-items: center;
+  background: #f8fafc;
+  border: 5px solid var(--ink-card);
+  border-radius: 16px;
+  display: flex;
+  height: 180px;
+  justify-content: center;
+  padding: 26px;
+}
+.sponsor img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+.sponsor.dark {
+  background: var(--ink);
+}
+
+.family-photo {
+  border: 2px solid var(--ink-line);
+  border-radius: 18px;
+  height: 500px;
+  object-fit: cover;
+  width: 100%;
+}
+.closing-promo {
+  align-items: start;
+  display: grid;
+  gap: 32px;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  margin-top: 38px;
+}
+
+.contact {
+  margin: 0;
+}
+
+.free-classes {
+  align-items: center;
+  background: var(--brand);
+  border-radius: 10px;
+  color: var(--ink);
+  display: inline-flex;
+  font-family: "Oswald", sans-serif;
+  font-size: 0.95em;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1;
+  min-height: 82px;
+  padding: 14px 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.free-classes strong {
+  font-family: "Anton", sans-serif;
+  font-size: 1.35em;
+  font-weight: 400;
+  line-height: 1;
+  margin-left: 5px;
+}
+
+.contact-details {
+  color: var(--brand);
+  font-family: "Oswald", sans-serif;
+  font-size: 0.66em;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-top: 12px !important;
+}
+
+.website-qr {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+}
+
+.website-qr img {
+  background: white;
+  border: 10px solid white;
+  border-radius: 12px;
+  height: 300px;
+  width: 300px;
+}
+
+.website-qr p {
+  color: var(--white);
+  font-family: "Oswald", sans-serif;
+  font-size: 0.45em;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.start-overlay {
+  align-items: center;
+  background: rgb(14 17 22 / 96%);
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  position: fixed;
+  z-index: 100;
+}
+.start-card {
+  max-width: 720px;
+  text-align: center;
+}
+.start-card img {
+  height: 120px;
+  width: 120px;
+}
+.start-card h1 {
+  font-family: "Anton", sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+  margin: 18px 0 12px;
+  text-transform: uppercase;
+}
+.start-card p {
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.5;
+}
+.start-card button {
+  background: var(--brand);
+  border: 0;
+  border-radius: 10px;
+  color: var(--ink);
+  cursor: pointer;
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 28px;
+  padding: 15px 32px;
+  text-transform: uppercase;
+}
+.start-card button:focus-visible {
+  outline: 5px solid white;
+  outline-offset: 5px;
+}
+.is-hidden {
+  display: none;
+}
+
+.playback-status {
+  background: rgb(14 17 22 / 88%);
+  border: 1px solid var(--ink-line);
+  border-radius: 7px;
+  bottom: 18px;
+  color: var(--muted);
+  font-family: "Oswald", sans-serif;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: fixed;
+  right: 18px;
+  z-index: 30;
+}
+
+/* Slide entrance motion. Reveal adds .present only to the active slide, so
+   animations replay naturally as the deck loops. */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes media-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes list-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes value-rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sponsor-from-left {
+  from {
+    opacity: 0;
+    transform: translateX(-90px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes sponsor-from-right {
+  from {
+    opacity: 0;
+    transform: translateX(90px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes rule-grow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.reveal .slides section.present .eyebrow {
+  animation: rise-in 550ms ease-out both;
+}
+
+.reveal .slides section.present h1,
+.reveal .slides section.present h2 {
+  animation: rise-in 650ms 90ms ease-out both;
+}
+
+.reveal .slides section.present .lead,
+.reveal .slides section.present .tagline,
+.reveal .slides section.present .contact {
+  animation: rise-in 650ms 180ms ease-out both;
+}
+
+.reveal .slides section.present .rule {
+  animation: rule-grow 600ms 160ms ease-out both;
+  transform-origin: left center;
+}
+
+.reveal .slides section.present .mission-visual img,
+.reveal .slides section.present .coach-video-layout > iframe,
+.reveal .slides section.present .coach-video-layout > video,
+.reveal .slides section.present .expect-media,
+.reveal .slides section.present .parent-photo,
+.reveal .slides section.present .family-photo {
+  animation: media-in 800ms 160ms ease-out both;
+}
+
+.reveal .slides section.present .value,
+.reveal .slides section.present .coach-card,
+.reveal .slides section.present .sponsor {
+  animation: card-in 550ms ease-out both;
+}
+
+.reveal .slides section.present .value:nth-child(2),
+.reveal .slides section.present .coach-card:nth-child(2),
+.reveal .slides section.present .sponsor:nth-child(2) {
+  animation-delay: 90ms;
+}
+
+.reveal .slides section.present .value:nth-child(3),
+.reveal .slides section.present .coach-card:nth-child(3),
+.reveal .slides section.present .sponsor:nth-child(3) {
+  animation-delay: 160ms;
+}
+
+.reveal .slides section.present .value:nth-child(4),
+.reveal .slides section.present .coach-card:nth-child(4),
+.reveal .slides section.present .sponsor:nth-child(4) {
+  animation-delay: 230ms;
+}
+
+.reveal .slides section.present .value:nth-child(5),
+.reveal .slides section.present .coach-card:nth-child(5),
+.reveal .slides section.present .sponsor:nth-child(5) {
+  animation-delay: 300ms;
+}
+
+.reveal .slides section.present .value:nth-child(6),
+.reveal .slides section.present .coach-card:nth-child(6),
+.reveal .slides section.present .sponsor:nth-child(6) {
+  animation-delay: 370ms;
+}
+
+.reveal .slides section.parent-expectations.present .expect-list li {
+  animation: list-slide-in 600ms ease-out both;
+}
+
+.reveal .slides section.parent-expectations.present .expect-list li:nth-child(1) {
+  animation-delay: 300ms;
+}
+.reveal .slides section.parent-expectations.present .expect-list li:nth-child(2) {
+  animation-delay: 1.15s;
+}
+.reveal .slides section.parent-expectations.present .expect-list li:nth-child(3) {
+  animation-delay: 2s;
+}
+.reveal .slides section.parent-expectations.present .expect-list li:nth-child(4) {
+  animation-delay: 2.85s;
+}
+.reveal .slides section.parent-expectations.present .expect-list li:nth-child(5) {
+  animation-delay: 3.7s;
+}
+
+.reveal .slides section.mission-slide.present .value {
+  animation: value-rise-in 600ms ease-out both;
+}
+
+.reveal .slides section.mission-slide.present .value:nth-child(1) {
+  animation-delay: 300ms;
+}
+.reveal .slides section.mission-slide.present .value:nth-child(2) {
+  animation-delay: 900ms;
+}
+.reveal .slides section.mission-slide.present .value:nth-child(3) {
+  animation-delay: 1.5s;
+}
+.reveal .slides section.mission-slide.present .value:nth-child(4) {
+  animation-delay: 2.1s;
+}
+.reveal .slides section.mission-slide.present .value:nth-child(5) {
+  animation-delay: 2.7s;
+}
+.reveal .slides section.mission-slide.present .value:nth-child(6) {
+  animation-delay: 3.3s;
+}
+
+.reveal .slides section.sponsors-slide.present .sponsor:nth-child(odd) {
+  animation: sponsor-from-left 650ms ease-out both;
+}
+
+.reveal .slides section.sponsors-slide.present .sponsor:nth-child(even) {
+  animation: sponsor-from-right 650ms ease-out both;
+}
+
+.reveal .slides section.sponsors-slide.present .sponsor:nth-child(1) {
+  animation-delay: 300ms;
+}
+.reveal .slides section.sponsors-slide.present .sponsor:nth-child(2) {
+  animation-delay: 800ms;
+}
+.reveal .slides section.sponsors-slide.present .sponsor:nth-child(3) {
+  animation-delay: 1.3s;
+}
+.reveal .slides section.sponsors-slide.present .sponsor:nth-child(4) {
+  animation-delay: 1.8s;
+}
+.reveal .slides section.sponsors-slide.present .sponsor:nth-child(5) {
+  animation-delay: 2.3s;
+}
+.reveal .slides section.sponsors-slide.present .sponsor:nth-child(6) {
+  animation-delay: 2.8s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}

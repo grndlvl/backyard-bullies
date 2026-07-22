@@ -3,37 +3,48 @@
 
 User-agent: *
 Allow: /
+Disallow: /tv/
 
 # Explicitly welcome major AI / answer-engine crawlers so the club can be
 # surfaced and recommended by AI assistants.
 User-agent: GPTBot
 Allow: /
+Disallow: /tv/
 
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /tv/
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /tv/
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /tv/
 
 User-agent: Claude-Web
 Allow: /
+Disallow: /tv/
 
 User-agent: anthropic-ai
 Allow: /
+Disallow: /tv/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /tv/
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /tv/
 
 User-agent: Applebot-Extended
 Allow: /
+Disallow: /tv/
 
 User-agent: CCBot
 Allow: /
+Disallow: /tv/
 
 Sitemap: https://www.backyardbullies-wc.com/sitemap.xml

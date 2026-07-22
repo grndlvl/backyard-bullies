@@ -6,9 +6,13 @@ package-lock.json
 
 # Hand-formatted markup — Prettier's HTML reflow can alter inline whitespace/rendering
 index.html
+tv/index.html
 
 # Binary / generated assets
 images/
+tv/assets/
+tv/vendor/reveal/
+tv/vendor/fonts/*.woff2
 lighthouse*.json
 
 # Assistant / tooling working state
