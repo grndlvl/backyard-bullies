@@ -9,6 +9,22 @@
       "preserveQueryString": true,
       "includeSubdomains": true,
       "comment": "Parents Night Out vanity URL"
+    },
+    {
+      "source": "backyardbullies-wc.com/store",
+      "target": "https://backyardbullies.itemorder.com/shop/home/",
+      "statusCode": 301,
+      "preserveQueryString": true,
+      "includeSubdomains": true,
+      "comment": "Team store vanity URL"
+    },
+    {
+      "source": "backyardbullies-wc.com/gear",
+      "target": "https://backyardbullies.itemorder.com/shop/home/",
+      "statusCode": 301,
+      "preserveQueryString": true,
+      "includeSubdomains": true,
+      "comment": "Team gear vanity URL"
     }
   ]
 }
