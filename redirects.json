@@ -25,6 +25,14 @@
       "preserveQueryString": true,
       "includeSubdomains": true,
       "comment": "Team gear vanity URL"
+    },
+    {
+      "source": "backyardbullies-wc.com/update-info",
+      "target": "https://docs.google.com/forms/d/e/1FAIpQLSf05EsBmOuIx3jDrIPGtDEL8rlLbeuk_w65h9z1lWLc350HQQ/viewform",
+      "statusCode": 301,
+      "preserveQueryString": true,
+      "includeSubdomains": true,
+      "comment": "Athlete information update form vanity URL"
     }
   ]
 }
