@@ -36,19 +36,19 @@
     },
     {
       "source": "backyardbullies-wc.com/tv",
-      "target": "https://www.youtube.com/watch?v=COfJiyLMQ2g",
+      "target": "https://www.youtube.com/playlist?list=PLf-IHQTnXXTg",
       "statusCode": 302,
       "preserveQueryString": false,
       "includeSubdomains": true,
-      "comment": "TV presentation video"
+      "comment": "TV presentation playlist"
     },
     {
       "source": "backyardbullies-wc.com/tv/",
-      "target": "https://www.youtube.com/watch?v=COfJiyLMQ2g",
+      "target": "https://www.youtube.com/playlist?list=PLf-IHQTnXXTg",
       "statusCode": 302,
       "preserveQueryString": false,
       "includeSubdomains": true,
-      "comment": "TV presentation video with trailing slash"
+      "comment": "TV presentation playlist with trailing slash"
     }
   ]
 }
