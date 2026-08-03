@@ -33,6 +33,22 @@
       "preserveQueryString": true,
       "includeSubdomains": true,
       "comment": "Athlete information update form vanity URL"
+    },
+    {
+      "source": "backyardbullies-wc.com/tv",
+      "target": "https://www.youtube.com/watch?v=COfJiyLMQ2g",
+      "statusCode": 302,
+      "preserveQueryString": false,
+      "includeSubdomains": true,
+      "comment": "TV presentation video"
+    },
+    {
+      "source": "backyardbullies-wc.com/tv/",
+      "target": "https://www.youtube.com/watch?v=COfJiyLMQ2g",
+      "statusCode": 302,
+      "preserveQueryString": false,
+      "includeSubdomains": true,
+      "comment": "TV presentation video with trailing slash"
     }
   ]
 }
