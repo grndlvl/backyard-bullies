@@ -35,6 +35,22 @@
       "comment": "Athlete information update form vanity URL"
     },
     {
+      "source": "backyardbullies-wc.com/massage",
+      "target": "https://docs.google.com/forms/d/1KDIK1frGlb-JrRSGMcr3vow8iE1rxaFb1_3wBdk4JoY/viewform",
+      "statusCode": 302,
+      "preserveQueryString": true,
+      "includeSubdomains": true,
+      "comment": "Athletic Standard sports massage signup"
+    },
+    {
+      "source": "backyardbullies-wc.com/massage/",
+      "target": "https://docs.google.com/forms/d/1KDIK1frGlb-JrRSGMcr3vow8iE1rxaFb1_3wBdk4JoY/viewform",
+      "statusCode": 302,
+      "preserveQueryString": true,
+      "includeSubdomains": true,
+      "comment": "Athletic Standard sports massage signup with trailing slash"
+    },
+    {
       "source": "backyardbullies-wc.com/tv",
       "target": "https://www.youtube.com/playlist?list=PLf-IHQTnXXTg",
       "statusCode": 302,
