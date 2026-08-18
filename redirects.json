@@ -36,17 +36,17 @@
     },
     {
       "source": "backyardbullies-wc.com/massage",
-      "target": "https://docs.google.com/forms/d/1KDIK1frGlb-JrRSGMcr3vow8iE1rxaFb1_3wBdk4JoY/viewform",
+      "target": "https://docs.google.com/forms/d/e/1FAIpQLSfqQz1brHXZdN1iIWRXIhHkAs_2T4ZU8aVni2BQuNoojVtLJQ/viewform?usp=dialog",
       "statusCode": 302,
-      "preserveQueryString": true,
+      "preserveQueryString": false,
       "includeSubdomains": true,
       "comment": "Athletic Standard sports massage signup"
     },
     {
       "source": "backyardbullies-wc.com/massage/",
-      "target": "https://docs.google.com/forms/d/1KDIK1frGlb-JrRSGMcr3vow8iE1rxaFb1_3wBdk4JoY/viewform",
+      "target": "https://docs.google.com/forms/d/e/1FAIpQLSfqQz1brHXZdN1iIWRXIhHkAs_2T4ZU8aVni2BQuNoojVtLJQ/viewform?usp=dialog",
       "statusCode": 302,
-      "preserveQueryString": true,
+      "preserveQueryString": false,
       "includeSubdomains": true,
       "comment": "Athletic Standard sports massage signup with trailing slash"
     },
