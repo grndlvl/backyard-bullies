@@ -11,6 +11,7 @@ little vanilla JS. Hosted on **GitHub Pages**, built and deployed automatically 
 ```
 index.html                    The entire site (one page, scroll sections)
 parents-night-out/index.html  Parents Night Out event landing page
+sponsorship/index.html        Business sponsorship levels and interactive selector
 src/input.css                 Tailwind entry + custom CSS (source for the build)
 tailwind.config.js            Tailwind theme (brand colors, fonts)
 package.json                  Build scripts + Tailwind dev dependency

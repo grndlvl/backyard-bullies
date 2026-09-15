@@ -45,6 +45,94 @@ body {
   border-radius: 4px;
 }
 
+/* Sponsorship level explorer: native range semantics with a branded track and 44px hit area. */
+.sponsor-range {
+  width: 100%;
+  min-height: 44px;
+  appearance: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+.sponsor-range::-webkit-slider-runnable-track {
+  height: 0.75rem;
+  border: 1px solid #64748b;
+  border-radius: 9999px;
+  background: linear-gradient(
+    to right,
+    #cd7f32 0 12.5%,
+    #cbd5e1 12.5% 37.5%,
+    #d4af37 37.5% 62.5%,
+    #93c5fd 62.5% 87.5%,
+    #b9f2ff 87.5% 100%
+  );
+}
+
+.sponsor-range::-webkit-slider-thumb {
+  width: 1.875rem;
+  height: 1.875rem;
+  margin-top: -0.625rem;
+  appearance: none;
+  border: 5px solid var(--tier-accent);
+  border-radius: 9999px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 45%);
+}
+
+.sponsor-range::-moz-range-track {
+  height: 0.75rem;
+  border: 1px solid #64748b;
+  border-radius: 9999px;
+  background: linear-gradient(
+    to right,
+    #cd7f32 0 12.5%,
+    #cbd5e1 12.5% 37.5%,
+    #d4af37 37.5% 62.5%,
+    #93c5fd 62.5% 87.5%,
+    #b9f2ff 87.5% 100%
+  );
+}
+
+.sponsor-range::-moz-range-thumb {
+  width: 1.375rem;
+  height: 1.375rem;
+  border: 5px solid var(--tier-accent);
+  border-radius: 9999px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 45%);
+}
+
+.sponsor-range:focus-visible {
+  border-radius: 9999px;
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 2px #000;
+}
+
+.sponsor-tier-card {
+  border-color: var(--tier-accent);
+  box-shadow: inset 5px 0 0 var(--tier-accent);
+}
+
+.sponsor-tier-accent {
+  color: var(--tier-accent);
+}
+
+.sponsorship-comparison td:not(.text-slate-500) > span[aria-hidden="true"] {
+  display: inline-block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.sponsorship-comparison .text-slate-500 {
+  color: #cbd5e1;
+}
+
+.sponsorship-table-viewport {
+  contain: layout paint;
+}
+
 /* Homeschool program: energetic paint and splatter treatment inspired by the flyer. */
 .homeschool-page .paint-zone {
   position: relative;

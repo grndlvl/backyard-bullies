@@ -7,7 +7,8 @@
       "name": "Homeschool Functional Fitness",
       "path": "/homeschool-functional-fitness/"
     },
-    { "name": "Membership Scholarship", "path": "/scholarship/" }
+    { "name": "Membership Scholarship", "path": "/scholarship/" },
+    { "name": "Sponsorship", "path": "/sponsorship/" }
   ],
   "full": [
     { "name": "Homepage", "path": "/" },
@@ -16,6 +17,7 @@
       "name": "Homeschool Functional Fitness",
       "path": "/homeschool-functional-fitness/"
     },
-    { "name": "Membership Scholarship", "path": "/scholarship/" }
+    { "name": "Membership Scholarship", "path": "/scholarship/" },
+    { "name": "Sponsorship", "path": "/sponsorship/" }
   ]
 }

@@ -5,6 +5,7 @@ module.exports = {
     "./parents-night-out/**/*.html",
     "./homeschool-functional-fitness/**/*.html",
     "./scholarship/**/*.html",
+    "./sponsorship/**/*.html",
   ],
   theme: {
     extend: {

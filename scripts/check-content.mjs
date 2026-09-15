@@ -19,6 +19,10 @@ const pages = [
     name: "scholarship/index.html",
     url: new URL("../scholarship/index.html", import.meta.url),
   },
+  {
+    name: "sponsorship/index.html",
+    url: new URL("../sponsorship/index.html", import.meta.url),
+  },
 ].map((page) => ({ ...page, html: readFileSync(page.url, "utf8") }));
 const errors = [];
 
