@@ -278,6 +278,42 @@
     {
       "@context": "https://schema.org",
       "@type": "Event",
+      "name": "Wrestling Clinic — All Ages, All Skill Levels",
+      "description": "A four-hour wrestling clinic for athletes of all ages and skill levels focused on technique, conditioning, mindset, and results at Backyard Bullies Wrestling Club in Augusta, GA.",
+      "startDate": "2026-10-03T08:00:00-04:00",
+      "endDate": "2026-10-03T12:00:00-04:00",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "image": "https://www.backyardbullies-wc.com/images/camps/wrestling-clinic-october-2026.webp",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdaU0U6rkw-us_9woNuy4mtevYRp8IIStvXhummQ82HSzfSyg/viewform",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSdaU0U6rkw-us_9woNuy4mtevYRp8IIStvXhummQ82HSzfSyg/viewform",
+        "price": 50,
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "location": {
+        "@type": "Place",
+        "name": "Backyard Bullies Wrestling Club",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "266 Bobby Jones Expressway, Unit 19",
+          "addressLocality": "Augusta",
+          "addressRegion": "GA",
+          "postalCode": "30907",
+          "addressCountry": "US"
+        }
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "Backyard Bullies Wrestling Club",
+        "url": "https://www.backyardbullies-wc.com/"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
       "name": "Trunk or Treat",
       "description": "A family Trunk or Treat night hosted by Faglier's Mixed Martial Arts and Backyard Bullies Wrestling Club in the back parking lot at 266 Bobby Jones Expressway, Augusta, GA.",
       "startDate": "2026-10-23T18:00:00-04:00",
@@ -459,6 +495,21 @@
       </div>
     </section>
 
+    <!-- ============ ATHLETE SPOTLIGHT ============ -->
+    <section aria-labelledby="athlete-spotlight-title" class="bg-ink-soft py-12 sm:py-16 border-b border-ink-line">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <article class="mx-auto grid w-full max-w-3xl overflow-hidden rounded-2xl border border-ink-line bg-ink-card sm:grid-cols-2">
+          <img src="images/esperanza-beach-worlds-2026.webp" alt="Esperanza on the sand at the Katerini 2026 beach wrestling finals in Greece, in front of a scoreboard showing USA versus Greece in U20 Women's 60 kg" width="900" height="900" loading="lazy" class="aspect-square h-full w-full object-cover" />
+          <div class="flex flex-col justify-center p-6 sm:p-8">
+            <p class="text-xs uppercase tracking-[0.2em] text-brand mb-2">Athlete Spotlight</p>
+            <h2 id="athlete-spotlight-title" class="font-head font-700 uppercase text-2xl mb-3">Esperanza Places 8th at Beach Worlds</h2>
+            <p class="text-slate-200 text-sm mb-4">Our very own Esperanza finished 8th in the world at Beach Worlds in Katerini, Greece, wrestling for Team USA in the U20 women's 60 kg bracket. That's the way to represent the Backyard Bullies WC — congratulations, Esperanza!</p>
+            <a href="https://www.facebook.com/justin.r.boyden/posts/28347593658241953/" target="_blank" rel="noopener noreferrer" class="text-brand underline underline-offset-2 text-sm hover:text-white">Read the post on Facebook<span class="sr-only"> (opens in new window)</span> →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <!-- ============ ABOUT ============ -->
     <section id="about" class="py-20 sm:py-24 border-b border-ink-line">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
@@ -594,9 +645,9 @@
           <p class="text-slate-300">Seasonal camps, special clinics, and club events for wrestlers and families. Spots are limited — register early.</p>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-6">
+        <div class="grid md:grid-cols-2 lg:grid-cols-6 gap-6">
           <!-- Homeschool Functional Fitness Open House -->
-          <article class="bg-ink-card border border-ink-line rounded-xl p-6 flex flex-col">
+          <article class="bg-ink-card border border-ink-line rounded-xl p-6 flex flex-col lg:col-span-2">
             <div class="min-h-20 mb-3">
               <h3 class="font-head font-700 uppercase text-xl text-brand mb-1">Homeschool Functional Fitness Open House</h3>
               <p class="text-xs uppercase tracking-wide text-slate-400">Wednesday, September 30, 2026 • 12:00–1:00 PM</p>
@@ -617,7 +668,7 @@
           </article>
 
           <!-- The Athletic Standard Sports Massage -->
-          <article class="bg-ink-card border border-ink-line rounded-xl p-6 flex flex-col">
+          <article class="bg-ink-card border border-ink-line rounded-xl p-6 flex flex-col lg:col-span-2">
             <div class="min-h-20 mb-3">
               <h3 class="font-head font-700 uppercase text-xl text-brand mb-1">The Athletic Standard Sports Massage</h3>
               <p class="text-xs uppercase tracking-wide text-slate-400">Thursday, October 1, 2026 • 6:00–8:30 PM</p>
@@ -637,8 +688,29 @@
             </a>
           </article>
 
+          <!-- Wrestling Clinic -->
+          <article class="bg-ink-card border border-ink-line rounded-xl p-6 flex flex-col lg:col-span-2">
+            <div class="min-h-20 mb-3">
+              <h3 class="font-head font-700 uppercase text-xl text-brand mb-1">Wrestling Clinic</h3>
+              <p class="text-xs uppercase tracking-wide text-slate-400">Saturday, October 3, 2026 • 8:00 AM–12:00 PM</p>
+            </div>
+            <a href="images/camps/wrestling-clinic-october-2026.webp" target="_blank" rel="noopener noreferrer" class="mb-5 h-80 w-60 self-center overflow-hidden rounded-lg bg-ink ring-1 ring-ink-line focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand">
+              <img src="images/camps/wrestling-clinic-october-2026.webp" alt="Wrestling Clinic promotional flyer" width="1024" height="1536" loading="lazy" class="h-full w-full object-fill" />
+              <span class="sr-only">View the full Wrestling Clinic flyer (opens in new window)</span>
+            </a>
+            <p class="text-slate-200 text-sm mb-4">Elevate your game in a four-hour clinic open to wrestlers of every age and skill level.</p>
+            <ul class="list-disc pl-5 space-y-1.5 text-slate-200 text-sm mb-6">
+              <li>Improve technique and build conditioning</li>
+              <li>Develop mental toughness and competitive skills</li>
+              <li>$50 per person</li>
+            </ul>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdaU0U6rkw-us_9woNuy4mtevYRp8IIStvXhummQ82HSzfSyg/viewform" target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center justify-center gap-2 bg-brand text-ink font-head font-700 uppercase text-sm px-5 py-3 rounded-md hover:bg-brand-dark transition-colors">
+              Register for the Wrestling Clinic<span class="sr-only"> (opens in new window)</span>
+            </a>
+          </article>
+
           <!-- Trunk or Treat -->
-          <article class="bg-ink-card border border-ink-line rounded-xl p-6 flex flex-col">
+          <article class="bg-ink-card border border-ink-line rounded-xl p-6 flex flex-col lg:col-span-2 lg:col-start-2">
             <div class="min-h-20 mb-3">
               <h3 class="font-head font-700 uppercase text-xl text-brand mb-1">Trunk or Treat</h3>
               <p class="text-xs uppercase tracking-wide text-slate-400">Friday, October 23, 2026 • 6:00–7:30 PM</p>
@@ -659,7 +731,7 @@
           </article>
 
           <!-- Homeschool Functional Fitness + Wrestling -->
-          <article class="bg-ink-card border border-ink-line rounded-xl p-6 flex flex-col">
+          <article class="bg-ink-card border border-ink-line rounded-xl p-6 flex flex-col lg:col-span-2">
             <div class="min-h-20 mb-3">
               <h3 class="font-head font-700 uppercase text-xl text-brand mb-1">Homeschool Functional Fitness + Wrestling</h3>
               <p class="text-xs uppercase tracking-wide text-slate-400">Begins August 5, 2026 • Wednesdays + optional Fridays</p>
@@ -912,6 +984,7 @@
                 <span class="text-slate-400 group-open:rotate-45 transition-transform" aria-hidden="true">+</span>
               </summary>
               <div class="mt-5 space-y-5 text-slate-300 text-sm leading-6">
+                <img src="images/coaches/justin-boyden-portrait.webp" alt="Coach Justin Boyden" width="480" height="600" loading="lazy" class="mx-auto w-full max-w-md rounded-lg ring-1 ring-ink-line object-cover" />
                 <div class="bg-brand/10 border-l-4 border-brand rounded-r-lg p-5 sm:p-6">
                   <p class="text-brand text-xs font-semibold uppercase tracking-wide mb-2">Coaching Philosophy</p>
                   <p class="font-head font-700 text-lg leading-snug text-slate-100">Building champions on the mat and leaders in life.</p>
@@ -952,6 +1025,7 @@
                 <span class="text-slate-400 group-open:rotate-45 transition-transform" aria-hidden="true">+</span>
               </summary>
               <div class="mt-5 space-y-5 text-slate-300 text-sm leading-6">
+                <img src="images/coaches/katie-boyden-portrait.webp" alt="Coach Katie Boyden" width="480" height="600" loading="lazy" class="mx-auto w-full max-w-md rounded-lg ring-1 ring-ink-line object-cover" />
                 <div class="bg-brand/10 border-l-4 border-brand rounded-r-lg p-5 sm:p-6">
                   <p class="text-brand text-xs font-semibold uppercase tracking-wide mb-2">Coaching Philosophy</p>
                   <p class="font-head font-700 text-lg leading-snug text-slate-100">Wrestling builds character, leadership, and lifelong success.</p>
@@ -991,6 +1065,7 @@
                 <span class="text-slate-400 group-open:rotate-45 transition-transform" aria-hidden="true">+</span>
               </summary>
               <div class="mt-5 space-y-5 text-slate-300 text-sm leading-6">
+                <img src="images/coaches/olivia-kendrick-portrait.webp" alt="Coach Olivia Kendrick" width="480" height="600" loading="lazy" class="mx-auto w-full max-w-md rounded-lg ring-1 ring-ink-line object-cover" />
                 <div class="bg-brand/10 border-l-4 border-brand rounded-r-lg p-5 sm:p-6">
                   <p class="text-brand text-xs font-semibold uppercase tracking-wide mb-2">Coaching Philosophy</p>
                   <p class="font-head font-700 text-lg leading-snug text-slate-100">Strong bodies, strong minds, strong character.</p>
@@ -1030,6 +1105,7 @@
                 <span class="text-slate-400 group-open:rotate-45 transition-transform" aria-hidden="true">+</span>
               </summary>
               <div class="mt-5 space-y-5 text-slate-300 text-sm leading-6">
+                <img src="images/coaches/hallee-milot-portrait.webp" alt="Coach Hallee Milot" width="480" height="600" loading="lazy" class="mx-auto w-full max-w-md rounded-lg ring-1 ring-ink-line object-cover" />
                 <div class="bg-brand/10 border-l-4 border-brand rounded-r-lg p-5 sm:p-6">
                   <p class="text-brand text-xs font-semibold uppercase tracking-wide mb-2">Coaching Philosophy</p>
                   <p class="font-head font-700 text-lg leading-snug text-slate-100">Mental toughness, consistency, and embracing hard things build strength for life.</p>
@@ -1068,6 +1144,7 @@
                 <span class="text-slate-400 group-open:rotate-45 transition-transform" aria-hidden="true">+</span>
               </summary>
               <div class="mt-5 space-y-5 text-slate-300 text-sm leading-6">
+                <img src="images/coaches/dale-schmacht-portrait.webp" alt="Coach Dale Schmacht" width="480" height="600" loading="lazy" class="mx-auto w-full max-w-md rounded-lg ring-1 ring-ink-line object-cover" />
                 <div class="bg-brand/10 border-l-4 border-brand rounded-r-lg p-5 sm:p-6">
                   <p class="text-brand text-xs font-semibold uppercase tracking-wide mb-2">Coaching Philosophy</p>
                   <p class="font-head font-700 text-lg leading-snug text-slate-100">Hard work, self-discipline, and achieving established goals: the mindset he teaches every wrestler.</p>
@@ -1224,6 +1301,7 @@
                 <span class="text-slate-400 group-open:rotate-45 transition-transform" aria-hidden="true">+</span>
               </summary>
               <div class="mt-5 space-y-5 text-slate-300 text-sm leading-6">
+                <img src="images/coaches/rachel-bange-portrait.webp" alt="Coach Rachel Bange" width="480" height="600" loading="lazy" class="mx-auto w-full max-w-md rounded-lg ring-1 ring-ink-line object-cover" />
                 <div class="bg-brand/10 border-l-4 border-brand rounded-r-lg p-5 sm:p-6">
                   <p class="text-brand text-xs font-semibold uppercase tracking-wide mb-2">Coaching Philosophy</p>
                   <p class="font-head font-700 text-lg leading-snug text-slate-100">Wrestling is more than a sport — it teaches perseverance, accountability, leadership, and respect.</p>
@@ -1263,6 +1341,7 @@
                 <span class="text-slate-400 group-open:rotate-45 transition-transform" aria-hidden="true">+</span>
               </summary>
               <div class="mt-5 space-y-5 text-slate-300 text-sm leading-6">
+                <img src="images/coaches/blaine-carter-portrait.webp" alt="Coach Blaine Carter" width="480" height="600" loading="lazy" class="mx-auto w-full max-w-md rounded-lg ring-1 ring-ink-line object-cover" />
                 <div class="bg-brand/10 border-l-4 border-brand rounded-r-lg p-5 sm:p-6">
                   <p class="text-brand text-xs font-semibold uppercase tracking-wide mb-2">Coaching Philosophy</p>
                   <p class="font-head font-700 text-lg leading-snug text-slate-100">Wrestling builds discipline, perseverance, accountability, and the character needed to become champions in life.</p>
@@ -1304,6 +1383,7 @@
                 <span class="text-slate-400 group-open:rotate-45 transition-transform" aria-hidden="true">+</span>
               </summary>
               <div class="mt-5 space-y-5 text-slate-300 text-sm leading-6">
+                <img src="images/coaches/katie-huitron-portrait.webp" alt="Coach Katie Huitron" width="480" height="600" loading="lazy" class="mx-auto w-full max-w-md rounded-lg ring-1 ring-ink-line object-cover" />
                 <div class="bg-brand/10 border-l-4 border-brand rounded-r-lg p-5 sm:p-6">
                   <p class="text-brand text-xs font-semibold uppercase tracking-wide mb-2">Coaching Philosophy</p>
                   <p class="font-head font-700 text-lg leading-snug text-slate-100">Success starts with believing in yourself, working hard, staying focused, and never giving up.</p>
@@ -1381,6 +1461,7 @@
                 <span class="text-slate-400 group-open:rotate-45 transition-transform" aria-hidden="true">+</span>
               </summary>
               <div class="mt-5 space-y-5 text-slate-300 text-sm leading-6">
+                <img src="images/coaches/jake-kitchens-portrait.webp" alt="Coach Jake Kitchens" width="480" height="600" loading="lazy" class="mx-auto w-full max-w-md rounded-lg ring-1 ring-ink-line object-cover" />
                 <div class="bg-brand/10 border-l-4 border-brand rounded-r-lg p-5 sm:p-6">
                   <p class="text-brand text-xs font-semibold uppercase tracking-wide mb-2">Coaching Philosophy</p>
                   <p class="font-head font-700 text-lg leading-snug text-slate-100">Champions are built through hard work, service, and leading by example.</p>
@@ -1618,16 +1699,6 @@
             <a href="https://www.instagram.com/backyardbullieswc" target="_blank" rel="noopener noreferrer" class="text-brand underline underline-offset-2">Instagram<span class="sr-only"> (opens in new window)</span></a> &amp;
             <a href="https://www.facebook.com/BackyardBulliesWC/" target="_blank" rel="noopener noreferrer" class="text-brand underline underline-offset-2">Facebook<span class="sr-only"> (opens in new window)</span></a>.</p>
         </div>
-
-        <article class="mx-auto mb-10 grid w-full max-w-3xl overflow-hidden rounded-2xl border border-ink-line bg-ink-card sm:grid-cols-2">
-          <img src="images/esperanza-beach-worlds-2026.webp" alt="Esperanza on the sand at the Katerini 2026 beach wrestling finals in Greece, in front of a scoreboard showing USA versus Greece in U20 Women's 60 kg" width="900" height="900" loading="lazy" class="aspect-square h-full w-full object-cover" />
-          <div class="flex flex-col justify-center p-6 sm:p-8">
-            <p class="text-xs uppercase tracking-[0.2em] text-brand mb-2">Athlete Spotlight</p>
-            <h3 class="font-head font-700 uppercase text-2xl mb-3">Esperanza Places 8th at Beach Worlds</h3>
-            <p class="text-slate-200 text-sm mb-4">Our very own Esperanza finished 8th in the world at Beach Worlds in Katerini, Greece, wrestling for Team USA in the U20 women's 60 kg bracket. That's the way to represent the Backyard Bullies WC — congratulations, Esperanza!</p>
-            <a href="https://www.facebook.com/justin.r.boyden/posts/28347593658241953/" target="_blank" rel="noopener noreferrer" class="text-brand underline underline-offset-2 text-sm hover:text-white">Read the post on Facebook<span class="sr-only"> (opens in new window)</span> →</a>
-          </div>
-        </article>
 
         <div class="mx-auto w-full max-w-3xl rounded-2xl border border-brand/40 bg-ink-card p-3 sm:p-4 shadow-2xl shadow-black/40">
           <div class="overflow-hidden rounded-xl">
