@@ -416,6 +416,7 @@
               <li><a href="sponsorship/" class="block rounded-md px-3 py-2 hover:bg-ink-soft hover:text-brand transition-colors">Sponsorship</a></li>
               <li><a href="#store" class="block rounded-md px-3 py-2 hover:bg-ink-soft hover:text-brand transition-colors">Shop</a></li>
               <li><a href="#feed" class="block rounded-md px-3 py-2 hover:bg-ink-soft hover:text-brand transition-colors">Latest</a></li>
+              <li><a href="#podcast" class="block rounded-md px-3 py-2 hover:bg-ink-soft hover:text-brand transition-colors">Podcast</a></li>
               <li><a href="#sponsors" class="block rounded-md px-3 py-2 hover:bg-ink-soft hover:text-brand transition-colors">Our Sponsors</a></li>
             </ul>
           </details>
@@ -432,7 +433,7 @@
             <span class="sr-only">Menu</span>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
           </summary>
-          <nav aria-label="Mobile" class="absolute left-0 right-0 top-16 border-t border-ink-line bg-ink shadow-2xl shadow-black/40">
+          <nav aria-label="Mobile" class="absolute left-0 right-0 top-16 max-h-[calc(100vh-4rem)] overflow-y-auto border-t border-ink-line bg-ink shadow-2xl shadow-black/40">
             <ul class="px-4 py-3 space-y-1 font-head uppercase tracking-wide text-sm">
               <li><a href="#about" class="block py-2.5 hover:text-brand">About</a></li>
               <li><a href="#programs" class="block py-2.5 hover:text-brand">Programs</a></li>
@@ -447,6 +448,7 @@
               <li><a href="#reviews" class="block py-2.5 hover:text-brand">Reviews</a></li>
               <li><a href="#contact" class="block py-2.5 hover:text-brand">Contact</a></li>
               <li><a href="#feed" class="block py-2.5 hover:text-brand">Latest</a></li>
+              <li><a href="#podcast" class="block py-2.5 hover:text-brand">Podcast</a></li>
               <li><a href="#sponsors" class="block py-2.5 hover:text-brand">Our Sponsors</a></li>
               <li class="pt-2"><a href="tel:+17062500186" class="block text-center bg-brand text-ink font-700 px-4 py-2.5 rounded-md">Call / Text 706-250-0186</a></li>
             </ul>
@@ -1739,8 +1741,41 @@
 
       </div>
     </section>
+
+    <!-- ============ PODCAST ============ -->
+    <section id="podcast" class="py-20 sm:py-24 border-b border-ink-line">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:gap-14">
+          <a href="https://www.youtube.com/playlist?list=PLN8EPdorT4uo" target="_blank" rel="noopener noreferrer" class="group relative block overflow-hidden rounded-2xl border border-brand/40 bg-ink-card shadow-2xl shadow-black/40">
+            <img src="https://i.ytimg.com/vi/djRw30VckDM/maxresdefault.jpg" alt="Coach Justin Boyden talks with Coach Katie and Coach Victoria during The Backyard podcast" width="1280" height="720" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="aspect-video w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" />
+            <span class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" aria-hidden="true"></span>
+            <span class="absolute inset-x-0 bottom-0 flex items-center gap-3 p-5 sm:p-6">
+              <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand text-ink shadow-lg shadow-black/30 transition-colors group-hover:bg-brand-dark" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
+              </span>
+              <span>
+                <span class="block font-head text-lg font-700 uppercase tracking-wide text-white">Watch on YouTube</span>
+                <span class="block text-sm text-slate-200">Open the full podcast playlist<span class="sr-only"> (opens in new window)</span></span>
+              </span>
+            </span>
+          </a>
+
+          <div>
+            <p class="mb-3 font-head text-sm font-700 uppercase tracking-[0.18em] text-brand">The Backyard Podcast <span aria-hidden="true">·</span> 4 Episodes</p>
+            <div class="section-rule mb-5"></div>
+            <h2 class="font-display uppercase text-4xl sm:text-5xl mb-5">Real Wrestling. Real Stories.</h2>
+            <p class="text-lg leading-8 text-slate-300">Go inside the wrestling room with Coach Justin Boyden and guests for conversations about training, athlete development, coaching, family, girls' wrestling, and the championship mindset.</p>
+            <p class="mt-4 text-slate-400">Start with Episode 1 or jump into the newest conversation. All four episodes are together in one YouTube playlist.</p>
+            <a href="https://www.youtube.com/playlist?list=PLN8EPdorT4uo" target="_blank" rel="noopener noreferrer" class="mt-7 inline-flex min-h-12 items-center justify-center rounded-md bg-brand px-6 py-3 font-head text-sm font-700 uppercase tracking-wide text-ink transition-colors hover:bg-brand-dark">
+              Watch All Episodes <span class="sr-only">on YouTube (opens in new window)</span><span class="ml-2" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ SPONSORS ============ -->
-    <section id="sponsors" class="py-20 sm:py-24 border-b border-ink-line">
+    <section id="sponsors" class="bg-ink-soft py-20 sm:py-24 border-b border-ink-line">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="max-w-2xl mb-12">
           <div class="section-rule mb-5"></div>
