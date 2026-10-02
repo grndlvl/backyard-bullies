@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <title>Backyard Bullies SONIC Spirit Night flyer</title>
+  <desc>SONIC Spirit Night is Thursday, October 15, 2026, from 5 to 9 PM at 3743 Wheeler Road in Augusta, Georgia. Ten to twenty percent of event sales support Backyard Bullies Wrestling Club.</desc>
+  <rect width="1080" height="1350" fill="#1192d1" />
+
+  <image x="381" y="44" width="318" height="171" xlink:href="sonic/logo.png" />
+
+  <text x="540" y="274" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700" letter-spacing="8" text-anchor="middle">YOU'RE INVITED TO</text>
+  <text x="540" y="365" fill="#ffffff" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="76" font-weight="900" letter-spacing="2" text-anchor="middle">PUT THE “FUN”</text>
+  <text x="540" y="445" fill="#ffffff" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="76" font-weight="900" letter-spacing="2" text-anchor="middle">IN FUNDRAISER</text>
+
+  <image x="140" y="370" width="800" height="800" xlink:href="sonic/fundraiser-characters.png" />
+
+  <rect x="105" y="800" width="870" height="288" rx="48" fill="#ffffff" />
+  <text x="540" y="881" fill="#005683" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="47" font-weight="900" text-anchor="middle">THURSDAY, OCTOBER 15</text>
+  <text x="540" y="947" fill="#e90046" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="54" font-weight="900" text-anchor="middle">5:00–9:00 PM</text>
+  <line x1="230" x2="850" y1="982" y2="982" stroke="#75cede" stroke-width="4" />
+  <text x="540" y="1030" fill="#005683" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="700" letter-spacing="1" text-anchor="middle">SONIC DRIVE-IN • 3743 WHEELER ROAD</text>
+  <text x="540" y="1070" fill="#005683" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" letter-spacing="2" text-anchor="middle">AUGUSTA, GEORGIA 30909</text>
+
+  <text x="540" y="1160" fill="#ffffff" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="45" font-weight="900" text-anchor="middle">10–20% OF EVENT SALES SUPPORT</text>
+  <text x="540" y="1223" fill="#ffffff" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="41" font-weight="900" text-anchor="middle">BACKYARD BULLIES WRESTLING CLUB</text>
+  <text x="540" y="1279" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle">20% at $1,500+ in event sales • 10% below $1,500</text>
+  <text x="540" y="1322" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" letter-spacing="1" text-anchor="middle">BRING YOUR FAMILY • GRAB DINNER • SUPPORT THE TEAM</text>
+</svg>
