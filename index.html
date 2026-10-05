@@ -214,62 +214,30 @@
   [
     {
       "@context": "https://schema.org",
-      "@type": "Event",
-      "name": "The Athletic Standard Sports Massage",
-      "description": "The Athletic Standard is offering reservation-only 20-minute sports massage sessions for $20. Limited time slots are available.",
-      "startDate": "2026-10-01T18:00:00-04:00",
-      "endDate": "2026-10-01T20:30:00-04:00",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "image": "https://www.backyardbullies-wc.com/images/camps/athletic-standard-sports-massage.webp",
-      "url": "https://www.backyardbullies-wc.com/massage",
-      "offers": {
-        "@type": "Offer",
-        "url": "https://www.backyardbullies-wc.com/massage",
-        "price": 20,
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/LimitedAvailability"
-      },
-      "organizer": {
-        "@type": "Organization",
-        "name": "The Athletic Standard",
-        "url": "https://theathleticstandard.com/"
-      }
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Event",
-      "name": "Wrestling Clinic — All Ages, All Skill Levels",
-      "description": "A four-hour wrestling clinic for athletes of all ages and skill levels focused on technique, conditioning, mindset, and results at Backyard Bullies Wrestling Club in Augusta, GA.",
-      "startDate": "2026-10-03T08:00:00-04:00",
-      "endDate": "2026-10-03T12:00:00-04:00",
-      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "image": "https://www.backyardbullies-wc.com/images/camps/wrestling-clinic-october-2026.webp",
-      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdaU0U6rkw-us_9woNuy4mtevYRp8IIStvXhummQ82HSzfSyg/viewform",
-      "offers": {
-        "@type": "Offer",
-        "url": "https://docs.google.com/forms/d/e/1FAIpQLSdaU0U6rkw-us_9woNuy4mtevYRp8IIStvXhummQ82HSzfSyg/viewform",
-        "price": 50,
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock"
-      },
-      "location": {
-        "@type": "Place",
-        "name": "Backyard Bullies Wrestling Club",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "266 Bobby Jones Expressway, Unit 19",
-          "addressLocality": "Augusta",
-          "addressRegion": "GA",
-          "postalCode": "30907",
-          "addressCountry": "US"
-        }
-      },
-      "organizer": {
-        "@type": "Organization",
+      "@type": "Course",
+      "name": "Homeschool Functional Fitness + Wrestling",
+      "description": "Weekly functional fitness with optional wrestling for homeschool athletes in a positive, encouraging environment.",
+      "url": "https://www.backyardbullies-wc.com/homeschool-functional-fitness/",
+      "image": "https://www.backyardbullies-wc.com/images/camps/homeschool-functional-fitness.webp",
+      "provider": {
+        "@type": "SportsActivityLocation",
         "name": "Backyard Bullies Wrestling Club",
         "url": "https://www.backyardbullies-wc.com/"
-      }
+      },
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "onsite",
+        "startDate": "2026-10-07",
+        "location": {
+          "@type": "Place",
+          "name": "Backyard Bullies Wrestling Club",
+          "address": "266 Bobby Jones Expressway (Rear Entrance), Augusta, GA 30907"
+        }
+      },
+      "offers": [
+        {"@type": "Offer", "name": "Functional Fitness", "price": 50, "priceCurrency": "USD", "category": "monthly"},
+        {"@type": "Offer", "name": "Functional Fitness + Wrestling", "price": 90, "priceCurrency": "USD", "category": "monthly"}
+      ]
     },
     {
       "@context": "https://schema.org",
@@ -338,30 +306,26 @@
     },
     {
       "@context": "https://schema.org",
-      "@type": "Course",
-      "name": "Homeschool Functional Fitness + Wrestling",
-      "description": "Weekly functional fitness with optional wrestling for homeschool athletes in a positive, encouraging environment.",
-      "url": "https://www.backyardbullies-wc.com/homeschool-functional-fitness/",
-      "image": "https://www.backyardbullies-wc.com/images/camps/homeschool-functional-fitness.webp",
-      "provider": {
-        "@type": "SportsActivityLocation",
-        "name": "Backyard Bullies Wrestling Club",
-        "url": "https://www.backyardbullies-wc.com/"
+      "@type": "Event",
+      "name": "The Athletic Standard Sports Massage",
+      "description": "The Athletic Standard is offering reservation-only 20-minute sports massage sessions for $20. Limited time slots are available.",
+      "startDate": "2026-11-05T18:00:00-05:00",
+      "endDate": "2026-11-05T20:30:00-05:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "image": "https://www.backyardbullies-wc.com/images/camps/athletic-standard-sports-massage.webp",
+      "url": "https://www.backyardbullies-wc.com/massage",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.backyardbullies-wc.com/massage",
+        "price": 20,
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/LimitedAvailability"
       },
-      "hasCourseInstance": {
-        "@type": "CourseInstance",
-        "courseMode": "onsite",
-        "startDate": "2026-08-05",
-        "location": {
-          "@type": "Place",
-          "name": "Backyard Bullies Wrestling Club",
-          "address": "266 Bobby Jones Expressway (Rear Entrance), Augusta, GA 30907"
-        }
-      },
-      "offers": [
-        {"@type": "Offer", "name": "Functional Fitness", "price": 50, "priceCurrency": "USD", "category": "monthly"},
-        {"@type": "Offer", "name": "Functional Fitness + Wrestling", "price": 90, "priceCurrency": "USD", "category": "monthly"}
-      ]
+      "organizer": {
+        "@type": "Organization",
+        "name": "The Athletic Standard",
+        "url": "https://theathleticstandard.com/"
+      }
     }
   ]
   </script>
@@ -661,50 +625,27 @@
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-6 gap-6">
-          <!-- The Athletic Standard Sports Massage -->
-          <article class="bg-ink-card border border-ink-line rounded-xl p-6 flex flex-col lg:col-span-2">
+          <!-- Homeschool Functional Fitness + Wrestling -->
+          <article class="bg-ink-card border border-ink-line rounded-xl p-6 flex flex-col lg:col-span-3">
             <div class="min-h-20 mb-3">
-              <h3 class="font-head font-700 uppercase text-xl text-brand mb-1">The Athletic Standard Sports Massage</h3>
-              <p class="text-xs uppercase tracking-wide text-slate-400">Thursday, October 1, 2026 • 6:00–8:30 PM</p>
+              <h3 class="font-head font-700 uppercase text-xl text-brand mb-1">Homeschool Functional Fitness + Wrestling</h3>
+              <p class="text-xs uppercase tracking-wide text-slate-400">Starts October 7, 2026 • Continues weekly</p>
             </div>
-            <a href="images/camps/athletic-standard-sports-massage.webp" target="_blank" rel="noopener noreferrer" class="mb-5 h-80 w-60 self-center overflow-hidden rounded-lg bg-ink ring-1 ring-ink-line focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand">
-              <img src="images/camps/athletic-standard-sports-massage.webp" alt="The Athletic Standard Sports Massage flyer for the first Thursday of every month" width="1003" height="1568" loading="lazy" class="h-full w-full object-fill" />
-              <span class="sr-only">View the full Athletic Standard Sports Massage flyer (opens in new window)</span>
+            <a href="images/camps/homeschool-functional-fitness.webp" target="_blank" rel="noopener noreferrer" class="mb-5 h-80 w-60 self-center overflow-hidden rounded-lg bg-ink ring-1 ring-ink-line focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand">
+              <img src="images/camps/homeschool-functional-fitness.webp" alt="Homeschool Functional Fitness and Wrestling promotional flyer" width="1024" height="1536" loading="lazy" class="h-full w-full object-fill" />
+              <span class="sr-only">View the full Homeschool Functional Fitness and Wrestling flyer (opens in new window)</span>
             </a>
-            <p class="text-slate-200 text-sm mb-4">Recover, reset, and perform with a focused 20-minute sports massage session offered by The Athletic Standard.</p>
+            <p class="text-slate-200 text-sm mb-4">A welcoming weekly program where homeschool athletes build strength, athleticism, confidence, discipline, and wrestling skills in a fun, safe environment.</p>
             <ul class="list-disc pl-5 space-y-1.5 text-slate-200 text-sm mb-6">
-              <li>$20 per 20-minute session</li>
-              <li>Available from 6:00 to 8:30 PM</li>
-              <li>Limited slots — reservation required</li>
+              <li>Wednesday functional fitness with <a href="#coach-olivia" class="text-brand underline underline-offset-2 hover:text-white">Coach Olivia</a>: $50/month</li>
+              <li>Add Friday wrestling with <a href="#coach-justin" class="text-brand underline underline-offset-2 hover:text-white">Coach Boyden</a>: $90/month total</li>
+              <li>Four or eight sessions per month</li>
             </ul>
-            <a href="https://www.backyardbullies-wc.com/massage" target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center justify-center gap-2 bg-brand text-ink font-head font-700 uppercase text-sm px-5 py-3 rounded-md hover:bg-brand-dark transition-colors">
-              Reserve a Massage Session<span class="sr-only"> (opens in new window)</span>
-            </a>
-          </article>
-
-          <!-- Wrestling Clinic -->
-          <article class="bg-ink-card border border-ink-line rounded-xl p-6 flex flex-col lg:col-span-2">
-            <div class="min-h-20 mb-3">
-              <h3 class="font-head font-700 uppercase text-xl text-brand mb-1">Wrestling Clinic</h3>
-              <p class="text-xs uppercase tracking-wide text-slate-400">Saturday, October 3, 2026 • 8:00 AM–12:00 PM</p>
-            </div>
-            <a href="images/camps/wrestling-clinic-october-2026.webp" target="_blank" rel="noopener noreferrer" class="mb-5 h-80 w-60 self-center overflow-hidden rounded-lg bg-ink ring-1 ring-ink-line focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand">
-              <img src="images/camps/wrestling-clinic-october-2026.webp" alt="Wrestling Clinic promotional flyer" width="1024" height="1536" loading="lazy" class="h-full w-full object-fill" />
-              <span class="sr-only">View the full Wrestling Clinic flyer (opens in new window)</span>
-            </a>
-            <p class="text-slate-200 text-sm mb-4">Elevate your game in a four-hour clinic open to wrestlers of every age and skill level.</p>
-            <ul class="list-disc pl-5 space-y-1.5 text-slate-200 text-sm mb-6">
-              <li>Improve technique and build conditioning</li>
-              <li>Develop mental toughness and competitive skills</li>
-              <li>$50 per person</li>
-            </ul>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdaU0U6rkw-us_9woNuy4mtevYRp8IIStvXhummQ82HSzfSyg/viewform" target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center justify-center gap-2 bg-brand text-ink font-head font-700 uppercase text-sm px-5 py-3 rounded-md hover:bg-brand-dark transition-colors">
-              Register for the Wrestling Clinic<span class="sr-only"> (opens in new window)</span>
-            </a>
+            <a href="homeschool-functional-fitness/" class="mt-auto inline-flex items-center justify-center gap-2 bg-brand text-ink font-head font-700 uppercase text-sm px-5 py-3 rounded-md hover:bg-brand-dark transition-colors">View program details &amp; register</a>
           </article>
 
           <!-- SONIC Spirit Night -->
-          <article class="bg-ink-card border border-ink-line rounded-xl p-6 flex flex-col lg:col-span-2">
+          <article class="bg-ink-card border border-ink-line rounded-xl p-6 flex flex-col lg:col-span-3">
             <div class="min-h-20 mb-3">
               <h3 class="font-head font-700 uppercase text-xl text-brand mb-1">SONIC Spirit Night</h3>
               <p class="text-xs uppercase tracking-wide text-slate-400">Thursday, October 15, 2026 • 5:00–9:00 PM</p>
@@ -725,7 +666,7 @@
           </article>
 
           <!-- Trunk or Treat -->
-          <article class="bg-ink-card border border-ink-line rounded-xl p-6 flex flex-col lg:col-span-2 lg:col-start-2">
+          <article class="bg-ink-card border border-ink-line rounded-xl p-6 flex flex-col lg:col-span-3">
             <div class="min-h-20 mb-3">
               <h3 class="font-head font-700 uppercase text-xl text-brand mb-1">Trunk or Treat</h3>
               <p class="text-xs uppercase tracking-wide text-slate-400">Friday, October 23, 2026 • 6:00–7:30 PM</p>
@@ -745,23 +686,25 @@
             </a>
           </article>
 
-          <!-- Homeschool Functional Fitness + Wrestling -->
-          <article class="bg-ink-card border border-ink-line rounded-xl p-6 flex flex-col lg:col-span-2">
+          <!-- The Athletic Standard Sports Massage -->
+          <article class="bg-ink-card border border-ink-line rounded-xl p-6 flex flex-col lg:col-span-3">
             <div class="min-h-20 mb-3">
-              <h3 class="font-head font-700 uppercase text-xl text-brand mb-1">Homeschool Functional Fitness + Wrestling</h3>
-              <p class="text-xs uppercase tracking-wide text-slate-400">Begins August 5, 2026 • Wednesdays + optional Fridays</p>
+              <h3 class="font-head font-700 uppercase text-xl text-brand mb-1">The Athletic Standard Sports Massage</h3>
+              <p class="text-xs uppercase tracking-wide text-slate-400">Thursday, November 5, 2026 • 6:00–8:30 PM</p>
             </div>
-            <a href="images/camps/homeschool-functional-fitness.webp" target="_blank" rel="noopener noreferrer" class="mb-5 h-80 w-60 self-center overflow-hidden rounded-lg bg-ink ring-1 ring-ink-line focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand">
-              <img src="images/camps/homeschool-functional-fitness.webp" alt="Homeschool Functional Fitness and Wrestling promotional flyer" width="1024" height="1536" loading="lazy" class="h-full w-full object-fill" />
-              <span class="sr-only">View the full Homeschool Functional Fitness and Wrestling flyer (opens in new window)</span>
+            <a href="images/camps/athletic-standard-sports-massage.webp" target="_blank" rel="noopener noreferrer" class="mb-5 h-80 w-60 self-center overflow-hidden rounded-lg bg-ink ring-1 ring-ink-line focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand">
+              <img src="images/camps/athletic-standard-sports-massage.webp" alt="The Athletic Standard Sports Massage flyer for the first Thursday of every month" width="1003" height="1568" loading="lazy" class="h-full w-full object-fill" />
+              <span class="sr-only">View the full Athletic Standard Sports Massage flyer (opens in new window)</span>
             </a>
-            <p class="text-slate-200 text-sm mb-4">A welcoming weekly program where homeschool athletes build strength, athleticism, confidence, discipline, and wrestling skills in a fun, safe environment.</p>
+            <p class="text-slate-200 text-sm mb-4">Recover, reset, and perform with a focused 20-minute sports massage session offered by The Athletic Standard.</p>
             <ul class="list-disc pl-5 space-y-1.5 text-slate-200 text-sm mb-6">
-              <li>Wednesday functional fitness with <a href="#coach-olivia" class="text-brand underline underline-offset-2 hover:text-white">Coach Olivia</a>: $50/month</li>
-              <li>Add Friday wrestling with <a href="#coach-justin" class="text-brand underline underline-offset-2 hover:text-white">Coach Boyden</a>: $90/month total</li>
-              <li>Four or eight sessions per month</li>
+              <li>$20 per 20-minute session</li>
+              <li>Available from 6:00 to 8:30 PM</li>
+              <li>Limited slots — reservation required</li>
             </ul>
-            <a href="homeschool-functional-fitness/" class="mt-auto inline-flex items-center justify-center gap-2 bg-brand text-ink font-head font-700 uppercase text-sm px-5 py-3 rounded-md hover:bg-brand-dark transition-colors">View program details &amp; register</a>
+            <a href="https://www.backyardbullies-wc.com/massage" target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center justify-center gap-2 bg-brand text-ink font-head font-700 uppercase text-sm px-5 py-3 rounded-md hover:bg-brand-dark transition-colors">
+              Reserve a Massage Session<span class="sr-only"> (opens in new window)</span>
+            </a>
           </article>
         </div>
       </div>
