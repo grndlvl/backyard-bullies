@@ -50,6 +50,10 @@ test("tournament schedule is grouped under Events, separate from weekly training
     "href",
     "#tournament-schedule",
   );
+  await expect(page.locator('#tournament-table th[scope="colgroup"]')).toHaveCount(0);
+  await expect(
+    page.locator("#tournament-table [data-tournament-month] > tr:first-child > td[colspan='6']"),
+  ).toHaveCount(4);
 });
 
 test("multiple types use OR, keep overlap once, and support keyboard and history", async ({
