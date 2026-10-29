@@ -18,6 +18,7 @@ mkdir -p _site/assets
 
 cp index.html _site/
 cp robots.txt sitemap.xml llms.txt _site/
+cp 2026-27-tournament-schedule.pdf _site/
 cp CNAME _site/
 cp -r images _site/
 touch _site/.nojekyll
