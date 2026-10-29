@@ -1,0 +1,247 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Backyard Bullies Wrestling Club//Tournament Schedule//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Backyard Bullies 2026-27 Tournaments
+BEGIN:VEVENT
+UID:bybwc-2026-10-28-preseason-nationals@backyardbullies-wc.com
+DTSTAMP:20261029T174436Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261102
+SUMMARY:Preseason Nationals
+LOCATION:West Des Moines\, IA
+DESCRIPTION:Tentative working schedule. Type: USAW National. Estimated trav
+ el: ~13 hr. All-day entry\; confirm event times\, registration\, and club 
+ attendance with coaches.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+URL:https://www.backyardbullies-wc.com/#tournament-schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:bybwc-2026-11-07-white-knoll-open@backyardbullies-wc.com
+DTSTAMP:20261029T174436Z
+DTSTART;VALUE=DATE:20261107
+DTEND;VALUE=DATE:20261108
+SUMMARY:White Knoll Open
+LOCATION:White Knoll\, SC
+DESCRIPTION:Tentative working schedule. Type: Palmetto SCUSA. Estimated tra
+ vel: ~1 hr 30 min. All-day entry\; confirm event times\, registration\, an
+ d club attendance with coaches.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+URL:https://www.backyardbullies-wc.com/#tournament-schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:bybwc-2026-11-28-parkview-thanksgiving-tournament@backyardbullies-wc.co
+ m
+DTSTAMP:20261029T174436Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:Parkview Thanksgiving Tournament
+LOCATION:Parkview HS\, GA
+DESCRIPTION:Tentative working schedule. Type: Hammer GAUSA. Estimated trave
+ l: ~2 hr 20 min. All-day entry\; confirm event times\, registration\, and 
+ club attendance with coaches.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+URL:https://www.backyardbullies-wc.com/#tournament-schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:bybwc-2026-12-05-ninety-six-open@backyardbullies-wc.com
+DTSTAMP:20261029T174436Z
+DTSTART;VALUE=DATE:20261205
+DTEND;VALUE=DATE:20261206
+SUMMARY:Ninety Six Open
+LOCATION:Ninety Six\, SC
+DESCRIPTION:Tentative working schedule. Type: Palmetto SCUSA. Estimated tra
+ vel: ~1 hr 30 min. All-day entry\; confirm event times\, registration\, an
+ d club attendance with coaches.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+URL:https://www.backyardbullies-wc.com/#tournament-schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:bybwc-2026-12-06-life-u-kid-1st-year@backyardbullies-wc.com
+DTSTAMP:20261029T174436Z
+DTSTART;VALUE=DATE:20261206
+DTEND;VALUE=DATE:20261207
+SUMMARY:Life U Kid 1st Year
+LOCATION:Life University\, GA
+DESCRIPTION:Tentative working schedule. Type: 1st Year GAUSA. Estimated tra
+ vel: ~2 hr 15 min. All-day entry\; confirm event times\, registration\, an
+ d club attendance with coaches.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+URL:https://www.backyardbullies-wc.com/#tournament-schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:bybwc-2026-12-12-iron-tiger-rumble@backyardbullies-wc.com
+DTSTAMP:20261029T174436Z
+DTSTART;VALUE=DATE:20261212
+DTEND;VALUE=DATE:20261213
+SUMMARY:Iron Tiger Rumble
+LOCATION:Darlington School\, GA
+DESCRIPTION:Tentative working schedule. Type: Hammer / 1st Year GAUSA. Esti
+ mated travel: ~2 hr 45 min. All-day entry\; confirm event times\, registra
+ tion\, and club attendance with coaches.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+URL:https://www.backyardbullies-wc.com/#tournament-schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:bybwc-2026-12-19-grizzly-jr-grappler@backyardbullies-wc.com
+DTSTAMP:20261029T174436Z
+DTSTART;VALUE=DATE:20261219
+DTEND;VALUE=DATE:20261220
+SUMMARY:Grizzly Jr. Grappler
+LOCATION:Creekview HS\, GA
+DESCRIPTION:Tentative working schedule. Type: Open / 1st Year GAUSA. Estima
+ ted travel: ~2 hr 35 min. All-day entry\; confirm event times\, registrati
+ on\, and club attendance with coaches.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+URL:https://www.backyardbullies-wc.com/#tournament-schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:bybwc-2026-12-27-villa-rica-1st-year@backyardbullies-wc.com
+DTSTAMP:20261029T174436Z
+DTSTART;VALUE=DATE:20261227
+DTEND;VALUE=DATE:20261228
+SUMMARY:Villa Rica 1st Year
+LOCATION:Villa Rica HS\, GA
+DESCRIPTION:Tentative working schedule. Type: 1st Year GAUSA. Estimated tra
+ vel: ~2 hr 45 min. All-day entry\; confirm event times\, registration\, an
+ d club attendance with coaches.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+URL:https://www.backyardbullies-wc.com/#tournament-schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:bybwc-2027-01-02-goldmine-classic@backyardbullies-wc.com
+DTSTAMP:20261029T174436Z
+DTSTART;VALUE=DATE:20270102
+DTEND;VALUE=DATE:20270103
+SUMMARY:Goldmine Classic
+LOCATION:Lumpkin HS\, GA
+DESCRIPTION:Tentative working schedule. Type: Hammer GAUSA. Estimated trave
+ l: ~2 hr 45 min. All-day entry\; confirm event times\, registration\, and 
+ club attendance with coaches.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+URL:https://www.backyardbullies-wc.com/#tournament-schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:bybwc-2027-01-09-van-epps-memorial@backyardbullies-wc.com
+DTSTAMP:20261029T174436Z
+DTSTART;VALUE=DATE:20270109
+DTEND;VALUE=DATE:20270110
+SUMMARY:Van Epps Memorial
+LOCATION:Cambridge HS\, GA
+DESCRIPTION:Tentative working schedule. Type: Hammer GAUSA. Estimated trave
+ l: ~2 hr 25 min. All-day entry\; confirm event times\, registration\, and 
+ club attendance with coaches.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+URL:https://www.backyardbullies-wc.com/#tournament-schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:bybwc-2027-01-16-john-wayne-memorial-1st-year@backyardbullies-wc.com
+DTSTAMP:20261029T174436Z
+DTSTART;VALUE=DATE:20270116
+DTEND;VALUE=DATE:20270117
+SUMMARY:John Wayne Memorial 1st Year
+LOCATION:Dawsonville\, GA
+DESCRIPTION:Tentative working schedule. Type: 1st Year GAUSA. Estimated tra
+ vel: ~2 hr 45 min. All-day entry\; confirm event times\, registration\, an
+ d club attendance with coaches.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+URL:https://www.backyardbullies-wc.com/#tournament-schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:bybwc-2027-01-22-kids-folkstyle-nationals@backyardbullies-wc.com
+DTSTAMP:20261029T174436Z
+DTSTART;VALUE=DATE:20270122
+DTEND;VALUE=DATE:20270125
+SUMMARY:Kids Folkstyle Nationals
+LOCATION:Fort Wayne\, IN
+DESCRIPTION:Tentative working schedule. Type: National. Estimated travel: ~
+ 9 hr. All-day entry\; confirm event times\, registration\, and club attend
+ ance with coaches.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+URL:https://www.backyardbullies-wc.com/#tournament-schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:bybwc-2027-01-31-north-paulding-hammer@backyardbullies-wc.com
+DTSTAMP:20261029T174436Z
+DTSTART;VALUE=DATE:20270131
+DTEND;VALUE=DATE:20270201
+SUMMARY:North Paulding Hammer
+LOCATION:North Paulding HS\, GA
+DESCRIPTION:Tentative working schedule. Type: Hammer GAUSA. Estimated trave
+ l: ~2 hr 15 min. All-day entry\; confirm event times\, registration\, and 
+ club attendance with coaches. Primary club selection for January 31.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+URL:https://www.backyardbullies-wc.com/#tournament-schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:bybwc-2027-01-31-beginner-s-bash@backyardbullies-wc.com
+DTSTAMP:20261029T174436Z
+DTSTART;VALUE=DATE:20270131
+DTEND;VALUE=DATE:20270201
+SUMMARY:Beginner's Bash
+LOCATION:Woodstock HS\, GA
+DESCRIPTION:Tentative working schedule. Type: 1st Year GAUSA. Estimated tra
+ vel: ~2 hr 20 min. All-day entry\; confirm event times\, registration\, an
+ d club attendance with coaches. January 31 first-year option\; North Pauld
+ ing Hammer is the primary club selection.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+URL:https://www.backyardbullies-wc.com/#tournament-schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:bybwc-2027-02-06-palmetto-league-championship@backyardbullies-wc.com
+DTSTAMP:20261029T174436Z
+DTSTART;VALUE=DATE:20270206
+DTEND;VALUE=DATE:20270207
+SUMMARY:Palmetto League Championship
+LOCATION:SC
+DESCRIPTION:Tentative working schedule. Type: Championship SCUSA. Estimated
+  travel: ~1–2 hr. All-day entry\; confirm event times\, registration\, a
+ nd club attendance with coaches.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+URL:https://www.backyardbullies-wc.com/#tournament-schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:bybwc-2027-02-20-ga-state-qualifiers@backyardbullies-wc.com
+DTSTAMP:20261029T174436Z
+DTSTART;VALUE=DATE:20270220
+DTEND;VALUE=DATE:20270221
+SUMMARY:GA State Qualifiers
+LOCATION:Multiple Locations\, GA
+DESCRIPTION:Tentative working schedule. Type: Qualifier GAUSA. Estimated tr
+ avel: Varies. All-day entry\; confirm event times\, registration\, and clu
+ b attendance with coaches.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+URL:https://www.backyardbullies-wc.com/#tournament-schedule
+END:VEVENT
+BEGIN:VEVENT
+UID:bybwc-2027-02-27-kids-girls-state@backyardbullies-wc.com
+DTSTAMP:20261029T174436Z
+DTSTART;VALUE=DATE:20270227
+DTEND;VALUE=DATE:20270301
+SUMMARY:Kids / Girls State
+LOCATION:Clayton County\, GA
+DESCRIPTION:Tentative working schedule. Type: State GAUSA. Estimated travel
+ : ~2 hr. All-day entry\; confirm event times\, registration\, and club att
+ endance with coaches.
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+URL:https://www.backyardbullies-wc.com/#tournament-schedule
+END:VEVENT
+END:VCALENDAR

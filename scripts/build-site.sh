@@ -19,6 +19,8 @@ mkdir -p _site/assets
 cp index.html _site/
 cp robots.txt sitemap.xml llms.txt _site/
 cp 2026-27-tournament-schedule.pdf _site/
+cp 2026-27-tournament-schedule.ics _site/
+cp assets/tournament-schedule.mjs _site/assets/
 cp CNAME _site/
 cp -r images _site/
 touch _site/.nojekyll
@@ -38,7 +40,9 @@ npx tailwindcss -i ./src/input.css -o ./_site/assets/tailwind.css --minify
 # Stamping the content hash onto the href gives changed CSS a URL the CDN has
 # never cached.
 CSS_HASH="$(sha256sum _site/assets/tailwind.css | cut -c1-12)"
+TOURNAMENT_HASH="$(sha256sum _site/assets/tournament-schedule.mjs | cut -c1-12)"
 find _site -name '*.html' -exec \
   sed -i "s|assets/tailwind\.css|assets/tailwind.css?v=${CSS_HASH}|g" {} +
+sed -i "s|assets/tournament-schedule\.mjs|assets/tournament-schedule.mjs?v=${TOURNAMENT_HASH}|g" _site/index.html
 echo "Stylesheet versioned as ?v=${CSS_HASH}"
 grep -rho 'assets/tailwind\.css?v=[a-f0-9]*' _site --include='*.html' | sort -u

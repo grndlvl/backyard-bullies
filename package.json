@@ -17,7 +17,8 @@
     "a11y:doctor": "bash tests/a11y/scripts/a11y-doctor.sh",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "test:tournaments": "node --test tests/tournament-schedule.test.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.11.3",

@@ -28,9 +28,11 @@ const errors = [];
 
 // 1) JSON-LD validity
 const blocks = pages.flatMap((page) =>
-  [...page.html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(
-    (match) => ({ page, raw: match[1] }),
-  ),
+  [
+    ...page.html.matchAll(
+      /<script\b[^>]*\btype="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g,
+    ),
+  ].map((match) => ({ page, raw: match[1] })),
 );
 if (blocks.length === 0) errors.push("No JSON-LD blocks found in <head>");
 

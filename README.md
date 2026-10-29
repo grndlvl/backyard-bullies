@@ -148,6 +148,35 @@ prevents an unfinished configuration from erasing the production redirect list.
 
 ## Notes
 
+### Tournament schedule
+
+The schedule in `index.html` supplies the event data for the filters, sorting,
+tooltips, and selected-event calendar export in `assets/tournament-schedule.mjs`.
+Multiple selected types use OR matching, so an event appears only once even if
+it matches several types. Links in the tournament block’s existing priority and rule text, plus browser history, preserve filters in
+repeated `tournament-type` query parameters. `tournament-sort=distance-asc` or
+`distance-desc` sorts globally by estimated travel time; ranges use their
+midpoint and unknown estimates always follow known ones.
+
+The filters use a collapsed native disclosure containing a checkbox fieldset. Desktop sorting lives in the Date and Distance table headers; phones use the selector inside the table caption. The static `ItemList` schema contains 17 `SportsEvent` entries with date-only ranges and tentative descriptions, excluding rest weekends. Keep it and `llms.txt` synchronized with the visible rows.
+
+The full-season `2026-27-tournament-schedule.ics` also works without JavaScript.
+After changing event facts, select **All types**, download the selection, and
+replace this file with the download. The browser tests compare that static
+calendar with the export from the visible source. All-day ranges have an
+exclusive end date, event IDs stay stable between exports, and rest weekends
+are excluded. Downloads are snapshots, not subscriptions.
+
+Run `npm run test:tournaments` for calendar and selection logic. With the site
+served locally, run the interaction tests with:
+
+```bash
+BASE_URL=http://127.0.0.1:8000 npx playwright test \
+  --config=tests/a11y/playwright.config.js tests/a11y/tests/tournament-schedule.spec.js
+```
+
+### General
+
 - **Accessibility:** semantic landmarks, skip link, keyboard-operable mobile menu, alt text,
   labeled icon links, visible focus rings, and `prefers-reduced-motion` support are built in.
 - **Styling:** Tailwind is compiled (no runtime CDN), so the production page ships one small,

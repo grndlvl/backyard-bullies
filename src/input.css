@@ -45,6 +45,107 @@ body {
   border-radius: 4px;
 }
 
+.tournament-filter,
+.tournament-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #64748b;
+  border-radius: 0.5rem;
+  color: #e2e8f0;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.tournament-filter:focus-within {
+  outline: 3px solid #3fc8f4;
+  outline-offset: 3px;
+}
+
+.tournament-filter:has(input:checked),
+.tournament-filter[aria-pressed="true"] {
+  color: #0e1116;
+  background: #3fc8f4;
+  border-color: #3fc8f4;
+}
+
+.tournament-filter input {
+  width: 1rem;
+  height: 1rem;
+  accent-color: #0e1116;
+}
+
+.tournament-action:hover,
+.tournament-action:focus-visible {
+  color: #3fc8f4;
+  border-color: #3fc8f4;
+}
+
+.tournament-action:disabled {
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+.tournament-sort {
+  min-height: 44px;
+  max-width: 100%;
+  padding: 0.5rem 2rem 0.5rem 0.75rem;
+  color: #f8fafc;
+  background: #1b2230;
+  border: 1px solid #64748b;
+  border-radius: 0.5rem;
+}
+
+.tournament-sort:focus-visible {
+  outline: 3px solid #3fc8f4;
+  outline-offset: 3px;
+}
+
+.tournament-year[hidden] {
+  display: none;
+}
+
+#tournament-mobile-sort[hidden] {
+  display: none;
+}
+
+.tournament-sort-heading {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  text-transform: uppercase;
+  text-align: left;
+  color: #3fc8f4;
+}
+
+.tournament-type {
+  min-height: 44px;
+  padding: 0.25rem 0;
+  text-align: left;
+  text-decoration: underline dotted;
+  text-underline-offset: 0.25em;
+  cursor: help;
+}
+
+.tournament-tooltip {
+  position: fixed;
+  z-index: 80;
+  width: min(20rem, calc(100vw - 2rem));
+  max-height: calc(100dvh - 2rem);
+  padding: 1rem;
+  overflow: auto;
+  color: #f8fafc;
+  background: #0e1116;
+  border: 1px solid #3fc8f4;
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 40%);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
 /* Sponsorship level explorer: native range semantics with a branded track and 44px hit area. */
 .sponsor-range {
   width: 100%;
