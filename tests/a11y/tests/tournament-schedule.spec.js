@@ -38,6 +38,13 @@ test("tournament schedule is grouped under Events, separate from weekly training
 }) => {
   await expect(page.locator("#camps #tournament-schedule")).toHaveCount(1);
   await expect(page.locator("#schedule #tournament-schedule")).toHaveCount(0);
+  const desktopEventsMenu = page.locator("#desktopEventsMenu");
+  const desktopTournamentLink = desktopEventsMenu.locator('a[href="#tournament-schedule"]');
+  await expect(desktopTournamentLink).toHaveText("Tournament Schedule");
+  const mobileTournamentLink = page.locator(
+    'nav[aria-label="Mobile"] a[href="#tournament-schedule"]',
+  );
+  await expect(mobileTournamentLink).toHaveText("Tournament Schedule");
   const eventNavigation = page.getByRole("navigation", { name: "Event sections" });
   await expect(eventNavigation.getByRole("link", { name: "Tournament schedule" })).toHaveAttribute(
     "href",
