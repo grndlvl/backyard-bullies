@@ -214,6 +214,33 @@
   [
     {
       "@context": "https://schema.org",
+      "@type": "Event",
+      "@id": "https://www.backyardbullies-wc.com/#thanksgiving-break-camp",
+      "name": "Thanksgiving Break Day Camp",
+      "description": "Three days of fun, fitness, and confidence building, November 23–25, 2026, from 9:00 AM to 3:30 PM daily. Ages 4–13; participants must be potty trained. Bring a water bottle, packed lunch, and snacks as needed. $75 for all three days or $30 per day. Spots are limited.",
+      "startDate": "2026-11-23T09:00:00-05:00",
+      "endDate": "2026-11-25T15:30:00-05:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "image": "https://www.backyardbullies-wc.com/images/camps/thanksgiving-break-day-camp-2026.jpg",
+      "url": "https://www.backyardbullies-wc.com/#thanksgiving-break-camp",
+      "sameAs": "https://www.facebook.com/events/1829305354862399/",
+      "location": {
+        "@type": "Place",
+        "name": "Backyard Bullies Wrestling Club",
+        "address": "266 Bobby Jones Expressway (Rear Entrance), Augusta, GA 30907"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "Backyard Bullies Wrestling Club",
+        "url": "https://www.backyardbullies-wc.com/"
+      },
+      "offers": [
+        {"@type": "Offer", "name": "All 3 days", "price": 75, "priceCurrency": "USD", "url": "https://docs.google.com/forms/d/e/1FAIpQLSctVax9NTXo9DBIoQxFlzSSU-99FbMcx0_BIlWMSEVbWOIa4g/viewform"},
+        {"@type": "Offer", "name": "Per day", "price": 30, "priceCurrency": "USD", "url": "https://docs.google.com/forms/d/e/1FAIpQLSctVax9NTXo9DBIoQxFlzSSU-99FbMcx0_BIlWMSEVbWOIa4g/viewform"}
+      ]
+    },
+    {
+      "@context": "https://schema.org",
       "@type": "Course",
       "name": "Homeschool Functional Fitness + Wrestling",
       "description": "Weekly functional fitness with optional wrestling for homeschool athletes in a positive, encouraging environment.",
@@ -986,7 +1013,30 @@
           </nav>
         </div>
 
-        <div id="special-events" class="grid md:grid-cols-2 gap-6 scroll-mt-24">
+        <div id="special-events" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 scroll-mt-24">
+
+          <!-- Thanksgiving Break Day Camp -->
+          <article id="thanksgiving-break-camp" class="bg-ink-card border border-ink-line rounded-xl p-6 flex flex-col scroll-mt-24">
+            <div class="min-h-20 mb-3">
+              <h3 class="font-head font-700 uppercase text-xl text-brand mb-1">Thanksgiving Break Day Camp</h3>
+              <p class="text-xs uppercase tracking-wide text-slate-400">November 23–25, 2026 • 9:00 AM–3:30 PM daily</p>
+            </div>
+            <a href="images/camps/thanksgiving-break-day-camp-2026.jpg" target="_blank" rel="noopener noreferrer" class="mb-5 h-80 w-full self-center overflow-hidden rounded-lg bg-ink ring-1 ring-ink-line focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand">
+              <img src="images/camps/thanksgiving-break-day-camp-2026.jpg" alt="Thanksgiving Break Day Camp flyer" width="907" height="960" loading="lazy" class="h-full w-full object-contain" />
+              <span class="sr-only">View the full Thanksgiving Break Day Camp flyer (opens in new window)</span>
+            </a>
+            <p class="text-slate-200 text-sm mb-4">Three days of fun, fitness, and confidence building with the Backyard Bullies family over Thanksgiving break.</p>
+            <ul class="list-disc pl-5 space-y-1.5 text-slate-200 text-sm mb-4">
+              <li>Ages 4–13; participants must be potty trained</li>
+              <li>$75 for all 3 days or $30 per day</li>
+              <li>266 Bobby Jones Expressway (Rear Entrance), Augusta, GA 30907</li>
+              <li>Bring a water bottle, packed lunch, and snacks as needed</li>
+            </ul>
+            <p class="text-slate-200 text-sm mb-4">Spots are limited. <a href="https://www.facebook.com/events/1829305354862399/" target="_blank" rel="noopener noreferrer" class="text-brand underline underline-offset-2 hover:text-white">View the Facebook event<span class="sr-only"> (opens in new window)</span></a>.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSctVax9NTXo9DBIoQxFlzSSU-99FbMcx0_BIlWMSEVbWOIa4g/viewform" target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center justify-center gap-2 bg-brand text-ink font-head font-700 uppercase text-sm px-5 py-3 rounded-md hover:bg-brand-dark transition-colors">
+              Register for Thanksgiving Camp<span class="sr-only"> (opens in new window)</span>
+            </a>
+          </article>
 
           <!-- The Athletic Standard Sports Massage -->
           <article class="bg-ink-card border border-ink-line rounded-xl p-6 flex flex-col">
